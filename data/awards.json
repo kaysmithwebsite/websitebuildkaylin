@@ -1,0 +1,26 @@
+{
+ "_note": "SECTION 22 SOCIAL PROOF. Only verified items render. The awards array is intentionally EMPTY: no award, ranking or designation has been confirmed for Kaylin Smith, and the spec forbids inventing them. Add entries with verified:true to activate the section; while empty the section does not render at all.",
+ "awards": [],
+ "media": [],
+ "certifications": [],
+ "associations": [
+  {
+   "name": "Toronto Regional Real Estate Board (TRREB)",
+   "note": "Board membership implied by Ontario brokerage registration",
+   "verified": true
+  },
+  {
+   "name": "Real Estate Council of Ontario (RECO)",
+   "note": "Regulator of registered salespersons in Ontario",
+   "verified": true
+  }
+ ],
+ "community": [
+  {
+   "name": "Markham Stouffville Hospital Foundation",
+   "note": "Supporter and volunteer since 2008",
+   "verified": true,
+   "_source": "Public RE/MAX agent profile"
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+  "_note": "Written originally for this site. It was prompted by the TRREB 'Whose Job Is It?' sheets the client supplied, but NONE of that document's content is reproduced: those sheets were last updated in December 2015 and their phone numbers are a decade old. Publishing stale service numbers would be worse than publishing nothing. What is genuinely durable is the structure, which is that York and Durham split services between the regional and the local municipality, and that knowing which tier owns a problem saves a wasted call. Contact URLs below are municipal front doors rather than deep links, because those move.",
+  "_links_verified": false,
+  "_instructions": "Check each URL resolves before launch and set _links_verified to true.",
+
+  "intro": "Ontario outside Toronto runs on two tiers of municipal government, and new owners lose a lot of time calling the wrong one. In York and Durham the region handles water, wastewater and waste collection, while your own town or city handles roads, parking, by-law enforcement, building permits and property tax. Toronto is a single tier, so everything goes through 311.",
+
+  "tiers": [
+    {
+      "name": "The region",
+      "applies_to": "York Region and Durham Region",
+      "owns": ["Drinking water supply and water quality", "Wastewater and sewers",
+               "Waste collection, recycling and green bin", "Regional roads, usually the numbered ones",
+               "Public health", "Paramedics and social services"],
+      "note": "If the problem is what comes out of the tap or what gets picked up at the curb, it is almost always regional."
+    },
+    {
+      "name": "Your town or city",
+      "applies_to": "Markham, Richmond Hill, Vaughan, Ajax, Pickering, Whitby and the rest",
+      "owns": ["Local roads, sidewalks and snow clearing", "Building permits and inspections",
+               "Zoning and by-law enforcement", "Parking and noise complaints",
+               "Property tax billing", "Parks, recreation and libraries",
+               "Water and sewer billing in some municipalities"],
+      "note": "Anything about the property itself, or the street in front of it, starts here."
+    },
+    {
+      "name": "Toronto",
+      "applies_to": "City of Toronto only",
+      "owns": ["Everything above, in one place"],
+      "note": "Toronto amalgamated the two tiers. Call 311 and they route it."
+    }
+  ],
+
+  "entry_points": [
+    { "name": "City of Toronto", "what": "311 for every municipal service", "url": "https://www.toronto.ca/home/311-toronto-at-your-service/" },
+    { "name": "York Region",     "what": "Water, waste and regional roads for Markham, Richmond Hill, Vaughan, Aurora, Newmarket, King, East Gwillimbury, Georgina and Whitchurch-Stouffville", "url": "https://www.york.ca/" },
+    { "name": "Durham Region",   "what": "Water, waste and regional roads for Ajax, Pickering, Whitby, Oshawa, Clarington, Uxbridge, Scugog and Brock", "url": "https://www.durham.ca/" },
+    { "name": "City of Markham", "what": "Local roads, permits, by-law, parking and property tax", "url": "https://www.markham.ca/" }
+  ],
+
+  "before_you_call": [
+    { "title": "Have the roll number ready", "body": "Your property tax roll number identifies the property faster than the address, and it is on your tax bill." },
+    { "title": "Check whether it is on your side of the line", "body": "The municipality maintains the water main and the sewer in the street. The service connection from there into your house is usually yours, and that division decides who pays." },
+    { "title": "Permits are cheaper than remediation", "body": "Work done without a permit surfaces on resale, and an open permit or an unpermitted alteration can hold up a closing. Ask before the work, not after." },
+    { "title": "Locates are free and legally required", "body": "Before any digging, request utility locates through Ontario One Call. Hitting a gas or hydro line is the expensive way to learn this." }
+  ]
+}

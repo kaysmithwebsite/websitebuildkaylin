@@ -1,0 +1,150 @@
+{
+  "_note": "SECTION 23 INSIGHTS. Articles below are prepared DRAFTS. They contain general, factual information about the Ontario real estate process and carry no invented claims about Kaylin's results, rankings or clients. Every record has status:\"draft\" and byline_approved:false. The production build (build.py --production) excludes drafts, so nothing publishes under Kaylin's name until she reviews it and sets byline_approved to true. Dev builds render them with a visible DRAFT badge.",
+  "categories": [
+    { "slug": "market",        "name": "Market",              "description": "What the numbers are actually doing, and what they are not." },
+    { "slug": "buying",        "name": "Buying",              "description": "Process, strategy and the decisions that carry real cost." },
+    { "slug": "selling",       "name": "Selling",             "description": "Preparation, positioning and negotiation." },
+    { "slug": "investing",     "name": "Investing",           "description": "Holding property as an asset rather than a home." },
+    { "slug": "neighbourhoods","name": "Neighbourhoods",      "description": "Reading a community before you commit to it." },
+    { "slug": "perspective",   "name": "Kaylin's Perspective","description": "Direct commentary." }
+  ],
+  "articles": [
+    {
+      "slug": "what-a-conditional-offer-actually-protects",
+      "title": "What a conditional offer actually protects",
+      "category": "buying",
+      "date": "2026-08-19",
+      "read_minutes": 6,
+      "status": "draft",
+      "byline_approved": false,
+      "excerpt": "Conditions are not delay. They are the part of the agreement where risk gets assigned, and most of the cost of getting them wrong shows up after closing.",
+      "body": [
+        { "type": "p", "text": "In Ontario, an Agreement of Purchase and Sale can be firm or conditional. A firm offer binds you on acceptance. A conditional offer binds you too, but gives you a defined window in which a specified condition must be satisfied or waived before the agreement becomes unconditional." },
+        { "type": "p", "text": "That distinction is where a lot of money sits." },
+        { "type": "h2", "text": "The three that carry the most weight" },
+        { "type": "p", "text": "A financing condition confirms that a lender will actually advance funds against this specific property. Pre-qualification confirms something weaker: that you look like a plausible borrower. Pre-approval is an assessment of you. Financing approval is an assessment of the property as well, including its appraised value. Those are different tests, and the second one fails more often than buyers expect in a moving market." },
+        { "type": "p", "text": "A home inspection condition buys you information. It does not usually buy you a renegotiation, and treating it as a price-reduction mechanism is a good way to lose a seller's cooperation. Its real value is the decision it enables: proceed, proceed with adjusted expectations, or walk." },
+        { "type": "p", "text": "A status certificate condition applies to condominium purchases. The certificate discloses the corporation's financial position, reserve fund, current and pending special assessments, rules, and any litigation. Reading it properly is a legal task. Budget for a lawyer to do it." },
+        { "type": "h2", "text": "Why competitive offers strip them out" },
+        { "type": "p", "text": "In multiple offers, sellers weigh certainty alongside price. A firm offer at a lower number can beat a conditional offer at a higher one, because the seller is pricing the risk that the conditional deal collapses and the property returns to market with days on market already accumulated." },
+        { "type": "p", "text": "That is a real dynamic, and pretending otherwise does not help buyers. But going firm is a decision with consequences, and it should be made deliberately, with the underlying work done in advance rather than skipped." },
+        { "type": "h2", "text": "Doing the work early" },
+        { "type": "p", "text": "Most of what a condition would have verified can be verified before you offer. Full lender approval rather than pre-qualification. A pre-offer inspection where the seller permits one. A status certificate reviewed in advance on a condo. A lawyer briefed and available." },
+        { "type": "p", "text": "That is the actual strategy. Not removing conditions, but moving the work that justified them to the front of the process." },
+        { "type": "callout", "text": "This is general information about the Ontario purchase process, not legal advice. Review any Agreement of Purchase and Sale with a licensed Ontario real estate lawyer before signing." }
+      ]
+    },
+    {
+      "slug": "pricing-is-a-position-not-a-number",
+      "title": "Pricing is a position, not a number",
+      "category": "selling",
+      "date": "2026-08-05",
+      "read_minutes": 5,
+      "status": "draft",
+      "byline_approved": false,
+      "excerpt": "The list price is a strategic choice about who sees the property and how they behave when they do. It is not an estimate of value.",
+      "body": [
+        { "type": "p", "text": "Sellers tend to treat the list price as a prediction. It is closer to an instruction." },
+        { "type": "p", "text": "The number you choose determines which search filters return your property, which buyers walk through the door, and what those buyers assume before they arrive. It sets expectations about condition, about your motivation, and about whether there is room to negotiate." },
+        { "type": "h2", "text": "The two directions, and what each one costs" },
+        { "type": "p", "text": "Pricing below expected value concentrates attention. It widens the buyer pool, compresses the timeline, and in a market with sufficient depth it can produce competition that carries the final number above where a higher list price would have landed. It only works when the demand is genuinely there. When it is not, you have simply anchored low." },
+        { "type": "p", "text": "Pricing above expected value preserves room to negotiate and can work for properties that are genuinely difficult to compare. It costs you the early attention window, which is the most valuable one you will get. Days on market accumulate, and buyers read that number." },
+        { "type": "h2", "text": "The first two weeks" },
+        { "type": "p", "text": "New listings get concentrated attention. Every buyer already searching in that price band and area sees the property at once. That audience does not reassemble later." },
+        { "type": "p", "text": "A price reduction three weeks in reaches a much smaller group, and it reaches them with a signal attached. The property has been available and has not sold. That signal is expensive and difficult to undo." },
+        { "type": "h2", "text": "What the choice should depend on" },
+        { "type": "p", "text": "Depth of comparable inventory. How distinctive the property is. Whether the seller's timeline is fixed or flexible. Current absorption in that specific segment, not the city-wide average. And the seller's actual tolerance for the risk each approach carries." },
+        { "type": "p", "text": "Those are different for every property. Which is why pricing is a conversation before it is a number." }
+      ]
+    },
+    {
+      "slug": "reading-a-neighbourhood-before-you-commit",
+      "title": "Reading a neighbourhood before you commit to it",
+      "category": "neighbourhoods",
+      "date": "2026-07-22",
+      "read_minutes": 7,
+      "status": "draft",
+      "byline_approved": false,
+      "excerpt": "Most buyers evaluate a neighbourhood on a Saturday afternoon. That is the one time it is guaranteed to look its best.",
+      "body": [
+        { "type": "p", "text": "Showings cluster on weekends. So does the version of a neighbourhood that sells it." },
+        { "type": "h2", "text": "Go back at the times that matter" },
+        { "type": "p", "text": "Drive the actual commute at the actual hour. In the GTA the difference between an off-peak and a peak trip on the same route can be doubled, and that difference is a permanent feature of your life, not a detail." },
+        { "type": "p", "text": "Return on a weekday evening. Street parking pressure, noise and traffic patterns are all different from Saturday at two o'clock." },
+        { "type": "h2", "text": "Look at what is approved, not what is built" },
+        { "type": "p", "text": "Municipal development applications are public. In York Region and across the GTA, planning portals show what has been submitted, what is under review and what has been approved near a given address. A vacant parcel or a low-rise plaza beside a property is a future condition, not a permanent one." },
+        { "type": "p", "text": "This cuts both ways. New transit or a planned community centre can support values. A tower against a rear lot line can do the opposite. Either way you want to know before you buy, not after." },
+        { "type": "h2", "text": "Boundaries move" },
+        { "type": "p", "text": "School catchments are set by the boards and are subject to review. Buying into a specific catchment is reasonable. Assuming that catchment is permanent is not. Confirm current boundaries with the board directly rather than relying on a listing, and understand that they can change." },
+        { "type": "h2", "text": "Sub-markets inside one name" },
+        { "type": "p", "text": "Communities that share a name frequently do not share a market. A single neighbourhood can hold three distinct construction eras on adjacent streets, with different lot sizes, different buyer profiles and different pricing behaviour." },
+        { "type": "p", "text": "Averaging across that name produces a number that describes nothing. The useful comparison is much narrower than the neighbourhood." }
+      ]
+    },
+    {
+      "slug": "the-numbers-that-actually-move-a-hold",
+      "title": "The numbers that actually move a hold",
+      "category": "investing",
+      "date": "2026-07-09",
+      "read_minutes": 6,
+      "status": "draft",
+      "byline_approved": false,
+      "excerpt": "Gross yield is the figure most often quoted and the least often useful. Here is what it leaves out.",
+      "body": [
+        { "type": "p", "text": "Gross yield divides annual rent by purchase price. It is easy to calculate, which is most of why it gets quoted." },
+        { "type": "p", "text": "It ignores every cost of holding the asset." },
+        { "type": "h2", "text": "What sits between gross and net" },
+        { "type": "p", "text": "Property tax. Insurance, which for a tenanted property is not the same policy or the same premium as owner-occupied coverage. Condominium maintenance fees where they apply, and their trajectory, which matters more than their current level. Maintenance and capital reserve, because roofs, furnaces and appliances have finite lives and pretending otherwise just defers the number." },
+        { "type": "p", "text": "Vacancy, which is not zero even in a tight market, because turnover has a cost in both lost rent and preparation. Property management if you are not doing it yourself, and an honest accounting of your own time if you are." },
+        { "type": "h2", "text": "Financing changes the shape of everything" },
+        { "type": "p", "text": "Two identical properties with different mortgage terms are different investments. Rate, amortization and the split between principal and interest determine cash flow, and the principal portion is not an expense in the way interest is. It is a transfer into equity." },
+        { "type": "p", "text": "A property with negative cash flow and meaningful principal paydown is a different proposition from one with negative cash flow and none. Conflating them produces bad decisions in both directions." },
+        { "type": "h2", "text": "The rules are part of the model" },
+        { "type": "p", "text": "In Ontario, the Residential Tenancies Act governs rent increases, notice, and the grounds and process for ending a tenancy. Rent control applies to many but not all units, and the distinction turns on when the unit was first occupied. Any model that assumes rent moves freely with the market is wrong for a large share of the stock." },
+        { "type": "callout", "text": "General information only. This is not investment, tax, accounting or legal advice. Model any acquisition with a qualified accountant and review tenancy matters with a lawyer familiar with the Residential Tenancies Act." }
+      ]
+    },
+    {
+      "slug": "why-average-price-is-the-wrong-question",
+      "title": "Why average price is the wrong question",
+      "category": "market",
+      "date": "2026-06-24",
+      "read_minutes": 5,
+      "status": "draft",
+      "byline_approved": false,
+      "excerpt": "A rising average can describe a falling market. The composition of what sold moves the number as much as value does.",
+      "body": [
+        { "type": "p", "text": "Board statistics report average sale price across everything that transacted in a period. That figure moves with what sold as much as with what things are worth." },
+        { "type": "h2", "text": "Composition" },
+        { "type": "p", "text": "If detached sales make up a larger share of transactions this month than last, the average rises. Every individual property could have sold for less than it would have a month earlier and the headline still goes up." },
+        { "type": "p", "text": "This is not a flaw in the statistic. It is a flaw in reading it as though it measured value." },
+        { "type": "h2", "text": "Better instruments" },
+        { "type": "p", "text": "Median reduces the pull of outliers at the top. Sale-to-list ratio describes negotiating conditions directly: above one hundred percent indicates competition, below it indicates room. Days on market describes absorption speed. Months of inventory, which is active listings divided by monthly sales, describes the balance between supply and demand better than any price figure." },
+        { "type": "p", "text": "A benchmark or index price, which controls for the characteristics of what sold, is closer to a like-for-like measure than a raw average." },
+        { "type": "h2", "text": "Scale" },
+        { "type": "p", "text": "None of these are useful at the level of a whole region. A GTA-wide figure aggregates markets that are behaving differently from one another, and often in opposite directions. The number that matters to a specific decision is the one drawn from the same property type, the same price band and the same community." },
+        { "type": "p", "text": "That number is usually built from a small set of comparables, examined individually. Headlines carry the regional average instead." }
+      ]
+    },
+    {
+      "slug": "the-conversation-before-the-decision",
+      "title": "The conversation before the decision",
+      "category": "perspective",
+      "date": "2026-06-03",
+      "read_minutes": 4,
+      "status": "draft",
+      "byline_approved": false,
+      "excerpt": "Most of the value in this work happens before anyone looks at a property. It is also the part clients most often skip.",
+      "body": [
+        { "type": "p", "text": "By the time a client is booking showings, most of the consequential decisions have already been made. Budget. Location. Property type. Timeline. Whether to buy first or sell first." },
+        { "type": "p", "text": "Those decisions get made quickly and often informally, and they constrain everything that follows." },
+        { "type": "h2", "text": "Buy first or sell first" },
+        { "type": "p", "text": "This single question changes the entire risk profile of a move, and it has no universally correct answer. Selling first gives you a known number and removes financing uncertainty, at the cost of possibly needing interim housing. Buying first secures the property you want, at the cost of carrying two properties if the sale takes longer than expected, and bridge financing to cover the gap." },
+        { "type": "p", "text": "The right answer depends on the depth of the market you are selling into, the scarcity of what you are buying, and the client's actual financial capacity to absorb an overlap. Not on a general rule." },
+        { "type": "h2", "text": "What the conversation covers" },
+        { "type": "p", "text": "What the move is actually for. What has to be true for it to be worth doing. What the timeline is genuinely driven by, and whether that driver is fixed. Where the flexibility is, because there is always some, and knowing where it sits is what makes negotiation possible later." },
+        { "type": "p", "text": "Property is emotional. The strategy should not be. Separating the two is most of the job." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "_note": "PHASE 2. Drives the progressive inquiry form and the classification, tagging and scoring that runs on submission. Every value key below matches a Postgres enum in supabase/migrations/0001_crm_core.sql. Changing a label here is safe; changing a value means changing the enum too.",
+
+  "paths": [
+    { "value": "buy",        "label": "Buy Real Estate",   "note": "A first home, a next home, or a move.", "branch": "real_estate" },
+    { "value": "sell",       "label": "Sell Real Estate",  "note": "Preparing, pricing and going to market.", "branch": "real_estate" },
+    { "value": "invest",     "label": "Invest",            "note": "Rental, pre-construction or a portfolio.", "branch": "real_estate" },
+    { "value": "consulting", "label": "Business Consulting","note": "Strategy, growth, operations or events.", "branch": "business" },
+    { "value": "other",      "label": "Something Else",    "note": "Not sure yet, or none of the above.", "branch": "unsure" }
+  ],
+
+  "real_estate": {
+    "intent": [
+      ["buy", "Buy"], ["sell", "Sell"], ["buy_and_sell", "Buy and sell"],
+      ["invest", "Invest"], ["rent", "Rent"], ["relocate", "Relocate"],
+      ["pre_construction", "Pre-construction"], ["undecided", "Explore options"]
+    ],
+    "timeline": [
+      ["immediately", "Immediately"], ["within_30_days", "Within 30 days"],
+      ["1_3_months", "1 to 3 months"], ["3_6_months", "3 to 6 months"],
+      ["6_12_months", "6 to 12 months"], ["researching", "Just researching"]
+    ],
+    "budget": [
+      ["unsure", "Not sure yet"], ["under_500k", "Under $500K"], ["500k_750k", "$500K to $750K"],
+      ["750k_1m", "$750K to $1M"], ["1m_1_5m", "$1M to $1.5M"],
+      ["1_5m_2m", "$1.5M to $2M"], ["2m_plus", "$2M and above"]
+    ],
+    "property_type": [
+      ["", "No preference"], ["detached", "Detached"], ["semi", "Semi-detached"],
+      ["townhouse", "Townhouse"], ["condo", "Condo"], ["multiplex", "Multiplex"],
+      ["commercial", "Commercial"], ["land", "Land"]
+    ]
+  },
+
+  "business": {
+    "stage": [
+      ["idea", "Idea"], ["pre_launch", "Pre-launch"], ["new_business", "New business"],
+      ["growing", "Growing business"], ["established", "Established business"],
+      ["scaling", "Scaling"], ["restructuring", "Restructuring"], ["unsure", "Not sure"]
+    ],
+    "challenge": [
+      ["strategy", "Strategy"], ["growth", "Growth"], ["marketing", "Marketing"],
+      ["branding", "Branding"], ["sales", "Sales"], ["systems", "Systems"],
+      ["operations", "Operations"], ["financing", "Financing or readiness"],
+      ["business_model", "Business model"], ["expansion", "Expansion"],
+      ["real_estate", "Real estate"], ["leadership", "Leadership"], ["other", "Other"]
+    ],
+    "revenue": [
+      ["undisclosed", "Prefer not to say"], ["pre_revenue", "Pre-revenue"],
+      ["under_100k", "Under $100K"], ["100k_250k", "$100K to $250K"],
+      ["250k_500k", "$250K to $500K"], ["500k_1m", "$500K to $1M"],
+      ["1m_5m", "$1M to $5M"], ["5m_plus", "$5M and above"]
+    ],
+    "urgency": [
+      ["now", "Need help now"], ["within_30_days", "Within 30 days"],
+      ["1_3_months", "1 to 3 months"], ["exploring", "Exploring options"]
+    ]
+  },
+
+  "tag_rules": {
+    "_note": "Applied automatically on ingest. Each rule names a form value and the tag keys it adds.",
+    "path": {
+      "buy":        ["real_estate", "buyer"],
+      "sell":       ["real_estate", "seller"],
+      "invest":     ["real_estate", "investor"],
+      "consulting": ["business"]
+    },
+    "real_estate.intent": {
+      "buy_and_sell":     ["buyer", "seller"],
+      "relocate":         ["relocation"],
+      "pre_construction": ["pre_construction"],
+      "rent":             ["buyer"]
+    },
+    "business.stage": {
+      "idea":        ["startup"],
+      "pre_launch":  ["startup"],
+      "new_business":["startup"],
+      "established": ["established_business"],
+      "scaling":     ["growth"]
+    },
+    "business.challenge": {
+      "strategy":   ["strategy"],
+      "growth":     ["growth"],
+      "operations": ["operations"],
+      "systems":    ["operations"],
+      "marketing":  ["marketing"],
+      "branding":   ["marketing"]
+    }
+  },
+
+  "score_rules": {
+    "_note": "Maps a submitted value to a lead_scoring_rules.key seeded in migration 0004. Points live in the database so they stay editable.",
+    "real_estate.timeline": {
+      "immediately":    "re_timeline_under_90",
+      "within_30_days": "re_timeline_under_90",
+      "1_3_months":     "re_timeline_under_90"
+    },
+    "real_estate.pre_approved":   { "true": "re_financing_ready" },
+    "real_estate.budget_present": { "true": "re_budget_specified" },
+    "real_estate.seller_address_present": { "true": "re_seller_address" },
+    "business.urgency":  { "now": "biz_immediate_problem" },
+    "business.stage":    { "established": "biz_established", "scaling": "biz_established" },
+    "business.revenue_present":  { "true": "biz_revenue_supplied" },
+    "business.challenge_present": { "true": "biz_clear_project" }
+  },
+
+  "temperature_rules": {
+    "_note": "Section 33. Evaluated top down; the first match wins. Kaylin can always override on the record.",
+    "bands": [
+      { "temperature": "hot",     "min_score": 45 },
+      { "temperature": "warm",    "min_score": 25 },
+      { "temperature": "nurture", "min_score": 10 },
+      { "temperature": "cold",    "min_score": 0 }
+    ]
+  }
+}

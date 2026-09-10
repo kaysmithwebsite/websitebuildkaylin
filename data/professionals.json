@@ -1,0 +1,128 @@
+{
+  "_note": "FIND AN EXPERT. The professionals array is EMPTY on purpose: naming someone as vetted by Kaylin is a reputational and liability statement only she can make. The page works without it. Visitors choose what they need and Kaylin makes the introduction personally.",
+  "_directory_status": "not_published",
+  "trades": [
+    {
+      "slug": "mortgage",
+      "name": "Mortgage professional",
+      "note": "Financing, renewals and pre-approval."
+    },
+    {
+      "slug": "lawyer",
+      "name": "Real estate lawyer",
+      "note": "Closings, title and agreement review."
+    },
+    {
+      "slug": "insurance",
+      "name": "Insurance broker",
+      "note": "Home, tenant and landlord coverage."
+    },
+    {
+      "slug": "contractor",
+      "name": "General contractor",
+      "note": "Renovations, additions and full project management."
+    },
+    {
+      "slug": "builder",
+      "name": "Builder",
+      "note": "Custom builds and major structural work."
+    },
+    {
+      "slug": "inspector",
+      "name": "Home inspector",
+      "note": "Pre-purchase and pre-listing inspections."
+    },
+    {
+      "slug": "stager",
+      "name": "Home stager",
+      "note": "Styling and furniture for sale preparation."
+    },
+    {
+      "slug": "photographer",
+      "name": "Photographer",
+      "note": "Property, portrait and brand photography."
+    },
+    {
+      "slug": "videographer",
+      "name": "Videographer",
+      "note": "Walkthrough video, reels and drone where permitted."
+    },
+    {
+      "slug": "designer",
+      "name": "Interior designer",
+      "note": "Layout, finishes and specification."
+    },
+    {
+      "slug": "electrician",
+      "name": "Electrician",
+      "note": "Panel upgrades, rewiring and ESA-permitted work."
+    },
+    {
+      "slug": "plumber",
+      "name": "Plumber",
+      "note": "Repairs, replacements and rough-ins."
+    },
+    {
+      "slug": "hvac",
+      "name": "HVAC",
+      "note": "Furnaces, air conditioning and ventilation."
+    },
+    {
+      "slug": "roofer",
+      "name": "Roofer",
+      "note": "Repairs, replacement and inspections."
+    },
+    {
+      "slug": "painter",
+      "name": "Painter",
+      "note": "Interior and exterior, including pre-listing preparation."
+    },
+    {
+      "slug": "flooring",
+      "name": "Flooring",
+      "note": "Hardwood, tile, refinishing and installation."
+    },
+    {
+      "slug": "landscaper",
+      "name": "Landscaping",
+      "note": "Grounds, hardscape and curb appeal."
+    },
+    {
+      "slug": "handyman",
+      "name": "Handyman",
+      "note": "The small list that holds up a closing."
+    },
+    {
+      "slug": "cleaner",
+      "name": "Cleaning",
+      "note": "Deep cleans, move-in and move-out."
+    },
+    {
+      "slug": "mover",
+      "name": "Movers",
+      "note": "Local and long distance, plus storage."
+    },
+    {
+      "slug": "accountant",
+      "name": "Accountant",
+      "note": "Property, investment and small business tax."
+    },
+    {
+      "slug": "surveyor",
+      "name": "Surveyor",
+      "note": "Surveys and boundary work."
+    },
+    {
+      "slug": "other",
+      "name": "Something else",
+      "note": "Tell Kaylin what you need and she will look."
+    }
+  ],
+  "professionals": [],
+  "featured": [
+    "mortgage",
+    "lawyer",
+    "insurance",
+    "contractor"
+  ]
+}

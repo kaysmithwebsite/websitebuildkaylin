@@ -1,0 +1,2968 @@
+{
+ "_note": "DEMO LISTING DATA. Every record has demo:true and an MLS number in the DEMO-#### namespace. These are NOT real listings and are NOT represented as live MLS data. The UI renders a visible DEMO badge on each. Replace this file when an authorized TRREB/CREA DDF or IDX feed is licensed; the schema matches supabase/schema.sql table `properties`.",
+ "_feed_status": "not_connected",
+ "properties": [
+  {
+   "id": "demo-001",
+   "demo": true,
+   "mls_number": "DEMO-1001",
+   "status": "For Sale",
+   "listing_type": "sale",
+   "price": 1041000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "",
+    "street_number": "127",
+    "street_name": "Main Street Unionville",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L3R",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "unionville",
+   "coordinates": {
+    "lat": 43.858465,
+    "lng": -79.301582
+   },
+   "property_type": "Condo Townhouse",
+   "style": "Stacked",
+   "bedrooms": 3,
+   "bathrooms": 2,
+   "square_footage": 1310,
+   "square_footage_source": "Demo data",
+   "lot": null,
+   "parking_total": 1,
+   "garage_spaces": 2,
+   "year_built_range": "1981-1990",
+   "maintenance_fee_monthly": 999.97,
+   "property_tax_annual": 8788,
+   "property_tax_year": 2025,
+   "features": [
+    "Gas fireplace",
+    "Fenced rear yard",
+    "South-facing rear exposure",
+    "Finished basement",
+    "Stainless steel appliances",
+    "Quartz countertops"
+   ],
+   "amenities": [
+    "Party room",
+    "Bicycle storage",
+    "Fitness centre",
+    "Guest suite",
+    "Rooftop terrace"
+   ],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 5.77,
+     "width_m": 4.27
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 3.61,
+     "width_m": 2.86
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 3.3,
+     "width_m": 3.6
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 4.3,
+     "width_m": 4.42
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.25,
+     "width_m": 2.97
+    },
+    {
+     "level": "Second",
+     "name": "3rd Bedroom",
+     "length_m": 3.74,
+     "width_m": 3.23
+    }
+   ],
+   "days_on_market": 11,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 18,
+   "open_houses": [],
+   "sold": null,
+   "investment": {
+    "estimated_monthly_rent": 4200,
+    "estimated_monthly_expenses": 1850,
+    "basis": "Demo figures for interface demonstration only.",
+    "is_estimate": true
+   },
+   "description": "A 3-bedroom condo townhouse in the heart of Unionville. The layout carries 2 bathrooms and one space of parking. Notable inside: gas fireplace, fenced rear yard, south-facing rear exposure. Building amenities include party room, bicycle storage, fitness centre. Transit and highway access come by way of GO Transit Stouffville line. Worth seeing in person. The floor plan reads differently than the photographs.",
+   "featured": false
+  },
+  {
+   "id": "demo-002",
+   "demo": true,
+   "mls_number": "DEMO-1002",
+   "status": "For Sale",
+   "listing_type": "sale",
+   "price": 1092000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "1188",
+    "street_number": "186",
+    "street_name": "Rustle Woods Avenue",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L6B",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "cornell",
+   "coordinates": {
+    "lat": 43.87723,
+    "lng": -79.219829
+   },
+   "property_type": "Condo Townhouse",
+   "style": "Stacked",
+   "bedrooms": 3,
+   "bathrooms": 1,
+   "square_footage": 1420,
+   "square_footage_source": "Demo data",
+   "lot": null,
+   "parking_total": 2,
+   "garage_spaces": 1,
+   "year_built_range": "2001-2010",
+   "maintenance_fee_monthly": 869.3,
+   "property_tax_annual": 9659,
+   "property_tax_year": 2025,
+   "features": [
+    "Interlock driveway",
+    "Rough-in for bathroom",
+    "Finished basement",
+    "Hardwood throughout",
+    "Primary bedroom ensuite",
+    "Second-floor family room",
+    "Gas fireplace"
+   ],
+   "amenities": [
+    "Bicycle storage",
+    "Visitor parking",
+    "Fitness centre",
+    "Rooftop terrace"
+   ],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 5.3,
+     "width_m": 4.1
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 4.05,
+     "width_m": 3.09
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 4.41,
+     "width_m": 3.61
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 4.52,
+     "width_m": 3.52
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 4.18,
+     "width_m": 3.0
+    },
+    {
+     "level": "Second",
+     "name": "3rd Bedroom",
+     "length_m": 3.29,
+     "width_m": 2.6
+    }
+   ],
+   "days_on_market": 20,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 25,
+   "open_houses": [],
+   "sold": null,
+   "investment": null,
+   "description": "A 3-bedroom stacked condo townhouse in Cornell, offered at 1,420 square feet. Bathrooms total 1. Parking is 2 spaces of. Notable inside: interlock driveway, rough-in for bathroom, finished basement. Building amenities include bicycle storage, visitor parking, fitness centre. For getting out of the neighbourhood: Cornell Bus Terminal. Book a private showing to see how the space actually works.",
+   "featured": true
+  },
+  {
+   "id": "demo-003",
+   "demo": true,
+   "mls_number": "DEMO-1003",
+   "status": "For Sale",
+   "listing_type": "sale",
+   "price": 733000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "355",
+    "street_number": "93",
+    "street_name": "Church Street",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L3P",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "markham-village",
+   "coordinates": {
+    "lat": 43.866415,
+    "lng": -79.263068
+   },
+   "property_type": "Condo Apartment",
+   "style": "Apartment",
+   "bedrooms": 3,
+   "bathrooms": 2,
+   "square_footage": 920,
+   "square_footage_source": "Demo data",
+   "lot": null,
+   "parking_total": 1,
+   "garage_spaces": 0,
+   "year_built_range": "1991-2000",
+   "maintenance_fee_monthly": 580.29,
+   "property_tax_annual": 5422,
+   "property_tax_year": 2025,
+   "features": [
+    "Interlock driveway",
+    "Quartz countertops",
+    "Main floor laundry",
+    "Finished basement",
+    "Smooth ceilings"
+   ],
+   "amenities": [
+    "Guest suite",
+    "Fitness centre",
+    "Concierge"
+   ],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 3.52,
+     "width_m": 3.05
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 4.04,
+     "width_m": 3.12
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 3.1,
+     "width_m": 3.25
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 5.44,
+     "width_m": 4.48
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.49,
+     "width_m": 3.33
+    },
+    {
+     "level": "Second",
+     "name": "3rd Bedroom",
+     "length_m": 3.23,
+     "width_m": 3.08
+    }
+   ],
+   "days_on_market": 34,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 19,
+   "open_houses": [],
+   "sold": null,
+   "investment": null,
+   "description": "This apartment condo apartment sits in Markham Village and runs to 920 square feet. Bathrooms total 2. Parking is one space of. Notable inside: interlock driveway, quartz countertops, main floor laundry. Building amenities include guest suite, fitness centre, concierge. Transit and highway access come by way of Markham GO Station. Worth seeing in person. The floor plan reads differently than the photographs.",
+   "featured": true
+  },
+  {
+   "id": "demo-004",
+   "demo": true,
+   "mls_number": "DEMO-1004",
+   "status": "For Sale",
+   "listing_type": "sale",
+   "price": 2123000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "",
+    "street_number": "28",
+    "street_name": "Ada Mackenzie Road",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L6C",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "berczy-village",
+   "coordinates": {
+    "lat": 43.898643,
+    "lng": -79.304099
+   },
+   "property_type": "Detached",
+   "style": "3-Storey",
+   "bedrooms": 5,
+   "bathrooms": 2,
+   "square_footage": 2490,
+   "square_footage_source": "Demo data",
+   "lot": {
+    "frontage_ft": 60,
+    "depth_ft": 115
+   },
+   "parking_total": 4,
+   "garage_spaces": 3,
+   "year_built_range": "Pre-1980",
+   "maintenance_fee_monthly": null,
+   "property_tax_annual": 17627,
+   "property_tax_year": 2025,
+   "features": [
+    "Stainless steel appliances",
+    "Finished basement",
+    "Double car garage",
+    "Renovated kitchen",
+    "Rough-in for bathroom",
+    "Fenced rear yard",
+    "Central air conditioning"
+   ],
+   "amenities": [],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 4.37,
+     "width_m": 3.75
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 4.26,
+     "width_m": 2.96
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 4.51,
+     "width_m": 3.13
+    },
+    {
+     "level": "Main",
+     "name": "Family",
+     "length_m": 5.96,
+     "width_m": 3.52
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 4.07,
+     "width_m": 3.95
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.72,
+     "width_m": 3.29
+    },
+    {
+     "level": "Second",
+     "name": "3rd Bedroom",
+     "length_m": 3.07,
+     "width_m": 3.12
+    },
+    {
+     "level": "Second",
+     "name": "4th Bedroom",
+     "length_m": 3.09,
+     "width_m": 2.61
+    },
+    {
+     "level": "Basement",
+     "name": "Recreation",
+     "length_m": 6.03,
+     "width_m": 3.81
+    },
+    {
+     "level": "Basement",
+     "name": "Office",
+     "length_m": 3.66,
+     "width_m": 3.0
+    }
+   ],
+   "days_on_market": 15,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 20,
+   "open_houses": [],
+   "sold": null,
+   "investment": null,
+   "description": "2,490 square feet of finished space in Berczy Village, arranged over 5 bedrooms. The layout carries 2 bathrooms and 4 spaces of parking. Notable inside: stainless steel appliances, finished basement, double car garage. The lot measures roughly 60 by 115 feet. For getting out of the neighbourhood: YRT bus service. Worth seeing in person. The floor plan reads differently than the photographs.",
+   "featured": true
+  },
+  {
+   "id": "demo-005",
+   "demo": true,
+   "mls_number": "DEMO-1005",
+   "status": "For Sale",
+   "listing_type": "sale",
+   "price": 2640000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "",
+    "street_number": "161",
+    "street_name": "Wilfred Murison Avenue",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L6C",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "angus-glen",
+   "coordinates": {
+    "lat": 43.900802,
+    "lng": -79.308034
+   },
+   "property_type": "Detached",
+   "style": "Bungalow",
+   "bedrooms": 5,
+   "bathrooms": 2,
+   "square_footage": 2780,
+   "square_footage_source": "Demo data",
+   "lot": {
+    "frontage_ft": 36,
+    "depth_ft": 110
+   },
+   "parking_total": 2,
+   "garage_spaces": 2,
+   "year_built_range": "2011-2020",
+   "maintenance_fee_monthly": null,
+   "property_tax_annual": 18596,
+   "property_tax_year": 2025,
+   "features": [
+    "Central air conditioning",
+    "Double car garage",
+    "Fenced rear yard",
+    "Smooth ceilings",
+    "Stainless steel appliances",
+    "Skylight",
+    "Finished basement",
+    "Rough-in for bathroom",
+    "Main floor laundry"
+   ],
+   "amenities": [],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 4.65,
+     "width_m": 3.98
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 3.62,
+     "width_m": 2.81
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 3.69,
+     "width_m": 2.63
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 5.34,
+     "width_m": 3.82
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 4.21,
+     "width_m": 3.14
+    },
+    {
+     "level": "Second",
+     "name": "3rd Bedroom",
+     "length_m": 3.34,
+     "width_m": 3.2
+    },
+    {
+     "level": "Second",
+     "name": "4th Bedroom",
+     "length_m": 3.18,
+     "width_m": 2.62
+    },
+    {
+     "level": "Basement",
+     "name": "Recreation",
+     "length_m": 7.3,
+     "width_m": 4.08
+    }
+   ],
+   "days_on_market": 5,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 18,
+   "open_houses": [
+    {
+     "date": "2026-09-06",
+     "start": "1:00 PM",
+     "end": "3:00 PM"
+    }
+   ],
+   "sold": null,
+   "investment": null,
+   "description": "2,780 square feet of finished space in Angus Glen, arranged over 5 bedrooms. 2 bathrooms, and 2 spaces of parking. Notable inside: central air conditioning, double car garage, fenced rear yard. The lot measures roughly 36 by 110 feet. Transit and highway access come by way of YRT bus service. Arrange a showing to walk the layout.",
+   "featured": false
+  },
+  {
+   "id": "demo-006",
+   "demo": true,
+   "mls_number": "DEMO-1006",
+   "status": "For Sale",
+   "listing_type": "sale",
+   "price": 1164000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "",
+    "street_number": "136",
+    "street_name": "Giovanni Way",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L6C",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "cathedraltown",
+   "coordinates": {
+    "lat": 43.902299,
+    "lng": -79.332525
+   },
+   "property_type": "Semi-Detached",
+   "style": "2-Storey",
+   "bedrooms": 3,
+   "bathrooms": 3,
+   "square_footage": 1600,
+   "square_footage_source": "Demo data",
+   "lot": {
+    "frontage_ft": 25,
+    "depth_ft": 90
+   },
+   "parking_total": 2,
+   "garage_spaces": 1,
+   "year_built_range": "2011-2020",
+   "maintenance_fee_monthly": null,
+   "property_tax_annual": 8122,
+   "property_tax_year": 2025,
+   "features": [
+    "Renovated kitchen",
+    "Second-floor family room",
+    "Central air conditioning",
+    "Hardwood throughout",
+    "Skylight",
+    "Quartz countertops",
+    "Fenced rear yard",
+    "Stainless steel appliances"
+   ],
+   "amenities": [],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 4.09,
+     "width_m": 3.37
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 3.31,
+     "width_m": 3.63
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 3.27,
+     "width_m": 3.41
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 5.93,
+     "width_m": 3.82
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.76,
+     "width_m": 2.92
+    },
+    {
+     "level": "Second",
+     "name": "3rd Bedroom",
+     "length_m": 3.59,
+     "width_m": 2.78
+    }
+   ],
+   "days_on_market": 33,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 19,
+   "open_houses": [
+    {
+     "date": "2026-09-13",
+     "start": "12:00 PM",
+     "end": "2:00 PM"
+    }
+   ],
+   "sold": null,
+   "investment": null,
+   "description": "A 3-bedroom semi-detached in the heart of Cathedraltown. The layout carries 3 bathrooms and 2 spaces of parking. Notable inside: renovated kitchen, second-floor family room, central air conditioning. The lot measures roughly 25 by 90 feet. Transit and highway access come by way of YRT bus service. Worth seeing in person. The floor plan reads differently than the photographs.",
+   "featured": true
+  },
+  {
+   "id": "demo-007",
+   "demo": true,
+   "mls_number": "DEMO-1007",
+   "status": "For Sale",
+   "listing_type": "sale",
+   "price": 972000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "692",
+    "street_number": "79",
+    "street_name": "Mingay Avenue",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L6E",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "wismer-commons",
+   "coordinates": {
+    "lat": 43.888296,
+    "lng": -79.272649
+   },
+   "property_type": "Condo Townhouse",
+   "style": "Stacked",
+   "bedrooms": 2,
+   "bathrooms": 1,
+   "square_footage": 1210,
+   "square_footage_source": "Demo data",
+   "lot": null,
+   "parking_total": 1,
+   "garage_spaces": 2,
+   "year_built_range": "2021+",
+   "maintenance_fee_monthly": 977.71,
+   "property_tax_annual": 6695,
+   "property_tax_year": 2025,
+   "features": [
+    "Double car garage",
+    "Pot lights",
+    "Gas fireplace",
+    "Second-floor family room",
+    "Central air conditioning",
+    "Renovated kitchen",
+    "Primary bedroom ensuite",
+    "Skylight",
+    "Stainless steel appliances"
+   ],
+   "amenities": [
+    "Visitor parking",
+    "Bicycle storage",
+    "Fitness centre",
+    "Concierge",
+    "Party room"
+   ],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 5.73,
+     "width_m": 3.54
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 4.08,
+     "width_m": 3.0
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 3.71,
+     "width_m": 2.95
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 5.95,
+     "width_m": 4.38
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.3,
+     "width_m": 3.49
+    }
+   ],
+   "days_on_market": 21,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 30,
+   "open_houses": [
+    {
+     "date": "2026-09-06",
+     "start": "1:00 PM",
+     "end": "3:00 PM"
+    }
+   ],
+   "sold": null,
+   "investment": null,
+   "description": "A 2-bedroom stacked condo townhouse in Wismer Commons, offered at 1,210 square feet. 1 bathrooms, and one space of parking. Notable inside: double car garage, pot lights, gas fireplace. Building amenities include visitor parking, bicycle storage, fitness centre. Transit and highway access come by way of Mount Joy GO Station. Book a private showing to see how the space actually works.",
+   "featured": false
+  },
+  {
+   "id": "demo-008",
+   "demo": true,
+   "mls_number": "DEMO-1008",
+   "status": "For Sale",
+   "listing_type": "sale",
+   "price": 1007000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "",
+    "street_number": "214",
+    "street_name": "Bayview Avenue",
+    "city": "Thornhill",
+    "province": "ON",
+    "postal_prefix": "L3T",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "thornhill",
+   "coordinates": {
+    "lat": 43.802747,
+    "lng": -79.416862
+   },
+   "property_type": "Condo Townhouse",
+   "style": "2-Storey",
+   "bedrooms": 3,
+   "bathrooms": 2,
+   "square_footage": 1310,
+   "square_footage_source": "Demo data",
+   "lot": null,
+   "parking_total": 1,
+   "garage_spaces": 2,
+   "year_built_range": "1991-2000",
+   "maintenance_fee_monthly": 890.45,
+   "property_tax_annual": 9242,
+   "property_tax_year": 2025,
+   "features": [
+    "Walk-out basement",
+    "Hardwood throughout",
+    "Rough-in for bathroom",
+    "Gas fireplace",
+    "Fenced rear yard",
+    "Smooth ceilings"
+   ],
+   "amenities": [
+    "Fitness centre",
+    "Party room",
+    "Guest suite",
+    "Rooftop terrace",
+    "Visitor parking"
+   ],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 5.68,
+     "width_m": 3.31
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 3.75,
+     "width_m": 3.18
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 4.77,
+     "width_m": 3.15
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 5.15,
+     "width_m": 4.35
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 4.02,
+     "width_m": 3.32
+    },
+    {
+     "level": "Second",
+     "name": "3rd Bedroom",
+     "length_m": 3.77,
+     "width_m": 3.38
+    }
+   ],
+   "days_on_market": 1,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 31,
+   "open_houses": [
+    {
+     "date": "2026-09-12",
+     "start": "2:00 PM",
+     "end": "4:00 PM"
+    }
+   ],
+   "sold": null,
+   "investment": {
+    "estimated_monthly_rent": 3925,
+    "estimated_monthly_expenses": 1780,
+    "basis": "Demo figures for interface demonstration only.",
+    "is_estimate": true
+   },
+   "description": "1,310 square feet of finished space in Thornhill, arranged over 3 bedrooms. The layout carries 2 bathrooms and one space of parking. Notable inside: walk-out basement, hardwood throughout, rough-in for bathroom. Building amenities include fitness centre, party room, guest suite. Transit and highway access come by way of Viva Blue and YRT along Yonge Street. Worth seeing in person. The floor plan reads differently than the photographs.",
+   "featured": false
+  },
+  {
+   "id": "demo-009",
+   "demo": true,
+   "mls_number": "DEMO-1009",
+   "status": "For Sale",
+   "listing_type": "sale",
+   "price": 1511000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "",
+    "street_number": "217",
+    "street_name": "Mingay Avenue",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L6E",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "greensborough",
+   "coordinates": {
+    "lat": 43.902635,
+    "lng": -79.240814
+   },
+   "property_type": "Detached",
+   "style": "3-Storey",
+   "bedrooms": 4,
+   "bathrooms": 2,
+   "square_footage": 1880,
+   "square_footage_source": "Demo data",
+   "lot": {
+    "frontage_ft": 40,
+    "depth_ft": 100
+   },
+   "parking_total": 2,
+   "garage_spaces": 2,
+   "year_built_range": "Pre-1980",
+   "maintenance_fee_monthly": null,
+   "property_tax_annual": 13316,
+   "property_tax_year": 2025,
+   "features": [
+    "Stainless steel appliances",
+    "Gas fireplace",
+    "Central air conditioning",
+    "Walk-out basement",
+    "Primary bedroom ensuite",
+    "Pot lights",
+    "Rough-in for bathroom"
+   ],
+   "amenities": [],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 4.52,
+     "width_m": 3.76
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 3.8,
+     "width_m": 2.98
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 4.2,
+     "width_m": 3.53
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 4.38,
+     "width_m": 3.97
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.68,
+     "width_m": 3.27
+    },
+    {
+     "level": "Second",
+     "name": "3rd Bedroom",
+     "length_m": 3.04,
+     "width_m": 3.31
+    },
+    {
+     "level": "Second",
+     "name": "4th Bedroom",
+     "length_m": 3.1,
+     "width_m": 2.8
+    },
+    {
+     "level": "Basement",
+     "name": "Recreation",
+     "length_m": 7.07,
+     "width_m": 4.73
+    }
+   ],
+   "days_on_market": 17,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 20,
+   "open_houses": [
+    {
+     "date": "2026-09-06",
+     "start": "1:00 PM",
+     "end": "3:00 PM"
+    }
+   ],
+   "sold": null,
+   "investment": null,
+   "description": "1,880 square feet of finished space in Greensborough, arranged over 4 bedrooms. The layout carries 2 bathrooms and 2 spaces of parking. Notable inside: stainless steel appliances, gas fireplace, central air conditioning. The lot measures roughly 40 by 100 feet. Greensborough is served by Mount Joy GO Station. Worth seeing in person. The floor plan reads differently than the photographs.",
+   "featured": false
+  },
+  {
+   "id": "demo-010",
+   "demo": true,
+   "mls_number": "DEMO-1010",
+   "status": "For Sale",
+   "listing_type": "sale",
+   "price": 1152000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "",
+    "street_number": "284",
+    "street_name": "Esna Park Drive",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L3R",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "milliken-mills",
+   "coordinates": {
+    "lat": 43.823926,
+    "lng": -79.291782
+   },
+   "property_type": "Semi-Detached",
+   "style": "2-Storey",
+   "bedrooms": 4,
+   "bathrooms": 3,
+   "square_footage": 1620,
+   "square_footage_source": "Demo data",
+   "lot": {
+    "frontage_ft": 22,
+    "depth_ft": 90
+   },
+   "parking_total": 2,
+   "garage_spaces": 2,
+   "year_built_range": "1981-1990",
+   "maintenance_fee_monthly": null,
+   "property_tax_annual": 9055,
+   "property_tax_year": 2025,
+   "features": [
+    "Fenced rear yard",
+    "Skylight",
+    "Second-floor family room",
+    "Stainless steel appliances",
+    "Finished basement",
+    "Hardwood throughout",
+    "Pot lights",
+    "Gas fireplace"
+   ],
+   "amenities": [],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 5.7,
+     "width_m": 3.0
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 4.47,
+     "width_m": 2.81
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 4.47,
+     "width_m": 3.58
+    },
+    {
+     "level": "Main",
+     "name": "Family",
+     "length_m": 5.13,
+     "width_m": 3.63
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 4.48,
+     "width_m": 4.22
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.39,
+     "width_m": 3.23
+    },
+    {
+     "level": "Second",
+     "name": "3rd Bedroom",
+     "length_m": 3.59,
+     "width_m": 3.38
+    },
+    {
+     "level": "Second",
+     "name": "4th Bedroom",
+     "length_m": 3.3,
+     "width_m": 2.8
+    },
+    {
+     "level": "Basement",
+     "name": "Recreation",
+     "length_m": 4.29,
+     "width_m": 3.57
+    }
+   ],
+   "days_on_market": 26,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 33,
+   "open_houses": [],
+   "sold": null,
+   "investment": null,
+   "description": "A 4-bedroom semi-detached in the heart of Milliken Mills. Bathrooms total 3. Parking is 2 spaces of. Notable inside: fenced rear yard, skylight, second-floor family room. The lot measures roughly 22 by 90 feet. Milliken Mills is served by YRT and TTC connection at Steeles. A private showing is the fastest way to judge the fit.",
+   "featured": false
+  },
+  {
+   "id": "demo-011",
+   "demo": true,
+   "mls_number": "DEMO-1011",
+   "status": "For Sale",
+   "listing_type": "sale",
+   "price": 1604000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "",
+    "street_number": "262",
+    "street_name": "Bayview Avenue",
+    "city": "Richmond Hill",
+    "province": "ON",
+    "postal_prefix": "L4C",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "richmond-hill",
+   "coordinates": {
+    "lat": 43.872264,
+    "lng": -79.445996
+   },
+   "property_type": "Freehold Townhouse",
+   "style": "3-Storey",
+   "bedrooms": 2,
+   "bathrooms": 2,
+   "square_footage": 2060,
+   "square_footage_source": "Demo data",
+   "lot": {
+    "frontage_ft": 22,
+    "depth_ft": 110
+   },
+   "parking_total": 4,
+   "garage_spaces": 1,
+   "year_built_range": "2021+",
+   "maintenance_fee_monthly": null,
+   "property_tax_annual": 10942,
+   "property_tax_year": 2025,
+   "features": [
+    "Hardwood throughout",
+    "Second-floor family room",
+    "Double car garage",
+    "Fenced rear yard",
+    "Central air conditioning",
+    "Interlock driveway"
+   ],
+   "amenities": [],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 3.42,
+     "width_m": 3.39
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 4.1,
+     "width_m": 3.51
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 4.19,
+     "width_m": 3.55
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 4.79,
+     "width_m": 3.76
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 4.22,
+     "width_m": 2.91
+    }
+   ],
+   "days_on_market": 17,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 34,
+   "open_houses": [],
+   "sold": null,
+   "investment": null,
+   "description": "A 2-bedroom freehold townhouse in the heart of Richmond Hill. Bathrooms total 2. Parking is 4 spaces of. Notable inside: hardwood throughout, second-floor family room, double car garage. The lot measures roughly 22 by 110 feet. Transit and highway access come by way of Viva Blue and YRT along Yonge Street. A private showing is the fastest way to judge the fit.",
+   "featured": false
+  },
+  {
+   "id": "demo-012",
+   "demo": true,
+   "mls_number": "DEMO-1012",
+   "status": "For Sale",
+   "listing_type": "sale",
+   "price": 863000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "2065",
+    "street_number": "240",
+    "street_name": "Hoover Park Drive",
+    "city": "Whitchurch-Stouffville",
+    "province": "ON",
+    "postal_prefix": "L4A",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "stouffville",
+   "coordinates": {
+    "lat": 43.969263,
+    "lng": -79.242348
+   },
+   "property_type": "Condo Apartment",
+   "style": "Apartment",
+   "bedrooms": 2,
+   "bathrooms": 1,
+   "square_footage": 1160,
+   "square_footage_source": "Demo data",
+   "lot": null,
+   "parking_total": 1,
+   "garage_spaces": 0,
+   "year_built_range": "1981-1990",
+   "maintenance_fee_monthly": 706.69,
+   "property_tax_annual": 7160,
+   "property_tax_year": 2025,
+   "features": [
+    "Rough-in for bathroom",
+    "Central air conditioning",
+    "Pot lights",
+    "Second-floor family room",
+    "Double car garage",
+    "Smooth ceilings",
+    "Fenced rear yard"
+   ],
+   "amenities": [
+    "Rooftop terrace",
+    "Visitor parking",
+    "Fitness centre",
+    "Concierge",
+    "Party room"
+   ],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 4.38,
+     "width_m": 4.24
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 3.47,
+     "width_m": 3.02
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 3.31,
+     "width_m": 3.86
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 4.59,
+     "width_m": 4.32
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 4.14,
+     "width_m": 3.01
+    }
+   ],
+   "days_on_market": 24,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 32,
+   "open_houses": [],
+   "sold": null,
+   "investment": null,
+   "description": "A 2-bedroom apartment condo apartment in Whitchurch-Stouffville, offered at 1,160 square feet. 1 bathrooms, and one space of parking. Notable inside: rough-in for bathroom, central air conditioning, pot lights. Building amenities include rooftop terrace, visitor parking, fitness centre. Whitchurch-Stouffville is served by Stouffville GO Station. A private showing is the fastest way to judge the fit.",
+   "featured": false
+  },
+  {
+   "id": "demo-013",
+   "demo": true,
+   "mls_number": "DEMO-1013",
+   "status": "For Sale",
+   "listing_type": "sale",
+   "price": 697000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "911",
+    "street_number": "242",
+    "street_name": "Village Parkway",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L3R",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "unionville",
+   "coordinates": {
+    "lat": 43.874955,
+    "lng": -79.29997
+   },
+   "property_type": "Condo Apartment",
+   "style": "Apartment",
+   "bedrooms": 1,
+   "bathrooms": 2,
+   "square_footage": 850,
+   "square_footage_source": "Demo data",
+   "lot": null,
+   "parking_total": 2,
+   "garage_spaces": 0,
+   "year_built_range": "2001-2010",
+   "maintenance_fee_monthly": 561.1,
+   "property_tax_annual": 5414,
+   "property_tax_year": 2025,
+   "features": [
+    "Double car garage",
+    "Central air conditioning",
+    "Smooth ceilings",
+    "Quartz countertops",
+    "Interlock driveway",
+    "Primary bedroom ensuite",
+    "Stainless steel appliances",
+    "Cold cellar",
+    "Rough-in for bathroom"
+   ],
+   "amenities": [
+    "Guest suite",
+    "Visitor parking",
+    "Party room"
+   ],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 3.87,
+     "width_m": 3.95
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 4.25,
+     "width_m": 3.1
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 3.37,
+     "width_m": 2.85
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 6.03,
+     "width_m": 3.81
+    }
+   ],
+   "days_on_market": 60,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 26,
+   "open_houses": [
+    {
+     "date": "2026-09-05",
+     "start": "2:00 PM",
+     "end": "4:00 PM"
+    }
+   ],
+   "sold": null,
+   "investment": {
+    "estimated_monthly_rent": 2925,
+    "estimated_monthly_expenses": 1130,
+    "basis": "Demo figures for interface demonstration only.",
+    "is_estimate": true
+   },
+   "description": "A 1-bedroom apartment condo apartment in Unionville, offered at 850 square feet. The layout carries 2 bathrooms and 2 spaces of parking. Notable inside: double car garage, central air conditioning, smooth ceilings. Building amenities include guest suite, visitor parking, party room. Unionville is served by GO Transit Stouffville line. A private showing is the fastest way to judge the fit.",
+   "featured": false
+  },
+  {
+   "id": "demo-014",
+   "demo": true,
+   "mls_number": "DEMO-1014",
+   "status": "For Sale",
+   "listing_type": "sale",
+   "price": 2168000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "",
+    "street_number": "40",
+    "street_name": "Bur Oak Avenue",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L6B",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "cornell",
+   "coordinates": {
+    "lat": 43.881067,
+    "lng": -79.221792
+   },
+   "property_type": "Detached",
+   "style": "Bungalow",
+   "bedrooms": 3,
+   "bathrooms": 2,
+   "square_footage": 2920,
+   "square_footage_source": "Demo data",
+   "lot": {
+    "frontage_ft": 36,
+    "depth_ft": 110
+   },
+   "parking_total": 6,
+   "garage_spaces": 1,
+   "year_built_range": "2021+",
+   "maintenance_fee_monthly": null,
+   "property_tax_annual": 17802,
+   "property_tax_year": 2025,
+   "features": [
+    "Central air conditioning",
+    "Pot lights",
+    "Main floor laundry",
+    "Double car garage",
+    "Interlock driveway",
+    "Cold cellar",
+    "Gas fireplace",
+    "Second-floor family room"
+   ],
+   "amenities": [],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 5.75,
+     "width_m": 3.65
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 3.22,
+     "width_m": 3.36
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 4.12,
+     "width_m": 3.89
+    },
+    {
+     "level": "Main",
+     "name": "Family",
+     "length_m": 4.78,
+     "width_m": 3.81
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 3.84,
+     "width_m": 4.37
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.17,
+     "width_m": 2.89
+    },
+    {
+     "level": "Second",
+     "name": "3rd Bedroom",
+     "length_m": 3.08,
+     "width_m": 2.71
+    },
+    {
+     "level": "Basement",
+     "name": "Recreation",
+     "length_m": 4.35,
+     "width_m": 3.92
+    }
+   ],
+   "days_on_market": 2,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 24,
+   "open_houses": [],
+   "sold": null,
+   "investment": null,
+   "description": "This bungalow detached sits in Cornell and runs to 2,920 square feet. Bathrooms total 2. Parking is 6 spaces of. Notable inside: central air conditioning, pot lights, main floor laundry. The lot measures roughly 36 by 110 feet. For getting out of the neighbourhood: Cornell Bus Terminal. Book a private showing to see how the space actually works.",
+   "featured": true
+  },
+  {
+   "id": "demo-015",
+   "demo": true,
+   "mls_number": "DEMO-1015",
+   "status": "For Sale",
+   "listing_type": "sale",
+   "price": 706000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "644",
+    "street_number": "226",
+    "street_name": "Main Street North",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L3P",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "markham-village",
+   "coordinates": {
+    "lat": 43.88453,
+    "lng": -79.254093
+   },
+   "property_type": "Condo Apartment",
+   "style": "Apartment",
+   "bedrooms": 1,
+   "bathrooms": 2,
+   "square_footage": 920,
+   "square_footage_source": "Demo data",
+   "lot": null,
+   "parking_total": 0,
+   "garage_spaces": 0,
+   "year_built_range": "1991-2000",
+   "maintenance_fee_monthly": 542.66,
+   "property_tax_annual": 5424,
+   "property_tax_year": 2025,
+   "features": [
+    "Fenced rear yard",
+    "Walk-out basement",
+    "South-facing rear exposure",
+    "Main floor laundry",
+    "Skylight",
+    "Quartz countertops",
+    "Stainless steel appliances",
+    "Rough-in for bathroom"
+   ],
+   "amenities": [
+    "Guest suite",
+    "Rooftop terrace",
+    "Concierge",
+    "Bicycle storage"
+   ],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 5.05,
+     "width_m": 3.02
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 3.24,
+     "width_m": 2.9
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 3.61,
+     "width_m": 3.06
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 4.6,
+     "width_m": 3.45
+    }
+   ],
+   "days_on_market": 52,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 22,
+   "open_houses": [
+    {
+     "date": "2026-09-06",
+     "start": "1:00 PM",
+     "end": "3:00 PM"
+    }
+   ],
+   "sold": null,
+   "investment": {
+    "estimated_monthly_rent": 2750,
+    "estimated_monthly_expenses": 1115,
+    "basis": "Demo figures for interface demonstration only.",
+    "is_estimate": true
+   },
+   "description": "920 square feet of finished space in Markham Village, arranged over 1 bedrooms. The layout carries 2 bathrooms and no dedicated parking. Notable inside: fenced rear yard, walk-out basement, south-facing rear exposure. Building amenities include guest suite, rooftop terrace, concierge. For getting out of the neighbourhood: Markham GO Station. Book a private showing to see how the space actually works.",
+   "featured": false
+  },
+  {
+   "id": "demo-016",
+   "demo": true,
+   "mls_number": "DEMO-1016",
+   "status": "For Sale",
+   "listing_type": "sale",
+   "price": 844000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "1524",
+    "street_number": "91",
+    "street_name": "Grand Trunk Avenue",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L6C",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "berczy-village",
+   "coordinates": {
+    "lat": 43.889955,
+    "lng": -79.295294
+   },
+   "property_type": "Condo Apartment",
+   "style": "Apartment",
+   "bedrooms": 3,
+   "bathrooms": 1,
+   "square_footage": 1080,
+   "square_footage_source": "Demo data",
+   "lot": null,
+   "parking_total": 1,
+   "garage_spaces": 0,
+   "year_built_range": "2011-2020",
+   "maintenance_fee_monthly": 847.09,
+   "property_tax_annual": 7339,
+   "property_tax_year": 2025,
+   "features": [
+    "Main floor laundry",
+    "Central air conditioning",
+    "Finished basement",
+    "Double car garage",
+    "Fenced rear yard"
+   ],
+   "amenities": [
+    "Bicycle storage",
+    "Guest suite",
+    "Concierge",
+    "Party room",
+    "Visitor parking"
+   ],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 4.48,
+     "width_m": 3.81
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 3.7,
+     "width_m": 3.28
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 4.68,
+     "width_m": 3.41
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 5.69,
+     "width_m": 3.25
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.33,
+     "width_m": 2.98
+    },
+    {
+     "level": "Second",
+     "name": "3rd Bedroom",
+     "length_m": 3.13,
+     "width_m": 3.09
+    }
+   ],
+   "days_on_market": 41,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 29,
+   "open_houses": [],
+   "sold": null,
+   "investment": {
+    "estimated_monthly_rent": 3050,
+    "estimated_monthly_expenses": 1580,
+    "basis": "Demo figures for interface demonstration only.",
+    "is_estimate": true
+   },
+   "description": "A 3-bedroom condo apartment in the heart of Berczy Village. 1 bathrooms, and one space of parking. Notable inside: main floor laundry, central air conditioning, finished basement. Building amenities include bicycle storage, guest suite, concierge. Transit and highway access come by way of YRT bus service. Worth seeing in person. The floor plan reads differently than the photographs.",
+   "featured": false
+  },
+  {
+   "id": "demo-017",
+   "demo": true,
+   "mls_number": "DEMO-1017",
+   "status": "For Sale",
+   "listing_type": "sale",
+   "price": 1293000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "2004",
+    "street_number": "218",
+    "street_name": "Rustle Woods Avenue",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L6C",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "angus-glen",
+   "coordinates": {
+    "lat": 43.90318,
+    "lng": -79.308212
+   },
+   "property_type": "Condo Townhouse",
+   "style": "Stacked",
+   "bedrooms": 2,
+   "bathrooms": 1,
+   "square_footage": 1570,
+   "square_footage_source": "Demo data",
+   "lot": null,
+   "parking_total": 1,
+   "garage_spaces": 2,
+   "year_built_range": "1981-1990",
+   "maintenance_fee_monthly": 1037.27,
+   "property_tax_annual": 10323,
+   "property_tax_year": 2025,
+   "features": [
+    "Stainless steel appliances",
+    "South-facing rear exposure",
+    "Skylight",
+    "Quartz countertops",
+    "Rough-in for bathroom"
+   ],
+   "amenities": [
+    "Rooftop terrace",
+    "Bicycle storage",
+    "Guest suite"
+   ],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 4.38,
+     "width_m": 3.06
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 4.43,
+     "width_m": 3.79
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 4.29,
+     "width_m": 2.67
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 4.41,
+     "width_m": 3.99
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.59,
+     "width_m": 2.85
+    }
+   ],
+   "days_on_market": 41,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 21,
+   "open_houses": [],
+   "sold": null,
+   "investment": {
+    "estimated_monthly_rent": 5150,
+    "estimated_monthly_expenses": 2020,
+    "basis": "Demo figures for interface demonstration only.",
+    "is_estimate": true
+   },
+   "description": "A 2-bedroom condo townhouse in the heart of Angus Glen. 1 bathrooms, and one space of parking. Notable inside: stainless steel appliances, south-facing rear exposure, skylight. Building amenities include rooftop terrace, bicycle storage, guest suite. For getting out of the neighbourhood: YRT bus service. Book a private showing to see how the space actually works.",
+   "featured": true
+  },
+  {
+   "id": "demo-018",
+   "demo": true,
+   "mls_number": "DEMO-1018",
+   "status": "For Sale",
+   "listing_type": "sale",
+   "price": 1356000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "",
+    "street_number": "52",
+    "street_name": "Giovanni Way",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L6C",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "cathedraltown",
+   "coordinates": {
+    "lat": 43.897144,
+    "lng": -79.31776
+   },
+   "property_type": "Freehold Townhouse",
+   "style": "2-Storey",
+   "bedrooms": 4,
+   "bathrooms": 3,
+   "square_footage": 1800,
+   "square_footage_source": "Demo data",
+   "lot": {
+    "frontage_ft": 60,
+    "depth_ft": 90
+   },
+   "parking_total": 2,
+   "garage_spaces": 1,
+   "year_built_range": "2021+",
+   "maintenance_fee_monthly": null,
+   "property_tax_annual": 12294,
+   "property_tax_year": 2025,
+   "features": [
+    "Skylight",
+    "Interlock driveway",
+    "Stainless steel appliances",
+    "Primary bedroom ensuite",
+    "Walk-out basement",
+    "Finished basement",
+    "Second-floor family room"
+   ],
+   "amenities": [],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 5.76,
+     "width_m": 4.24
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 4.13,
+     "width_m": 3.24
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 3.13,
+     "width_m": 3.0
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 5.6,
+     "width_m": 4.45
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.48,
+     "width_m": 3.05
+    },
+    {
+     "level": "Second",
+     "name": "3rd Bedroom",
+     "length_m": 3.81,
+     "width_m": 2.61
+    },
+    {
+     "level": "Second",
+     "name": "4th Bedroom",
+     "length_m": 3.28,
+     "width_m": 2.87
+    }
+   ],
+   "days_on_market": 40,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 21,
+   "open_houses": [],
+   "sold": null,
+   "investment": null,
+   "description": "A 4-bedroom freehold townhouse in the heart of Cathedraltown. Bathrooms total 3. Parking is 2 spaces of. Notable inside: skylight, interlock driveway, stainless steel appliances. The lot measures roughly 60 by 90 feet. Transit and highway access come by way of YRT bus service. Arrange a showing to walk the layout.",
+   "featured": false
+  },
+  {
+   "id": "demo-019",
+   "demo": true,
+   "mls_number": "DEMO-1019",
+   "status": "For Lease",
+   "listing_type": "lease",
+   "price": 2725,
+   "price_qualifier": "per month",
+   "address": {
+    "unit": "",
+    "street_number": "67",
+    "street_name": "Fred Varley Drive",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L3R",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "unionville",
+   "coordinates": {
+    "lat": 43.874245,
+    "lng": -79.312072
+   },
+   "property_type": "Semi-Detached",
+   "style": "2-Storey",
+   "bedrooms": 2,
+   "bathrooms": 2,
+   "square_footage": 1710,
+   "square_footage_source": "Demo data",
+   "lot": {
+    "frontage_ft": 30,
+    "depth_ft": 115
+   },
+   "parking_total": 2,
+   "garage_spaces": 1,
+   "year_built_range": "2021+",
+   "maintenance_fee_monthly": null,
+   "property_tax_annual": null,
+   "property_tax_year": null,
+   "features": [
+    "Cold cellar",
+    "Primary bedroom ensuite",
+    "Interlock driveway",
+    "Gas fireplace",
+    "Renovated kitchen",
+    "Double car garage",
+    "Stainless steel appliances",
+    "Quartz countertops"
+   ],
+   "amenities": [],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 4.04,
+     "width_m": 3.03
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 3.01,
+     "width_m": 3.08
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 4.77,
+     "width_m": 2.66
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 5.32,
+     "width_m": 4.22
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.15,
+     "width_m": 3.34
+    },
+    {
+     "level": "Basement",
+     "name": "Office",
+     "length_m": 3.45,
+     "width_m": 2.64
+    }
+   ],
+   "days_on_market": 19,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 29,
+   "open_houses": [],
+   "sold": null,
+   "investment": null,
+   "description": "A 2-bedroom semi-detached for lease in Unionville, at 1,710 square feet. The layout carries 2 bathrooms and 2 spaces of parking. Notable inside: cold cellar, primary bedroom ensuite, interlock driveway. The lot measures roughly 30 by 115 feet. Transit and highway access come by way of GO Transit Stouffville line. Arrange a showing to walk the layout.",
+   "featured": false
+  },
+  {
+   "id": "demo-020",
+   "demo": true,
+   "mls_number": "DEMO-1020",
+   "status": "For Lease",
+   "listing_type": "lease",
+   "price": 2825,
+   "price_qualifier": "per month",
+   "address": {
+    "unit": "",
+    "street_number": "304",
+    "street_name": "Yonge Street",
+    "city": "Thornhill",
+    "province": "ON",
+    "postal_prefix": "L3T",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "thornhill",
+   "coordinates": {
+    "lat": 43.816186,
+    "lng": -79.417941
+   },
+   "property_type": "Semi-Detached",
+   "style": "3-Storey",
+   "bedrooms": 2,
+   "bathrooms": 2,
+   "square_footage": 1940,
+   "square_footage_source": "Demo data",
+   "lot": {
+    "frontage_ft": 20,
+    "depth_ft": 115
+   },
+   "parking_total": 4,
+   "garage_spaces": 1,
+   "year_built_range": "1981-1990",
+   "maintenance_fee_monthly": null,
+   "property_tax_annual": null,
+   "property_tax_year": null,
+   "features": [
+    "Skylight",
+    "Primary bedroom ensuite",
+    "Smooth ceilings",
+    "Main floor laundry",
+    "Cold cellar"
+   ],
+   "amenities": [],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 4.2,
+     "width_m": 4.09
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 4.15,
+     "width_m": 2.87
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 3.33,
+     "width_m": 2.7
+    },
+    {
+     "level": "Main",
+     "name": "Family",
+     "length_m": 4.02,
+     "width_m": 3.29
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 5.76,
+     "width_m": 3.4
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.18,
+     "width_m": 3.29
+    },
+    {
+     "level": "Basement",
+     "name": "Recreation",
+     "length_m": 6.15,
+     "width_m": 4.34
+    }
+   ],
+   "days_on_market": 13,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 28,
+   "open_houses": [],
+   "sold": null,
+   "investment": null,
+   "description": "A 2-bedroom semi-detached for lease in Thornhill, at 1,940 square feet. Bathrooms total 2. Parking is 4 spaces of. Notable inside: skylight, primary bedroom ensuite, smooth ceilings. The lot measures roughly 20 by 115 feet. For getting out of the neighbourhood: Viva Blue and YRT along Yonge Street. Arrange a showing to walk the layout.",
+   "featured": false
+  },
+  {
+   "id": "demo-021",
+   "demo": true,
+   "mls_number": "DEMO-1021",
+   "status": "For Lease",
+   "listing_type": "lease",
+   "price": 4650,
+   "price_qualifier": "per month",
+   "address": {
+    "unit": "",
+    "street_number": "285",
+    "street_name": "Bayview Avenue",
+    "city": "Richmond Hill",
+    "province": "ON",
+    "postal_prefix": "L4C",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "richmond-hill",
+   "coordinates": {
+    "lat": 43.873031,
+    "lng": -79.435035
+   },
+   "property_type": "Detached",
+   "style": "3-Storey",
+   "bedrooms": 5,
+   "bathrooms": 2,
+   "square_footage": 2850,
+   "square_footage_source": "Demo data",
+   "lot": {
+    "frontage_ft": 25,
+    "depth_ft": 100
+   },
+   "parking_total": 2,
+   "garage_spaces": 2,
+   "year_built_range": "2011-2020",
+   "maintenance_fee_monthly": null,
+   "property_tax_annual": null,
+   "property_tax_year": null,
+   "features": [
+    "Second-floor family room",
+    "South-facing rear exposure",
+    "Pot lights",
+    "Main floor laundry",
+    "Interlock driveway",
+    "Stainless steel appliances"
+   ],
+   "amenities": [],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 5.76,
+     "width_m": 3.9
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 4.33,
+     "width_m": 3.06
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 3.93,
+     "width_m": 3.02
+    },
+    {
+     "level": "Main",
+     "name": "Family",
+     "length_m": 5.33,
+     "width_m": 3.44
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 4.01,
+     "width_m": 3.34
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.22,
+     "width_m": 3.6
+    },
+    {
+     "level": "Second",
+     "name": "3rd Bedroom",
+     "length_m": 3.81,
+     "width_m": 2.62
+    },
+    {
+     "level": "Second",
+     "name": "4th Bedroom",
+     "length_m": 3.4,
+     "width_m": 2.69
+    }
+   ],
+   "days_on_market": 1,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 21,
+   "open_houses": [],
+   "sold": null,
+   "investment": null,
+   "description": "A 5-bedroom detached for lease in Richmond Hill, at 2,850 square feet. 2 bathrooms, and 2 spaces of parking. Notable inside: second-floor family room, south-facing rear exposure, pot lights. The lot measures roughly 25 by 100 feet. Richmond Hill is served by Viva Blue and YRT along Yonge Street. Arrange a showing to walk the layout.",
+   "featured": false
+  },
+  {
+   "id": "demo-022",
+   "demo": true,
+   "mls_number": "DEMO-1022",
+   "status": "For Lease",
+   "listing_type": "lease",
+   "price": 1325,
+   "price_qualifier": "per month",
+   "address": {
+    "unit": "",
+    "street_number": "259",
+    "street_name": "Rodick Road",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L3R",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "milliken-mills",
+   "coordinates": {
+    "lat": 43.819876,
+    "lng": -79.301349
+   },
+   "property_type": "Condo Apartment",
+   "style": "Apartment",
+   "bedrooms": 2,
+   "bathrooms": 2,
+   "square_footage": 900,
+   "square_footage_source": "Demo data",
+   "lot": null,
+   "parking_total": 1,
+   "garage_spaces": 0,
+   "year_built_range": "1991-2000",
+   "maintenance_fee_monthly": 519.33,
+   "property_tax_annual": null,
+   "property_tax_year": null,
+   "features": [
+    "Finished basement",
+    "Interlock driveway",
+    "Fenced rear yard",
+    "Hardwood throughout",
+    "Stainless steel appliances",
+    "Walk-out basement",
+    "Primary bedroom ensuite",
+    "South-facing rear exposure",
+    "Central air conditioning"
+   ],
+   "amenities": [
+    "Rooftop terrace",
+    "Concierge",
+    "Guest suite"
+   ],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 4.55,
+     "width_m": 3.15
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 3.85,
+     "width_m": 3.54
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 3.04,
+     "width_m": 2.95
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 4.46,
+     "width_m": 3.48
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.09,
+     "width_m": 3.54
+    }
+   ],
+   "days_on_market": 55,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 30,
+   "open_houses": [],
+   "sold": null,
+   "investment": null,
+   "description": "A 2-bedroom condo apartment for lease in Milliken Mills, at 900 square feet. The layout carries 2 bathrooms and one space of parking. Notable inside: finished basement, interlock driveway, fenced rear yard. Building amenities include rooftop terrace, concierge, guest suite. Transit and highway access come by way of YRT and TTC connection at Steeles. Arrange a showing to walk the layout.",
+   "featured": false
+  },
+  {
+   "id": "demo-023",
+   "demo": true,
+   "mls_number": "DEMO-1023",
+   "status": "Sold",
+   "listing_type": "sale",
+   "price": 1728000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "",
+    "street_number": "231",
+    "street_name": "Main Street Unionville",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L3R",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "unionville",
+   "coordinates": {
+    "lat": 43.86227,
+    "lng": -79.309609
+   },
+   "property_type": "Freehold Townhouse",
+   "style": "2-Storey",
+   "bedrooms": 3,
+   "bathrooms": 3,
+   "square_footage": 2190,
+   "square_footage_source": "Demo data",
+   "lot": {
+    "frontage_ft": 40,
+    "depth_ft": 100
+   },
+   "parking_total": 4,
+   "garage_spaces": 1,
+   "year_built_range": "Pre-1980",
+   "maintenance_fee_monthly": null,
+   "property_tax_annual": 15281,
+   "property_tax_year": 2025,
+   "features": [
+    "Walk-out basement",
+    "Rough-in for bathroom",
+    "Double car garage",
+    "South-facing rear exposure",
+    "Hardwood throughout",
+    "Stainless steel appliances",
+    "Main floor laundry",
+    "Fenced rear yard"
+   ],
+   "amenities": [],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 4.51,
+     "width_m": 3.31
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 3.27,
+     "width_m": 3.34
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 3.89,
+     "width_m": 3.8
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 5.02,
+     "width_m": 3.26
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.73,
+     "width_m": 3.32
+    },
+    {
+     "level": "Second",
+     "name": "3rd Bedroom",
+     "length_m": 3.57,
+     "width_m": 2.72
+    }
+   ],
+   "days_on_market": 39,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 19,
+   "open_houses": [],
+   "sold": {
+    "sold_price": 1801000,
+    "sold_date": "2026-07-19",
+    "days_to_sell": 13,
+    "_demo_note": "Demo record. Not a real transaction."
+   },
+   "investment": null,
+   "description": "A 3-bedroom 2-storey freehold townhouse in Unionville, offered at 2,190 square feet. The layout carries 3 bathrooms and 4 spaces of parking. Notable inside: walk-out basement, rough-in for bathroom, double car garage. The lot measures roughly 40 by 100 feet. Transit and highway access come by way of GO Transit Stouffville line. This property has sold.",
+   "featured": false
+  },
+  {
+   "id": "demo-024",
+   "demo": true,
+   "mls_number": "DEMO-1024",
+   "status": "Sold",
+   "listing_type": "sale",
+   "price": 1454000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "",
+    "street_number": "164",
+    "street_name": "Bur Oak Avenue",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L6B",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "cornell",
+   "coordinates": {
+    "lat": 43.874099,
+    "lng": -79.232572
+   },
+   "property_type": "Semi-Detached",
+   "style": "2-Storey",
+   "bedrooms": 5,
+   "bathrooms": 2,
+   "square_footage": 2010,
+   "square_footage_source": "Demo data",
+   "lot": {
+    "frontage_ft": 20,
+    "depth_ft": 120
+   },
+   "parking_total": 2,
+   "garage_spaces": 1,
+   "year_built_range": "Pre-1980",
+   "maintenance_fee_monthly": null,
+   "property_tax_annual": 10183,
+   "property_tax_year": 2025,
+   "features": [
+    "Walk-out basement",
+    "Fenced rear yard",
+    "South-facing rear exposure",
+    "Finished basement",
+    "Primary bedroom ensuite",
+    "Interlock driveway",
+    "Smooth ceilings",
+    "Skylight"
+   ],
+   "amenities": [],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 4.3,
+     "width_m": 3.63
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 3.06,
+     "width_m": 2.83
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 4.46,
+     "width_m": 2.85
+    },
+    {
+     "level": "Main",
+     "name": "Family",
+     "length_m": 3.96,
+     "width_m": 4.35
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 4.19,
+     "width_m": 3.67
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.99,
+     "width_m": 3.33
+    },
+    {
+     "level": "Second",
+     "name": "3rd Bedroom",
+     "length_m": 3.73,
+     "width_m": 3.37
+    },
+    {
+     "level": "Second",
+     "name": "4th Bedroom",
+     "length_m": 3.02,
+     "width_m": 2.62
+    }
+   ],
+   "days_on_market": 26,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 26,
+   "open_houses": [],
+   "sold": {
+    "sold_price": 1470000,
+    "sold_date": "2026-08-21",
+    "days_to_sell": 5,
+    "_demo_note": "Demo record. Not a real transaction."
+   },
+   "investment": {
+    "estimated_monthly_rent": 6525,
+    "estimated_monthly_expenses": 970,
+    "basis": "Demo figures for interface demonstration only.",
+    "is_estimate": true
+   },
+   "description": "2,010 square feet of finished space in Cornell, arranged over 5 bedrooms. Bathrooms total 2. Parking is 2 spaces of. Notable inside: walk-out basement, fenced rear yard, south-facing rear exposure. The lot measures roughly 20 by 120 feet. Transit and highway access come by way of Cornell Bus Terminal. This property has sold.",
+   "featured": false
+  },
+  {
+   "id": "demo-025",
+   "demo": true,
+   "mls_number": "DEMO-1025",
+   "status": "Sold",
+   "listing_type": "sale",
+   "price": 1114000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "",
+    "street_number": "40",
+    "street_name": "Fred McLaren Boulevard",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L6C",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "berczy-village",
+   "coordinates": {
+    "lat": 43.880741,
+    "lng": -79.313363
+   },
+   "property_type": "Freehold Townhouse",
+   "style": "2-Storey",
+   "bedrooms": 2,
+   "bathrooms": 2,
+   "square_footage": 1530,
+   "square_footage_source": "Demo data",
+   "lot": {
+    "frontage_ft": 45,
+    "depth_ft": 110
+   },
+   "parking_total": 4,
+   "garage_spaces": 1,
+   "year_built_range": "2021+",
+   "maintenance_fee_monthly": null,
+   "property_tax_annual": 9692,
+   "property_tax_year": 2025,
+   "features": [
+    "Second-floor family room",
+    "Renovated kitchen",
+    "Fenced rear yard",
+    "Finished basement",
+    "Main floor laundry",
+    "Central air conditioning",
+    "South-facing rear exposure"
+   ],
+   "amenities": [],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 5.23,
+     "width_m": 3.18
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 4.58,
+     "width_m": 2.86
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 4.75,
+     "width_m": 3.79
+    },
+    {
+     "level": "Main",
+     "name": "Family",
+     "length_m": 4.17,
+     "width_m": 3.77
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 4.77,
+     "width_m": 4.5
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.52,
+     "width_m": 3.57
+    },
+    {
+     "level": "Basement",
+     "name": "Recreation",
+     "length_m": 7.43,
+     "width_m": 3.92
+    },
+    {
+     "level": "Basement",
+     "name": "Office",
+     "length_m": 3.72,
+     "width_m": 2.48
+    }
+   ],
+   "days_on_market": 47,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 20,
+   "open_houses": [],
+   "sold": {
+    "sold_price": 1133000,
+    "sold_date": "2026-06-27",
+    "days_to_sell": 4,
+    "_demo_note": "Demo record. Not a real transaction."
+   },
+   "investment": null,
+   "description": "This 2-storey freehold townhouse sits in Berczy Village and runs to 1,530 square feet. The layout carries 2 bathrooms and 4 spaces of parking. Notable inside: second-floor family room, renovated kitchen, fenced rear yard. The lot measures roughly 45 by 110 feet. For getting out of the neighbourhood: YRT bus service. This property has sold.",
+   "featured": false
+  },
+  {
+   "id": "demo-026",
+   "demo": true,
+   "mls_number": "DEMO-1026",
+   "status": "Sold",
+   "listing_type": "sale",
+   "price": 1707000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "",
+    "street_number": "6",
+    "street_name": "Main Street North",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L3P",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "markham-village",
+   "coordinates": {
+    "lat": 43.883636,
+    "lng": -79.263819
+   },
+   "property_type": "Semi-Detached",
+   "style": "3-Storey",
+   "bedrooms": 2,
+   "bathrooms": 2,
+   "square_footage": 2260,
+   "square_footage_source": "Demo data",
+   "lot": {
+    "frontage_ft": 30,
+    "depth_ft": 110
+   },
+   "parking_total": 4,
+   "garage_spaces": 1,
+   "year_built_range": "Pre-1980",
+   "maintenance_fee_monthly": null,
+   "property_tax_annual": 14368,
+   "property_tax_year": 2025,
+   "features": [
+    "Main floor laundry",
+    "Renovated kitchen",
+    "South-facing rear exposure",
+    "Quartz countertops",
+    "Fenced rear yard",
+    "Hardwood throughout",
+    "Finished basement",
+    "Second-floor family room"
+   ],
+   "amenities": [],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 5.72,
+     "width_m": 3.38
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 3.71,
+     "width_m": 3.54
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 3.14,
+     "width_m": 3.09
+    },
+    {
+     "level": "Main",
+     "name": "Family",
+     "length_m": 5.19,
+     "width_m": 4.18
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 5.03,
+     "width_m": 3.57
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.97,
+     "width_m": 3.54
+    },
+    {
+     "level": "Basement",
+     "name": "Recreation",
+     "length_m": 5.2,
+     "width_m": 4.82
+    }
+   ],
+   "days_on_market": 27,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 19,
+   "open_houses": [],
+   "sold": {
+    "sold_price": 1660000,
+    "sold_date": "2026-07-08",
+    "days_to_sell": 38,
+    "_demo_note": "Demo record. Not a real transaction."
+   },
+   "investment": null,
+   "description": "A 2-bedroom 3-storey semi-detached in Markham Village, offered at 2,260 square feet. Bathrooms total 2. Parking is 4 spaces of. Notable inside: main floor laundry, renovated kitchen, south-facing rear exposure. The lot measures roughly 30 by 110 feet. Transit and highway access come by way of Markham GO Station. This property has sold.",
+   "featured": false
+  },
+  {
+   "id": "demo-027",
+   "demo": true,
+   "mls_number": "DEMO-1027",
+   "status": "Sold",
+   "listing_type": "sale",
+   "price": 1228000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "",
+    "street_number": "268",
+    "street_name": "Roy Rainey Avenue",
+    "city": "Markham",
+    "province": "ON",
+    "postal_prefix": "L6E",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "wismer-commons",
+   "coordinates": {
+    "lat": 43.898484,
+    "lng": -79.277456
+   },
+   "property_type": "Freehold Townhouse",
+   "style": "3-Storey",
+   "bedrooms": 4,
+   "bathrooms": 3,
+   "square_footage": 1560,
+   "square_footage_source": "Demo data",
+   "lot": {
+    "frontage_ft": 30,
+    "depth_ft": 110
+   },
+   "parking_total": 2,
+   "garage_spaces": 1,
+   "year_built_range": "1991-2000",
+   "maintenance_fee_monthly": null,
+   "property_tax_annual": 8769,
+   "property_tax_year": 2025,
+   "features": [
+    "Skylight",
+    "Gas fireplace",
+    "Interlock driveway",
+    "Fenced rear yard",
+    "Pot lights"
+   ],
+   "amenities": [],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 5.65,
+     "width_m": 3.06
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 3.52,
+     "width_m": 3.67
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 4.04,
+     "width_m": 3.47
+    },
+    {
+     "level": "Main",
+     "name": "Family",
+     "length_m": 3.78,
+     "width_m": 3.92
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 3.91,
+     "width_m": 4.37
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.58,
+     "width_m": 3.41
+    },
+    {
+     "level": "Second",
+     "name": "3rd Bedroom",
+     "length_m": 3.79,
+     "width_m": 2.66
+    },
+    {
+     "level": "Second",
+     "name": "4th Bedroom",
+     "length_m": 3.6,
+     "width_m": 2.72
+    },
+    {
+     "level": "Basement",
+     "name": "Recreation",
+     "length_m": 6.75,
+     "width_m": 4.04
+    },
+    {
+     "level": "Basement",
+     "name": "Office",
+     "length_m": 3.5,
+     "width_m": 2.95
+    }
+   ],
+   "days_on_market": 57,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 21,
+   "open_houses": [],
+   "sold": {
+    "sold_price": 1280000,
+    "sold_date": "2026-07-19",
+    "days_to_sell": 21,
+    "_demo_note": "Demo record. Not a real transaction."
+   },
+   "investment": null,
+   "description": "1,560 square feet of finished space in Wismer Commons, arranged over 4 bedrooms. The layout carries 3 bathrooms and 2 spaces of parking. Notable inside: skylight, gas fireplace, interlock driveway. The lot measures roughly 30 by 110 feet. Transit and highway access come by way of Mount Joy GO Station. This property has sold.",
+   "featured": false
+  },
+  {
+   "id": "demo-028",
+   "demo": true,
+   "mls_number": "DEMO-1028",
+   "status": "Sold",
+   "listing_type": "sale",
+   "price": 1960000,
+   "price_qualifier": null,
+   "address": {
+    "unit": "",
+    "street_number": "120",
+    "street_name": "Green Lane",
+    "city": "Thornhill",
+    "province": "ON",
+    "postal_prefix": "L3T",
+    "country": "Canada"
+   },
+   "neighbourhood_slug": "thornhill",
+   "coordinates": {
+    "lat": 43.805943,
+    "lng": -79.421822
+   },
+   "property_type": "Detached",
+   "style": "Backsplit",
+   "bedrooms": 4,
+   "bathrooms": 3,
+   "square_footage": 2390,
+   "square_footage_source": "Demo data",
+   "lot": {
+    "frontage_ft": 20,
+    "depth_ft": 100
+   },
+   "parking_total": 2,
+   "garage_spaces": 1,
+   "year_built_range": "1981-1990",
+   "maintenance_fee_monthly": null,
+   "property_tax_annual": 16592,
+   "property_tax_year": 2025,
+   "features": [
+    "Smooth ceilings",
+    "South-facing rear exposure",
+    "Hardwood throughout",
+    "Second-floor family room",
+    "Quartz countertops",
+    "Interlock driveway",
+    "Primary bedroom ensuite"
+   ],
+   "amenities": [],
+   "rooms": [
+    {
+     "level": "Main",
+     "name": "Living",
+     "length_m": 5.02,
+     "width_m": 3.04
+    },
+    {
+     "level": "Main",
+     "name": "Dining",
+     "length_m": 3.02,
+     "width_m": 3.73
+    },
+    {
+     "level": "Main",
+     "name": "Kitchen",
+     "length_m": 3.85,
+     "width_m": 3.4
+    },
+    {
+     "level": "Main",
+     "name": "Family",
+     "length_m": 4.43,
+     "width_m": 4.02
+    },
+    {
+     "level": "Second",
+     "name": "Primary",
+     "length_m": 5.46,
+     "width_m": 4.2
+    },
+    {
+     "level": "Second",
+     "name": "2nd Bedroom",
+     "length_m": 3.97,
+     "width_m": 3.53
+    },
+    {
+     "level": "Second",
+     "name": "3rd Bedroom",
+     "length_m": 3.05,
+     "width_m": 2.89
+    },
+    {
+     "level": "Second",
+     "name": "4th Bedroom",
+     "length_m": 3.58,
+     "width_m": 2.92
+    }
+   ],
+   "days_on_market": 26,
+   "listing_brokerage": "RE/MAX Epic Realty Inc., Brokerage",
+   "listing_agent": "Kaylin Smith",
+   "images": [],
+   "image_count": 23,
+   "open_houses": [],
+   "sold": {
+    "sold_price": 1931000,
+    "sold_date": "2026-07-08",
+    "days_to_sell": 15,
+    "_demo_note": "Demo record. Not a real transaction."
+   },
+   "investment": null,
+   "description": "2,390 square feet of finished space in Thornhill, arranged over 4 bedrooms. Bathrooms total 3. Parking is 2 spaces of. Notable inside: smooth ceilings, south-facing rear exposure, hardwood throughout. The lot measures roughly 20 by 100 feet. Thornhill is served by Viva Blue and YRT along Yonge Street. This property has sold.",
+   "featured": false
+  }
+ ]
+}

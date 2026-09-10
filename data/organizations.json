@@ -1,0 +1,60 @@
+{
+  "_note": "GIVING BACK / COMMUNITY. Renders as the #giving-back section of the About page. Written in the first person to match the rest of that page, which is how the client supplies it. Every line below was supplied by the client. Generic descriptions of what each charity does are deliberately absent: the brief asks for Kaylin's involvement, not an encyclopedia entry.",
+  "_url_note": "durhamcatholicfoundation.ca and embersforaccess.org were missing from this file. Both were confirmed as the organisations' own official sites, each carrying its charitable registration number (80442 9041 RR0001 and 781588363RR0001). The other three URLs were already on file. Confirm all five before launch.",
+  "_permission_status": "none_confirmed",
+  "intro": [
+    "Success is about more than what you build for yourself. It is also about what you contribute to the people and communities around you.",
+    "I am proud to support organizations and initiatives that create meaningful opportunities for children, families and communities."
+  ],
+  "organizations": [
+    {
+      "name": "Children's Miracle Network",
+      "url": "https://childrensmiraclenetworkhospitals.org/",
+      "involvement": [
+        "I have been a proud supporter of Children's Miracle Network for more than a decade.",
+        "Through my real estate business, a portion of the proceeds from the sale of every home I sell is donated to Children's Miracle Network, allowing my business and my clients' transactions to contribute to supporting children and families."
+      ],
+      "logo_path": "",
+      "permission_confirmed": false,
+      "verified": true
+    },
+    {
+      "name": "Durham Catholic Children's Foundation",
+      "url": "https://www.durhamcatholicfoundation.ca/",
+      "involvement": [
+        "I serve as a Community Representative on the Board of Directors of the Durham Catholic Children's Foundation (DCCF), supporting its work to provide resources, opportunities, and support to children and families across Durham Region."
+      ],
+      "logo_path": "",
+      "permission_confirmed": false,
+      "verified": true,
+      "_note": "Settled 2026-09-08: the board seat is on the DCCF board itself. This supersedes the DCPIC wording used between 2026-09-03 and 2026-09-08."
+    },
+    {
+      "name": "Plan International Canada",
+      "url": "https://plancanada.ca/",
+      "involvement": [
+        "I have proudly sponsored children through Plan International Canada for more than two decades.",
+        "My long-standing commitment reflects my belief in creating opportunities and supporting children and communities around the world."
+      ],
+      "logo_path": "",
+      "permission_confirmed": false,
+      "verified": true
+    },
+    {
+      "name": "Embers for Access Foundation",
+      "url": "https://www.embersforaccess.org/",
+      "involvement": [
+        "I support Embers for Access Foundation through sponsorship, community partnerships, fundraising and event initiatives focused on accessibility, inclusion and creating opportunities for individuals and families."
+      ],
+      "logo_path": "",
+      "permission_confirmed": false,
+      "verified": true
+    }
+  ],
+  "broader": {
+    "heading": "Broader community involvement",
+    "paragraphs": [
+      "My community involvement also includes serving as a director, consultant, sponsor, event leader and community partner across charitable, arts, culture and community initiatives."
+    ]
+  }
+}

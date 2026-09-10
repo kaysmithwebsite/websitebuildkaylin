@@ -1,0 +1,16 @@
+{
+  "_note": "CLIENT REVIEWS. This array is EMPTY on purpose. Kaylin's Google reviews were not supplied, and reproducing reviews scraped from Google or a third-party agent-rating site is both a licensing problem and a misrepresentation of where they came from. The homepage renders a real reviews section the moment entries exist here. Nothing is invented.",
+  "_source_status": "not_supplied",
+  "_how_to_populate": [
+    "Fastest: copy each review from the Google Business Profile dashboard into the array below, with the reviewer name exactly as it appears, the rating, the date and the text. Set verified to true.",
+    "Automated: the Google Places API can return up to five reviews for a Place ID. It needs a billed Google Cloud key, and the key must never be exposed in this page, so the call belongs in a Supabase edge function that caches the result.",
+    "Either way, aggregate rating and review count must reflect what Google actually shows. Do not round up."
+  ],
+  "aggregate": {
+    "rating": null,
+    "count": null,
+    "verified": false,
+    "_note": "Populate only from the live Google Business Profile. An aggregateRating in structured data that does not match the public profile is a manual-action risk."
+  },
+  "reviews": []
+}

@@ -1,0 +1,202 @@
+{
+  "_note": "SITE CONFIGURATION. Values marked \"_verified\": true were confirmed from public brokerage/board records. Values marked \"_placeholder\": true are NOT confirmed and MUST be replaced by Kaylin before launch. Nothing here is invented as fact.",
+  "agent": {
+    "name": "Kaylin Smith",
+    "title": "Real Estate Broker & Consultant",
+    "short_name": "Kaylin",
+    "_verified": true
+  },
+  "brokerage": {
+    "trade_name": "RE/MAX Epic Realty",
+    "legal_name": "RE/MAX Epic Realty Inc., Brokerage",
+    "_legal_name_verified": true,
+    "_legal_name_note": "Read from the brokerage's own For Sale signage in the photographs supplied 2026-09-01, which reads RE/MAX EPIC / REALTY INC. BROKERAGE. This supersedes the earlier value taken from a public directory, which omitted 'Inc.'. Ontario advertising rules require the registered name exactly, so confirm the punctuation against the RECO public register before launch, but the corporate form is now established.",
+    "address_line1": "50 Acadia Avenue, Suite 315",
+    "address_line2": "",
+    "city": "Markham",
+    "province": "ON",
+    "province_full": "Ontario",
+    "postal_code": "L3R 0B3",
+    "country": "CA",
+    "_address_verified": false,
+    "_address_note": "From the same public directory listing. Confirm with the brokerage.",
+    "office_phone": "+12898168368",
+    "office_phone_display": "289-816-8368",
+    "office_email": "",
+    "office_fax": "",
+    "_office_contact_note": "DELIBERATELY EMPTY. The brokerage office phone and email are not public knowledge and must not be guessed. Kaylin's direct line is separate and lives under `contact`. Until these are supplied the brokerage block shows the office address and name only, which still satisfies the identification requirement.",
+    "logo_path": "/assets/img/brokerage/remax-logo.png",
+    "logo_alt": "RE/MAX Epic Realty Inc., Brokerage",
+    "_logo_note": "Official RE/MAX EPIC brokerage lockup supplied by the client, cropped to its artwork and otherwise unmodified: not recoloured, redrawn or reproportioned. The lockup already carries 'Realty Inc., Each Office Independently Owned and Operated'. Its wordmark is black, so on the navy footer it sits on a white plate.",
+    "independence_notice": "Each Office Independently Owned and Operated.",
+    "franchise_note": "RE/MAX is a registered trademark of RE/MAX, LLC. Used under licence by the brokerage. This website is operated by Kaylin Smith, not by RE/MAX, LLC.",
+    "_verified": true,
+    "_source": "Brokerage signage photographed by the client, 2026-09-01. Address from public REALTOR.ca and RE/MAX directory listings.",
+    "_office_note": "Office number supplied by the client 2026-09-03. The brokerage has no public email, so none is shown and none should be invented.",
+    "independence_in_logo": true,
+    "display_name_lines": [
+      "RE/MAX EPIC REALTY",
+      "Brokerage"
+    ]
+  },
+  "contact": {
+    "phone": "+16479867355",
+    "phone_display": "647-986-7355",
+    "sms": "+16479867355",
+    "email": "info@kaylinsmith.com",
+    "office_phone": "",
+    "_source": "Phone supplied directly by the client 2026-09-08, correcting the number previously transcribed from a photograph. Email still to be confirmed.",
+    "_needs_confirmation": false,
+    "_instructions": "These were transcribed from photographs, not supplied directly. CONFIRM both values before launch and set _needs_confirmation to false. A wrong phone number or email on a live site costs real leads.",
+    "whatsapp": "+16479867355",
+    "_whatsapp_note": "Same number as the mobile, supplied by the client 2026-09-08."
+  },
+  "booking": {
+    "real_estate_url": "",
+    "consulting_url": "",
+    "_placeholder": true,
+    "_instructions": "Two separate scheduling links. Paste a Calendly or Cal.com URL for each and the booking buttons become direct links. While blank they route to the matching enquiry form, which still reaches Kaylin."
+  },
+  "registration": {
+    "designation": "Broker",
+    "reco_registration_disclosure": "Kaylin Smith is registered as a Broker with the Real Estate Council of Ontario (RECO), trading in real estate through RE/MAX Epic Realty Inc., Brokerage.",
+    "registration_number": "",
+    "_source": "Business card in the supplied photographs reads KAYLIN SMITH, BROKER.",
+    "_needs_confirmation": true,
+    "_placeholder_fields": [
+      "registration_number"
+    ],
+    "_instructions": "Broker and Salesperson are separate registration categories under TRESA. The site previously described Kaylin as a salesperson, which was wrong. Confirm the category and add the RECO registration number. The brokerage legal name is required on all advertising and is enforced in the footer template."
+  },
+  "service_area": {
+    "primary_city": "Markham",
+    "region": "Greater Toronto Area",
+    "board": "Toronto Regional Real Estate Board (TRREB)",
+    "_verified": true
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/kaylinsmithdotcom/",
+    "linkedin": "https://www.linkedin.com/in/kaylinsmith/",
+    "facebook": "https://www.facebook.com/kaylinsmith.realestate/",
+    "youtube": "",
+    "_partially_verified": true,
+    "_instructions": "Facebook and LinkedIn confirmed from public search. Instagram/YouTube left blank; blank channels are not rendered.",
+    "_source_instagram": "Handle @kaylinsmithdotcom read from the supplied photographs."
+  },
+  "seo": {
+    "site_name": "Kaylin Smith Real Estate",
+    "base_url": "https://kaylinsmith.com",
+    "default_title": "Kaylin Smith | Real Estate Broker & Consultant | Markham & the GTA",
+    "default_description": "Kaylin Smith is a real estate broker serving Markham, Toronto and the Greater Toronto Area, and a consultant on business, transactions, charity affairs and events.",
+    "locale": "en_CA",
+    "twitter_handle": ""
+  },
+  "analytics": {
+    "ga4_measurement_id": "",
+    "_placeholder": true,
+    "_instructions": "Paste a GA4 Measurement ID (G-XXXXXXX) to activate analytics. When blank, events are still emitted to a local dataLayer and logged in dev so the event map can be verified without a live property."
+  },
+  "supabase": {
+    "url": "",
+    "anon_key": "",
+    "_placeholder": true,
+    "_instructions": "Paste the Supabase project URL and anon/publishable key to make every form persist to the database. Run supabase/schema.sql first. While blank, forms validate fully and queue submissions locally, and the UI states plainly that delivery is not yet connected. Never paste a service_role key here; this file is public."
+  },
+  "listings_feed": {
+    "provider": "",
+    "status": "not_connected",
+    "_instructions": "Property data is served from data/properties.json as clearly-marked demo records. When an authorized TRREB/CREA DDF or IDX feed is licensed, map it to the normalized schema in supabase/schema.sql (table: properties) and set status to 'connected'. Demo records render a visible DEMO badge until then."
+  },
+  "brands": {
+    "_note": "Two brands, deliberately separated. Real estate leads everywhere except the consulting section. Neither logo file has been supplied, so both render as typographic lockups built from the site's own type system. Drop a real file at the logo path and it replaces the lockup automatically, no other change needed.",
+    "real_estate": {
+      "name": "Kaylin Smith",
+      "descriptor": "Real Estate",
+      "lockup": "KAYLIN SMITH",
+      "sub": "REAL ESTATE",
+      "logo_path": "/assets/img/brand/re-navy.png",
+      "logo_alt": "Kaylin Smith Real Estate",
+      "_logo_note": "Two colourways. The navy lockup is the supplied artwork, cropped only. The white one is a reversed colourway derived from it by tools_knockout.py: the mark's shapes, proportions and spacing are untouched and only the colour is inverted, with anti-aliased edges preserved. If the designer supplies an official white version, drop it in at the same path.",
+      "logo_path_light": "/assets/img/brand/re-white.png"
+    },
+    "consulting": {
+      "name": "Kay Smith",
+      "descriptor": "Consulting Group",
+      "lockup": "KAYLIN SMITH",
+      "sub": "CONSULTING GROUP",
+      "logo_path": "/assets/img/brand/consulting-white.png",
+      "logo_alt": "Kay Smith Consulting Group",
+      "_logo_note": "Supplied white lockup on transparency, cropped to its artwork. It is white, so the consulting navigation stays navy rather than turning white on scroll.",
+      "_name_discrepancy": "STILL OPEN, and the evidence has shifted. The supplied logo artwork reads KAY SMITH CONSULTING GROUP. The booking address was kaysmithconsultinggroup@gmail.com until 2026-09-10, when the client changed it to kaylinsmithconsultinggroup@gmail.com. The site currently displays 'Kay Smith Consulting Group', chosen when the logo and the email agreed. Only the logo says Kay now. Confirm which name is correct: if it is Kaylin, the displayed name should change and the logo artwork needs replacing."
+    }
+  },
+  "reviews": {
+    "google_place_id": "",
+    "google_profile_url": "",
+    "_placeholder": true,
+    "_instructions": "Reviews are read from data/reviews.json. Paste the Google Business Profile URL so the homepage can link to the full review list, and the Place ID if you later want to pull them automatically through the Places API, which needs a billed Google Cloud key served from a backend, never from this page."
+  },
+  "routing": {
+    "_note": "Lead routing, set by the client 2026-09-10: real estate to info@kaylinsmith.com, EVERYTHING ELSE to the consulting inbox. Real estate is therefore the explicit list and consulting is the default, which is the safer way round: a new form added later lands in the general inbox rather than silently joining the real estate pipeline.",
+    "default": "consulting",
+    "real_estate": {
+      "email": "info@kaylinsmith.com",
+      "paths": [
+        "buy",
+        "sell",
+        "invest"
+      ],
+      "tables": [
+        "leads",
+        "showing_requests",
+        "valuation_requests",
+        "referral_requests",
+        "guide_downloads",
+        "newsletter_subscribers",
+        "listing_alerts"
+      ],
+      "calendar_id": "",
+      "_calendar_note": "Google Calendar ID for confirmed real estate consultations. Usually the account email, or a secondary calendar's ID from Calendar settings. Requires a Google service account with domain-wide delegation, or an OAuth refresh token, stored as a Supabase secret. While blank, the booking confirmation email still sends and no calendar event is created."
+    },
+    "consulting": {
+      "email": "kaylinsmithconsultinggroup@gmail.com",
+      "paths": [
+        "consulting",
+        "other"
+      ],
+      "tables": [
+        "business_enquiries",
+        "consultation_requests"
+      ],
+      "calendar_id": "",
+      "_calendar_note": "Separate calendar for consulting, so the two practices do not collide."
+    },
+    "_path_table": "crm_inquiries is the progressive form and carries both practices. It is routed on crm_inquiries.path: buy, sell and invest to real estate; consulting and other to the consulting inbox. Before this change it matched no rule and fell through to real estate, which mixed the two.",
+    "_needs_confirmation": true,
+    "_instructions": "Verify both addresses receive mail before launch, then set the Supabase secrets NOTIFY_TO_REAL_ESTATE and NOTIFY_TO_CONSULTING to match."
+  },
+  "netlify_forms": {
+    "_note": "Netlify Forms is the guaranteed capture path: it needs no database and no email provider. Two form names so Netlify's own notification settings can route each to its own inbox, which is simpler and harder to get wrong than conditional logic. Supabase, when configured, ALSO receives the submission and drives the CRM. A submission counts as delivered if either path succeeds.",
+    "enabled": true,
+    "forms": {
+      "real_estate": {
+        "name": "real-estate-enquiry",
+        "notify": "info@kaylinsmith.com",
+        "paths": [
+          "buy",
+          "sell",
+          "invest"
+        ]
+      },
+      "consulting": {
+        "name": "consulting-enquiry",
+        "notify": "kaylinsmithconsultinggroup@gmail.com",
+        "paths": [
+          "consulting",
+          "other"
+        ]
+      }
+    },
+    "_setup": "In Netlify: Project configuration > Forms > enable form detection, then redeploy. After the first submission of each form, set its notification address under Forms > <form name> > Settings and usage > Form notifications."
+  }
+}

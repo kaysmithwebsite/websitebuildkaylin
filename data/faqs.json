@@ -1,0 +1,31 @@
+{
+  "_note": "FAQ content. Answers are general information about the Ontario real estate process and contain no claims about Kaylin's individual results. Rendered with FAQPage structured data per section 31.",
+  "groups": [
+    {
+      "id": "buying", "title": "Buying",
+      "items": [
+        { "q": "How much do I need for a down payment in Ontario?", "a": "Federally regulated minimums are five percent on the portion of a purchase price up to $500,000, ten percent on the portion between $500,000 and $1,500,000, and twenty percent on properties of $1,500,000 or more. Anything under twenty percent requires mortgage default insurance, which is added to the mortgage. Confirm current thresholds with your lender or mortgage broker, as these rules change." },
+        { "q": "What does a buyer pay in closing costs?", "a": "In Ontario the main items are provincial land transfer tax, legal fees and disbursements, title insurance, and adjustments for prepaid property taxes or utilities. Purchases within the City of Toronto also attract a municipal land transfer tax. First-time buyers may qualify for a rebate on both. Your lawyer will provide a statement of adjustments before closing." },
+        { "q": "Does a buyer pay Kaylin's commission?", "a": "Compensation arrangements are set out in a written representation agreement and vary by transaction. Under Ontario's Trust in Real Estate Services Act, the terms of representation and remuneration must be disclosed to you in writing before you are bound. Ask for that in writing at the outset, and take the time to read it." },
+        { "q": "Should I get pre-approved before looking?", "a": "Yes, and understand the limits of it. Pre-approval assesses you, not the property. A lender can still decline to advance funds against a specific property, most commonly on appraised value. Doing the financing work early is what makes a competitive offer possible later." }
+      ]
+    },
+    {
+      "id": "selling", "title": "Selling",
+      "items": [
+        { "q": "How long does it take to sell?", "a": "It depends on property type, price band, community and current absorption in that specific segment, not on a city-wide average. That figure can be estimated for your property from comparable activity, and it should be estimated before you list, because it changes preparation and pricing decisions." },
+        { "q": "What preparation is actually worth doing?", "a": "Generally: cleaning, decluttering, addressing deferred maintenance that a buyer would flag, and paint. Larger renovations frequently do not return their cost at sale and can delay a listing past a favourable window. The right answer is property-specific and should be decided before work begins, not during." },
+        { "q": "Do I have to accept the highest offer?", "a": "No. A seller may accept, counter or reject any offer. Price is one term among several, and closing date, deposit, conditions and the strength of the buyer's financing all affect whether an accepted offer actually completes." },
+        { "q": "What is a home evaluation and what does it cost?", "a": "It is a written opinion of likely market value based on comparable sales, current competing inventory and the specific characteristics of your property. Kaylin provides it at no cost and with no obligation. It is not an appraisal, which is a separate service performed by a licensed appraiser and is what a lender relies on." }
+      ]
+    },
+    {
+      "id": "working-together", "title": "Working together",
+      "items": [
+        { "q": "What does a real estate consultant do that a broker does not?", "a": "Consulting work is advisory and is not tied to completing a transaction. It covers questions like whether to buy or sell at all, how to sequence a move, how a property performs as a hold, or how a portfolio is positioned. Sometimes the outcome is that no transaction should happen. That is a legitimate result." },
+        { "q": "Do you work outside Markham?", "a": "Yes. Kaylin trades in real estate through RE/MAX Epic Realty Inc., Brokerage in Markham and works across the Greater Toronto Area. Where a property falls outside her direct experience, she will say so and refer you to someone whose experience fits it better." },
+        { "q": "Is my information kept private?", "a": "Personal information submitted through this site is used to respond to your enquiry and is handled in accordance with Canadian privacy legislation, including PIPEDA. Marketing consent is requested separately from a transactional enquiry, and you can withdraw it at any time." }
+      ]
+    }
+  ]
+}

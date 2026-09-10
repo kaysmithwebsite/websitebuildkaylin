@@ -1,0 +1,68 @@
+{
+  "_note": "Four guides under Kaylin Smith Real Estate. Two are RE/MAX publications she distributes; that is stated once, discreetly, on the guide itself rather than turned into the headline, because the visitor is here for Kaylin. Chapter lists for the RE/MAX PDFs are empty on purpose: this build cannot read an image-based PDF and will not invent a table of contents for a document it has not opened. The other two have no file yet and say so.",
+  "guides": [
+    {
+      "slug": "buying",
+      "title": "The Buying Guide",
+      "subtitle": "What the process actually involves, from financing readiness to the keys.",
+      "audience": "buying",
+      "lead_source": "guide_buying",
+      "file_path": "/assets/guides/remax-homebuyers-guide.pdf",
+      "file_bytes": 18245151,
+      "publisher": "RE/MAX",
+      "chapters": [],
+      "note": "Published by RE/MAX and provided by Kaylin. Sent by email after you request it."
+    },
+    {
+      "slug": "selling",
+      "title": "The Selling Guide",
+      "subtitle": "Preparation, positioning and negotiation, in the order they happen.",
+      "audience": "selling",
+      "lead_source": "guide_selling",
+      "file_path": "/assets/guides/remax-home-sellers-guide.pdf",
+      "file_bytes": 17300944,
+      "publisher": "RE/MAX",
+      "chapters": [],
+      "note": "Published by RE/MAX and provided by Kaylin. Sent by email after you request it."
+    },
+    {
+      "slug": "investing",
+      "title": "The Investing Guide",
+      "subtitle": "Modelling a hold honestly, including the costs most spreadsheets leave out.",
+      "audience": "investing",
+      "lead_source": "guide_investing",
+      "file_path": "",
+      "file_bytes": 0,
+      "publisher": "Kaylin Smith Real Estate",
+      "chapters": [
+        "Gross yield, net yield and cash on cash, and when each one misleads",
+        "Building an expense model that includes a real capital reserve",
+        "How financing structure changes the investment, not just the payment",
+        "The Residential Tenancies Act as a modelling input",
+        "Assessing a tenanted property at acquisition",
+        "Exit assumptions, and testing them before you rely on them"
+      ],
+      "note": "Written by Kaylin. In preparation."
+    },
+    {
+      "slug": "homeownership",
+      "title": "The Homeownership Guide",
+      "subtitle": "What comes after closing, and what it costs to hold a home well.",
+      "audience": "homeownership",
+      "lead_source": "guide_homeownership",
+      "file_path": "",
+      "file_bytes": 0,
+      "publisher": "Kaylin Smith Real Estate",
+      "chapters": [
+        "The first ninety days: utilities, insurance, and what to change immediately",
+        "Property tax, assessment and how an appeal actually works",
+        "A maintenance calendar that prevents the expensive failures",
+        "Which improvements return their cost at resale and which do not",
+        "Permits, open permits and why they surface at the worst moment",
+        "Who to call: which tier of municipal government owns which problem",
+        "Reviewing your mortgage before renewal rather than at it"
+      ],
+      "note": "Written by Kaylin. In preparation."
+    }
+  ]
+}

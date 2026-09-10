@@ -1,0 +1,537 @@
+{
+ "_note": "SECTION 13 NEIGHBOURHOODS. Geographic, lifestyle and landmark descriptions below are general, publicly-known facts about real communities in Markham and the surrounding GTA, written originally for this site. Market statistics are deliberately null: average price, median price, days on market and sale-to-list ratio require a licensed TRREB data source and must never be estimated. Kaylin's commentary fields are empty and awaiting her own words.",
+ "_market_data_status": "not_connected",
+ "neighbourhoods": [
+  {
+   "slug": "unionville",
+   "name": "Unionville",
+   "city": "Markham",
+   "tagline": "A preserved 19th-century main street inside a modern city.",
+   "intro": "Unionville is one of the oldest settled areas in Markham, built around a Main Street that has kept its 19th-century storefronts while the surrounding city grew into one of the largest employment centres in the GTA. It is a rare combination: a genuine heritage core, strong schools, and immediate access to Highway 407.",
+   "lifestyle": "Main Street Unionville runs from Highway 7 north to Toogood Pond, lined with independent restaurants, cafes and small retail in restored heritage buildings. Weekends draw people from across the region, which is part of the appeal and part of the trade-off.",
+   "housing_types": [
+    "Detached",
+    "Semi-detached",
+    "Townhouse",
+    "Condominium apartment",
+    "Heritage property"
+   ],
+   "housing_note": "Housing stock ranges from protected heritage homes on and around Main Street to large detached homes in the surrounding subdivisions and newer condominium development along Highway 7.",
+   "parks": [
+    "Toogood Pond Park",
+    "Crosby Park",
+    "Milne Dam Conservation Park"
+   ],
+   "landmarks": [
+    "Historic Main Street Unionville",
+    "Unionville Station",
+    "Flato Markham Theatre",
+    "Varley Art Gallery of Markham"
+   ],
+   "transportation": [
+    "GO Transit Stouffville line, Unionville GO Station",
+    "Viva and YRT bus service along Highway 7",
+    "Highway 407 ETR access",
+    "Highway 404 nearby"
+   ],
+   "schools_note": "Served by the York Region District School Board and York Catholic District School Board. School catchments change; verify current boundaries directly with the school board before relying on them.",
+   "market_data": {
+    "average_price": null,
+    "median_price": null,
+    "transactions": null,
+    "new_listings": null,
+    "days_on_market": null,
+    "sale_to_list_ratio": null,
+    "period": null,
+    "source": null
+   },
+   "kaylin_commentary": "",
+   "hero_tone": "heritage",
+   "featured": true
+  },
+  {
+   "slug": "cornell",
+   "name": "Cornell",
+   "city": "Markham",
+   "tagline": "New urbanism, built to a plan.",
+   "intro": "Cornell was master-planned on new urbanist principles: narrow lots, front porches close to the sidewalk, rear laneway garages, and a street grid designed to be walked rather than driven. It is one of the clearest examples of the approach anywhere in Ontario.",
+   "lifestyle": "The neighbourhood is anchored by Cornell Community Centre and Library and by Markham Stouffville Hospital. The design intent shows in daily life: short blocks, visible front doors, and a community centre placed within walking distance of most of the plan.",
+   "housing_types": [
+    "Detached",
+    "Semi-detached",
+    "Freehold townhouse",
+    "Laneway townhouse",
+    "Condominium townhouse"
+   ],
+   "housing_note": "Predominantly newer construction. Laneway-garage homes are common, which changes both streetscape and parking from a conventional subdivision.",
+   "parks": [
+    "Cornell Park",
+    "Rouge National Urban Park access",
+    "Cornell Community Park"
+   ],
+   "landmarks": [
+    "Cornell Community Centre and Library",
+    "Markham Stouffville Hospital",
+    "Cornell Bus Terminal"
+   ],
+   "transportation": [
+    "Cornell Bus Terminal, YRT and Viva",
+    "Highway 407 ETR access",
+    "Donald Cousens Parkway",
+    "Mount Joy GO Station nearby"
+   ],
+   "schools_note": "Served by the York Region District School Board and York Catholic District School Board. Verify current catchments with the school board.",
+   "market_data": {
+    "average_price": null,
+    "median_price": null,
+    "transactions": null,
+    "new_listings": null,
+    "days_on_market": null,
+    "sale_to_list_ratio": null,
+    "period": null,
+    "source": null
+   },
+   "kaylin_commentary": "",
+   "hero_tone": "planned",
+   "featured": true
+  },
+  {
+   "slug": "markham-village",
+   "name": "Markham Village",
+   "city": "Markham",
+   "tagline": "The original town, still legible in the street pattern.",
+   "intro": "Markham Village is the historic core the wider city takes its name from. Main Street Markham North still carries the original commercial frontage, and the surrounding blocks hold some of the oldest residential stock in York Region alongside decades of later infill.",
+   "lifestyle": "Quieter than Unionville and more residential in character. Independent businesses, long-standing community events, and mature tree cover on the older streets.",
+   "housing_types": [
+    "Detached",
+    "Semi-detached",
+    "Townhouse",
+    "Century home"
+   ],
+   "housing_note": "Unusually wide range of construction eras on adjacent streets, from 19th-century century homes to postwar bungalows to recent infill. Lot sizes vary considerably block to block.",
+   "parks": [
+    "Morgan Park",
+    "Milne Dam Conservation Park",
+    "Markham Green"
+   ],
+   "landmarks": [
+    "Main Street Markham",
+    "Markham Museum",
+    "Markham Village Library"
+   ],
+   "transportation": [
+    "Markham GO Station, Stouffville line",
+    "YRT bus service",
+    "Highway 407 ETR access",
+    "Highway 7 corridor"
+   ],
+   "schools_note": "Served by the York Region District School Board and York Catholic District School Board. Verify current catchments with the school board.",
+   "market_data": {
+    "average_price": null,
+    "median_price": null,
+    "transactions": null,
+    "new_listings": null,
+    "days_on_market": null,
+    "sale_to_list_ratio": null,
+    "period": null,
+    "source": null
+   },
+   "kaylin_commentary": "",
+   "hero_tone": "heritage",
+   "featured": true
+  },
+  {
+   "slug": "berczy-village",
+   "name": "Berczy Village",
+   "city": "Markham",
+   "tagline": "Family-oriented, and priced accordingly.",
+   "intro": "Berczy Village is a largely late-1990s-to-2000s community in north-central Markham that has developed a strong reputation with families, driven substantially by its schools and by a consistent housing stock of detached and townhome product.",
+   "lifestyle": "Suburban in form and quiet in character, with retail concentrated at the plazas along Major Mackenzie Drive and Kennedy Road rather than in a walkable main street.",
+   "housing_types": [
+    "Detached",
+    "Semi-detached",
+    "Freehold townhouse"
+   ],
+   "housing_note": "Consistent construction era means comparables are relatively clean, which matters when pricing a sale here.",
+   "parks": [
+    "Berczy Park",
+    "Ada Mackenzie Park",
+    "Swan Lake Park"
+   ],
+   "landmarks": [
+    "Berczy Park",
+    "Angus Glen Community Centre nearby"
+   ],
+   "transportation": [
+    "YRT bus service",
+    "Highway 404 access",
+    "Highway 407 ETR access",
+    "Unionville GO Station nearby"
+   ],
+   "schools_note": "Served by the York Region District School Board and York Catholic District School Board. Catchment reputation is frequently cited in this area; confirm current boundaries with the board rather than relying on listings.",
+   "market_data": {
+    "average_price": null,
+    "median_price": null,
+    "transactions": null,
+    "new_listings": null,
+    "days_on_market": null,
+    "sale_to_list_ratio": null,
+    "period": null,
+    "source": null
+   },
+   "kaylin_commentary": "",
+   "hero_tone": "residential",
+   "featured": true
+  },
+  {
+   "slug": "angus-glen",
+   "name": "Angus Glen",
+   "city": "Markham",
+   "tagline": "Large lots on the edge of the golf course.",
+   "intro": "Angus Glen developed around the golf club of the same name in north Markham. It holds some of the larger detached housing stock in the city, and the community centre is among the most substantial municipal facilities in York Region.",
+   "lifestyle": "Low density by Markham standards, with wide streets and a strong association with the golf club and the community centre.",
+   "housing_types": [
+    "Detached",
+    "Estate home",
+    "Freehold townhouse"
+   ],
+   "housing_note": "Lot frontage and finish level vary widely, which makes comparable selection genuinely difficult here. This is a neighbourhood where pricing by square footage alone tends to mislead.",
+   "parks": [
+    "Angus Glen Park",
+    "Bruce Creek greenway"
+   ],
+   "landmarks": [
+    "Angus Glen Golf Club",
+    "Angus Glen Community Centre and Library"
+   ],
+   "transportation": [
+    "YRT bus service",
+    "Highway 404 access",
+    "Major Mackenzie Drive corridor"
+   ],
+   "schools_note": "Served by the York Region District School Board and York Catholic District School Board. Verify current catchments with the school board.",
+   "market_data": {
+    "average_price": null,
+    "median_price": null,
+    "transactions": null,
+    "new_listings": null,
+    "days_on_market": null,
+    "sale_to_list_ratio": null,
+    "period": null,
+    "source": null
+   },
+   "kaylin_commentary": "",
+   "hero_tone": "estate",
+   "featured": true
+  },
+  {
+   "slug": "cathedraltown",
+   "name": "Cathedraltown",
+   "city": "Markham",
+   "tagline": "Built around a cathedral, on a formal plan.",
+   "intro": "Cathedraltown is organised around the Cathedral of the Transfiguration, with a formal street plan and a densely built mix of detached homes, towns and low-rise condominium buildings. It is one of the more architecturally distinctive plans in Markham.",
+   "lifestyle": "Compact and walkable within its own boundaries, with the cathedral as an unmistakable visual anchor.",
+   "housing_types": [
+    "Detached",
+    "Freehold townhouse",
+    "Condominium townhouse",
+    "Condominium apartment"
+   ],
+   "housing_note": "Higher density than most Markham subdivisions, with a correspondingly wider range of price points in a small area.",
+   "parks": [
+    "Cathedraltown Park",
+    "Bruce Creek trails"
+   ],
+   "landmarks": [
+    "Cathedral of the Transfiguration",
+    "Cathedraltown roundabout and monument"
+   ],
+   "transportation": [
+    "YRT bus service",
+    "Highway 404 access",
+    "Major Mackenzie Drive corridor"
+   ],
+   "schools_note": "Served by the York Region District School Board and York Catholic District School Board. Verify current catchments with the school board.",
+   "market_data": {
+    "average_price": null,
+    "median_price": null,
+    "transactions": null,
+    "new_listings": null,
+    "days_on_market": null,
+    "sale_to_list_ratio": null,
+    "period": null,
+    "source": null
+   },
+   "kaylin_commentary": "",
+   "hero_tone": "planned",
+   "featured": false
+  },
+  {
+   "slug": "wismer-commons",
+   "name": "Wismer Commons",
+   "city": "Markham",
+   "tagline": "Consistent stock, strong demand, tight comparables.",
+   "intro": "Wismer Commons is a 2000s-era community in north Markham with a housing stock that is unusually consistent in age and type. It draws steady family demand and sits close to the Mount Joy GO Station.",
+   "lifestyle": "Residential and quiet, with retail along Bur Oak and Markham Road and green space threaded through the plan.",
+   "housing_types": [
+    "Detached",
+    "Semi-detached",
+    "Freehold townhouse"
+   ],
+   "housing_note": "The consistency of the stock cuts both ways: comparables are clean, but standing out as a seller requires deliberate preparation and presentation.",
+   "parks": [
+    "Wismer Park",
+    "Mount Joy Park",
+    "Swan Lake Park"
+   ],
+   "landmarks": [
+    "Mount Joy Community Centre",
+    "Wismer Public School"
+   ],
+   "transportation": [
+    "Mount Joy GO Station, Stouffville line",
+    "YRT bus service",
+    "Highway 407 ETR access"
+   ],
+   "schools_note": "Served by the York Region District School Board and York Catholic District School Board. Verify current catchments with the school board.",
+   "market_data": {
+    "average_price": null,
+    "median_price": null,
+    "transactions": null,
+    "new_listings": null,
+    "days_on_market": null,
+    "sale_to_list_ratio": null,
+    "period": null,
+    "source": null
+   },
+   "kaylin_commentary": "",
+   "hero_tone": "residential",
+   "featured": false
+  },
+  {
+   "slug": "thornhill",
+   "name": "Thornhill",
+   "city": "Markham & Vaughan",
+   "tagline": "An older community split across two municipalities.",
+   "intro": "Thornhill straddles the boundary between Markham and Vaughan, following Yonge Street north of Steeles. It is one of the older communities in the region, with a heritage conservation district at its centre and mature, established residential streets around it.",
+   "lifestyle": "More urban in feel than most of Markham, with the Yonge Street corridor providing continuous retail and transit and easy access south into Toronto.",
+   "housing_types": [
+    "Detached",
+    "Semi-detached",
+    "Townhouse",
+    "Condominium apartment",
+    "Heritage property"
+   ],
+   "housing_note": "Because Thornhill spans two municipalities, taxes, services and by-laws differ depending on which side of the boundary a property sits. Confirm the municipality before making assumptions.",
+   "parks": [
+    "Pomona Mills Park",
+    "Thornhill Woods Park",
+    "German Mills Settlers Park"
+   ],
+   "landmarks": [
+    "Thornhill Heritage Conservation District",
+    "Yonge Street corridor",
+    "Thornhill Community Centre"
+   ],
+   "transportation": [
+    "Viva Blue and YRT along Yonge Street",
+    "TTC connection at Steeles",
+    "Highway 407 ETR access",
+    "Highway 7 corridor"
+   ],
+   "schools_note": "Served by the York Region District School Board and York Catholic District School Board. Verify current catchments with the school board.",
+   "market_data": {
+    "average_price": null,
+    "median_price": null,
+    "transactions": null,
+    "new_listings": null,
+    "days_on_market": null,
+    "sale_to_list_ratio": null,
+    "period": null,
+    "source": null
+   },
+   "kaylin_commentary": "",
+   "hero_tone": "heritage",
+   "featured": true
+  },
+  {
+   "slug": "greensborough",
+   "name": "Greensborough",
+   "city": "Markham",
+   "tagline": "Newer construction, next to the GO line.",
+   "intro": "Greensborough is a newer community in northeast Markham, built largely in the 2000s and 2010s, with the Mount Joy GO Station on its edge and a mix of detached, town and condominium product.",
+   "lifestyle": "Suburban and family-oriented, with the Greensborough Community Centre and a network of trails through the plan.",
+   "housing_types": [
+    "Detached",
+    "Semi-detached",
+    "Freehold townhouse",
+    "Condominium townhouse"
+   ],
+   "housing_note": "Proximity to Mount Joy GO is a genuine pricing factor here and worth isolating when selecting comparables.",
+   "parks": [
+    "Greensborough Park",
+    "Swan Lake Park",
+    "Rouge River trails"
+   ],
+   "landmarks": [
+    "Greensborough Community Centre",
+    "Mount Joy GO Station"
+   ],
+   "transportation": [
+    "Mount Joy GO Station, Stouffville line",
+    "YRT bus service",
+    "Donald Cousens Parkway",
+    "Highway 407 ETR access"
+   ],
+   "schools_note": "Served by the York Region District School Board and York Catholic District School Board. Verify current catchments with the school board.",
+   "market_data": {
+    "average_price": null,
+    "median_price": null,
+    "transactions": null,
+    "new_listings": null,
+    "days_on_market": null,
+    "sale_to_list_ratio": null,
+    "period": null,
+    "source": null
+   },
+   "kaylin_commentary": "",
+   "hero_tone": "residential",
+   "featured": false
+  },
+  {
+   "slug": "milliken-mills",
+   "name": "Milliken Mills",
+   "city": "Markham",
+   "tagline": "South Markham, at the Toronto boundary.",
+   "intro": "Milliken Mills sits in south Markham against the Steeles Avenue boundary with Toronto. It is one of the more established parts of the city, with significant retail and employment along the Steeles and Kennedy corridors.",
+   "lifestyle": "Dense and well-serviced, with major retail centres, extensive dining, and the shortest drive into Scarborough and North York of any Markham community.",
+   "housing_types": [
+    "Detached",
+    "Semi-detached",
+    "Townhouse",
+    "Condominium apartment"
+   ],
+   "housing_note": "Largely 1970s through 1990s construction. Lot sizes are often larger than newer north Markham subdivisions at comparable price points.",
+   "parks": [
+    "Milliken Mills Park",
+    "Bruce's Mill nearby",
+    "Armadale Park"
+   ],
+   "landmarks": [
+    "Milliken Mills Community Centre",
+    "Pacific Mall",
+    "Markville area retail"
+   ],
+   "transportation": [
+    "YRT and TTC connection at Steeles",
+    "Milliken GO Station, Stouffville line",
+    "Highway 407 ETR access",
+    "Highway 404 access"
+   ],
+   "schools_note": "Served by the York Region District School Board and York Catholic District School Board. Verify current catchments with the school board.",
+   "market_data": {
+    "average_price": null,
+    "median_price": null,
+    "transactions": null,
+    "new_listings": null,
+    "days_on_market": null,
+    "sale_to_list_ratio": null,
+    "period": null,
+    "source": null
+   },
+   "kaylin_commentary": "",
+   "hero_tone": "urban",
+   "featured": false
+  },
+  {
+   "slug": "richmond-hill",
+   "name": "Richmond Hill",
+   "city": "Richmond Hill",
+   "tagline": "Yonge Street spine, ravine edges.",
+   "intro": "Richmond Hill sits immediately west of Markham, organised along Yonge Street with the Oak Ridges Moraine at its northern edge. It offers a broader range of housing eras than most of its neighbours, from postwar to current construction.",
+   "lifestyle": "A long north-south community with distinct characters at each end: dense and transit-served in the south, closer to conservation land in the north.",
+   "housing_types": [
+    "Detached",
+    "Semi-detached",
+    "Townhouse",
+    "Condominium apartment"
+   ],
+   "housing_note": "Character varies substantially from south to north. Treating Richmond Hill as a single market is a common and expensive mistake.",
+   "parks": [
+    "Mill Pond Park",
+    "Lake Wilcox Park",
+    "Richmond Green Sports Centre and Park"
+   ],
+   "landmarks": [
+    "Mill Pond",
+    "Richmond Hill Centre for the Performing Arts",
+    "David Dunlap Observatory"
+   ],
+   "transportation": [
+    "Viva Blue and YRT along Yonge Street",
+    "Richmond Hill GO line",
+    "Highway 404 access",
+    "Highway 407 ETR access"
+   ],
+   "schools_note": "Served by the York Region District School Board and York Catholic District School Board. Verify current catchments with the school board.",
+   "market_data": {
+    "average_price": null,
+    "median_price": null,
+    "transactions": null,
+    "new_listings": null,
+    "days_on_market": null,
+    "sale_to_list_ratio": null,
+    "period": null,
+    "source": null
+   },
+   "kaylin_commentary": "",
+   "hero_tone": "urban",
+   "featured": false
+  },
+  {
+   "slug": "stouffville",
+   "name": "Whitchurch-Stouffville",
+   "city": "Whitchurch-Stouffville",
+   "tagline": "Small-town main street, GO line to Union.",
+   "intro": "Whitchurch-Stouffville sits northeast of Markham, keeping a compact main street and a substantial rural land base while the built-up area has grown considerably around the GO corridor.",
+   "lifestyle": "Genuinely small-town in its core, with conservation areas and rural properties within minutes of the main street.",
+   "housing_types": [
+    "Detached",
+    "Semi-detached",
+    "Freehold townhouse",
+    "Rural and acreage property"
+   ],
+   "housing_note": "Rural and acreage properties here involve wells, septic systems and different financing considerations. They are not comparable to serviced-lot suburban homes and should not be priced as though they were.",
+   "parks": [
+    "Bruce's Mill Conservation Area",
+    "Memorial Park",
+    "Stouffville Reservoir"
+   ],
+   "landmarks": [
+    "Main Street Stouffville",
+    "Bruce's Mill Conservation Area",
+    "Lebovic Centre for Arts and Entertainment"
+   ],
+   "transportation": [
+    "Stouffville GO Station, Stouffville line",
+    "YRT bus service",
+    "Highway 404 access",
+    "Highway 407 ETR nearby"
+   ],
+   "schools_note": "Served by the York Region District School Board and York Catholic District School Board. Verify current catchments with the school board.",
+   "market_data": {
+    "average_price": null,
+    "median_price": null,
+    "transactions": null,
+    "new_listings": null,
+    "days_on_market": null,
+    "sale_to_list_ratio": null,
+    "period": null,
+    "source": null
+   },
+   "kaylin_commentary": "",
+   "hero_tone": "rural",
+   "featured": false
+  }
+ ]
+}

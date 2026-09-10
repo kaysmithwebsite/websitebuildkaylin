@@ -1,0 +1,137 @@
+{
+  "_note": "SECTION 52 and 53. Explanations are written originally for this site, not copied from government pages. Every entry links to the official source so a visitor can verify it. CRITICAL: every last_verified is null, meaning no figure or rule below has been checked against the current official source by this build. Government programs change, contribution limits move, and programs end. The page renders a prominent unverified state and the build warns until each entry is checked and dated. Do not launch this section without working through it.",
+  "_verification_status": "none_verified",
+
+  "categories": [
+    { "slug": "first-time",    "name": "First-Time Buyers",        "intro": "Programs aimed specifically at a first purchase." },
+    { "slug": "saving",        "name": "Saving for a Home",        "intro": "Accounts and withdrawals designed to build a down payment." },
+    { "slug": "tax-credits",   "name": "Tax Credits & Rebates",    "intro": "Money back at tax time or on closing." },
+    { "slug": "renovation",    "name": "Renovation & Energy",      "intro": "Support for improving a home you already own." },
+    { "slug": "new-build",     "name": "New Construction",         "intro": "Rebates and considerations specific to newly built homes." },
+    { "slug": "accessibility", "name": "Accessibility",            "intro": "Adapting a home for mobility, ageing or disability." },
+    { "slug": "ownership",     "name": "Home Ownership",           "intro": "Costs and credits that continue after you own." }
+  ],
+
+  "programs": [
+    {
+      "slug": "fhsa", "title": "First Home Savings Account (FHSA)",
+      "jurisdiction": "Federal", "category": "saving", "active": true, "featured": true,
+      "who": "First-time buyers saving a down payment.",
+      "description": "A registered account that combines the two tax advantages people usually have to choose between. Contributions are deductible from income the way an RRSP contribution is, and qualifying withdrawals to buy a first home come out tax free the way a TFSA withdrawal does. Unused contribution room carries forward.",
+      "benefit_summary": "Contribution room accrues annually up to a lifetime maximum. Confirm the current annual and lifetime limits, and the account's lifetime, with the CRA.",
+      "eligibility_summary": "Canadian resident, at least 18, and a first-time home buyer as the CRA defines it, which looks at whether you lived in a home you or your spouse owned in the current year or the preceding four calendar years.",
+      "official_source": "Canada Revenue Agency", "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/first-home-savings-account.html",
+      "effective_date": null, "expiry_date": null, "last_verified": null
+    },
+    {
+      "slug": "home-buyers-plan", "title": "Home Buyers' Plan (HBP)",
+      "jurisdiction": "Federal", "category": "saving", "active": true, "featured": true,
+      "who": "First-time buyers with money already in an RRSP.",
+      "description": "Lets you withdraw from your RRSP to buy or build a qualifying home without the withdrawal being taxed as income, provided you repay it to your RRSP over a set number of years. Missed repayments are added to your taxable income for that year, so treat the schedule as a real obligation.",
+      "benefit_summary": "A withdrawal limit applies per person, and a couple who both qualify can each withdraw. The limit was increased recently; confirm the current figure and the repayment schedule with the CRA.",
+      "eligibility_summary": "Must be a first-time home buyer under the CRA definition, must have a written agreement to buy or build, and must intend to occupy the home as a principal residence within one year. Funds generally must have been in the RRSP for 90 days.",
+      "official_source": "Canada Revenue Agency", "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/rrsps-related-plans/what-home-buyers-plan.html",
+      "effective_date": null, "expiry_date": null, "last_verified": null
+    },
+    {
+      "slug": "hbtc", "title": "First-Time Home Buyers' Tax Credit",
+      "jurisdiction": "Federal", "category": "tax-credits", "active": true, "featured": true,
+      "who": "First-time buyers, in the tax year of purchase.",
+      "description": "A non-refundable credit claimed on your return for the year you buy. It is claimed once per home and can be split between spouses, but the combined claim cannot exceed the maximum.",
+      "benefit_summary": "A fixed claim amount produces a credit at the lowest federal tax rate. Confirm the current amount with the CRA.",
+      "eligibility_summary": "You or your spouse acquired a qualifying home, and neither lived in a home owned by either of you in the year of purchase or the four preceding years. The first-time requirement does not apply where the purchase is for a person eligible for the disability tax credit.",
+      "official_source": "Canada Revenue Agency", "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-31270-home-buyers-amount.html",
+      "effective_date": null, "expiry_date": null, "last_verified": null
+    },
+    {
+      "slug": "ontario-ltt-refund", "title": "Ontario Land Transfer Tax Refund for First-Time Buyers",
+      "jurisdiction": "Ontario", "category": "first-time", "active": true, "featured": true,
+      "who": "First-time buyers anywhere in Ontario.",
+      "description": "Refunds provincial land transfer tax up to a maximum. Below a certain purchase price the refund covers the tax entirely; above it, you pay the difference. Your lawyer normally claims it at closing so it reduces the cash you bring, rather than arriving later.",
+      "benefit_summary": "Up to a fixed maximum refund. See the land transfer tax calculator on this site for an estimate on a specific price.",
+      "eligibility_summary": "At least 18, must not have owned a home or an interest in one anywhere in the world, and a spouse must not have owned one while your spouse. Must occupy as principal residence within nine months.",
+      "official_source": "Ontario Ministry of Finance", "source_url": "https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers",
+      "effective_date": null, "expiry_date": null, "last_verified": null
+    },
+    {
+      "slug": "toronto-mltt-rebate", "title": "Toronto Municipal Land Transfer Tax Rebate",
+      "jurisdiction": "Toronto", "category": "first-time", "active": true, "featured": false,
+      "who": "First-time buyers purchasing inside the City of Toronto.",
+      "description": "Toronto charges its own land transfer tax on top of the provincial one, and offers its own first-time buyer rebate against it. This is a separate claim from the provincial refund and both can apply to the same purchase.",
+      "benefit_summary": "Up to a fixed maximum, claimed separately from the provincial refund.",
+      "eligibility_summary": "Broadly mirrors the provincial rules. Confirm current criteria with the City of Toronto.",
+      "official_source": "City of Toronto", "source_url": "https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/",
+      "effective_date": null, "expiry_date": null, "last_verified": null
+    },
+    {
+      "slug": "gst-hst-new-housing-rebate", "title": "GST/HST New Housing Rebate",
+      "jurisdiction": "Federal and Ontario", "category": "new-build", "active": true, "featured": false,
+      "who": "Buyers of a newly built or substantially renovated home.",
+      "description": "New construction carries GST/HST that resale housing does not. This rebate returns part of it. On a builder purchase the rebate is often credited into the price so you never see it separately, which also means you should check whether your agreement assumes you qualify. If it assumes wrongly, the builder can charge the amount back to you on closing.",
+      "benefit_summary": "A federal portion and an Ontario portion, each with its own formula and cap. The value depends on the price and shrinks as price rises.",
+      "eligibility_summary": "Generally requires the home to be your or a relation's primary place of residence. Purchases intended as rentals fall under a different rebate with different rules.",
+      "official_source": "Canada Revenue Agency", "source_url": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/rc4028.html",
+      "effective_date": null, "expiry_date": null, "last_verified": null
+    },
+    {
+      "slug": "home-accessibility-tax-credit", "title": "Home Accessibility Tax Credit",
+      "jurisdiction": "Federal", "category": "accessibility", "active": true, "featured": false,
+      "who": "Seniors and people eligible for the disability tax credit, and family members supporting them.",
+      "description": "A credit for renovations that make a home safer or easier to move around in. Grab bars, ramps, walk-in tubs, widened doorways and similar work. The expense must be enduring and integral to the home, so equipment you could take with you generally does not qualify.",
+      "benefit_summary": "A percentage credit on eligible expenses up to an annual cap per qualifying individual.",
+      "eligibility_summary": "The qualifying individual must be 65 or older by year end, or eligible for the disability tax credit. Eligible dependants may also claim.",
+      "official_source": "Canada Revenue Agency", "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-31285-home-accessibility-expenses.html",
+      "effective_date": null, "expiry_date": null, "last_verified": null
+    },
+    {
+      "slug": "multigenerational-renovation-credit", "title": "Multigenerational Home Renovation Tax Credit",
+      "jurisdiction": "Federal", "category": "renovation", "active": true, "featured": false,
+      "who": "Families creating a self-contained secondary unit for a senior or an adult with a disability.",
+      "description": "A refundable credit for building a secondary suite so a qualifying relative can live with you. The unit has to be genuinely self-contained, with its own entrance, kitchen, bathroom and sleeping area.",
+      "benefit_summary": "A percentage of eligible renovation costs up to a cap, claimable once per qualifying individual over their lifetime.",
+      "eligibility_summary": "The qualifying relation must be 65 or older, or eligible for the disability tax credit, and must intend to live in the unit within twelve months of completion.",
+      "official_source": "Canada Revenue Agency", "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-45355-multigenerational-home-renovation-tax-credit.html",
+      "effective_date": null, "expiry_date": null, "last_verified": null
+    },
+    {
+      "slug": "canada-greener-homes", "title": "Canada Greener Homes Initiative",
+      "jurisdiction": "Federal", "category": "renovation", "active": true, "featured": false,
+      "who": "Owners making energy efficiency improvements.",
+      "description": "Support for retrofits such as insulation, heat pumps, windows and doors, usually requiring an EnerGuide evaluation before and after the work. The grant component and the loan component have had different availability over time, so check which parts are currently open.",
+      "benefit_summary": "An interest-free loan for eligible retrofits, historically alongside grant funding. Availability has changed; verify what is currently accepting applications.",
+      "eligibility_summary": "Homeowner, eligible property type, and a pre-retrofit EnerGuide evaluation completed before work begins. Starting work early is the most common reason applications fail.",
+      "official_source": "Natural Resources Canada", "source_url": "https://natural-resources.canada.ca/energy-efficiency/homes/canada-greener-homes-initiative",
+      "effective_date": null, "expiry_date": null, "last_verified": null
+    },
+    {
+      "slug": "oeptc", "title": "Ontario Energy and Property Tax Credit",
+      "jurisdiction": "Ontario", "category": "ownership", "active": true, "featured": false,
+      "who": "Lower and moderate income Ontario residents who pay rent or property tax.",
+      "description": "Part of the Ontario Trillium Benefit. It helps with the sales tax on energy and with property tax, and is paid out monthly rather than as a lump sum. It applies to renters as well as owners.",
+      "benefit_summary": "An income-tested amount, with a higher maximum for seniors.",
+      "eligibility_summary": "Ontario resident who paid rent or property tax on a principal residence in the year. Claimed through your tax return.",
+      "official_source": "Ontario Ministry of Finance", "source_url": "https://www.ontario.ca/page/ontario-trillium-benefit",
+      "effective_date": null, "expiry_date": null, "last_verified": null
+    },
+    {
+      "slug": "nrst", "title": "Non-Resident Speculation Tax",
+      "jurisdiction": "Ontario", "category": "ownership", "active": true, "featured": false,
+      "who": "Buyers who are not citizens or permanent residents of Canada, and certain corporations and trustees.",
+      "description": "A cost rather than a benefit, included here because it is the single largest surprise for an affected buyer. It applies province-wide on residential purchases by foreign nationals, foreign corporations and taxable trustees, and it sits on top of both land transfer taxes. Rebates exist in narrow circumstances.",
+      "benefit_summary": "A percentage of the purchase price, payable at closing. Verify the current rate before relying on any figure.",
+      "eligibility_summary": "Determined by the status of every purchaser on title. Federal restrictions on residential purchases by non-Canadians may also apply and are a separate matter. Get legal advice before signing.",
+      "official_source": "Ontario Ministry of Finance", "source_url": "https://www.ontario.ca/document/land-transfer-tax/non-resident-speculation-tax",
+      "effective_date": null, "expiry_date": null, "last_verified": null
+    },
+    {
+      "slug": "fthbi", "title": "First-Time Home Buyer Incentive",
+      "jurisdiction": "Federal", "category": "first-time", "active": false, "featured": false,
+      "who": "Formerly, first-time buyers seeking a shared equity contribution.",
+      "description": "A shared equity mortgage in which the federal government contributed part of the purchase price and shared in the change in value. It stopped accepting new applications, and is kept here because buyers still encounter references to it in older articles and wonder whether they missed it.",
+      "benefit_summary": "No longer available to new applicants.",
+      "eligibility_summary": "Closed to new applications. Existing participants remain bound by their agreements.",
+      "official_source": "Canada Mortgage and Housing Corporation", "source_url": "https://www.placetocallhome.ca/",
+      "effective_date": null, "expiry_date": "2024-03-21", "last_verified": null
+    }
+  ]
+}

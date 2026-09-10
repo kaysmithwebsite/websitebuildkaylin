@@ -1,0 +1,443 @@
+{
+  "_note": "SECTION 29 CMS. All editorial page copy lives here, not hard-coded in templates. Copy is original, written for this site. It makes no claim about Kaylin's results, volume, rankings or client outcomes. Statements describing her process are written as descriptions of method and should be reviewed by Kaylin for accuracy before launch.",
+  "_review_status": "awaiting_kaylin_review",
+  "home": {
+    "hero": {
+      "rotating": [
+        "REAL ESTATE, WITH STRATEGY.",
+        "ADVISE WITH CANDOUR.",
+        "BUY WITH CLARITY.",
+        "GROW WITH STRUCTURE.",
+        "SELL WITH INTENTION.",
+        "NEGOTIATE WITH LEVERAGE.",
+        "MOVE WITH CONFIDENCE."
+      ],
+      "standfirst": "Property is personal. Strategy shouldn't be.",
+      "attribution": "Kaylin Smith - Real Estate Broker & Consultant",
+      "primary_cta": {
+        "label": "Enter for Real Estate",
+        "href": "/real-estate/"
+      },
+      "secondary_cta": {
+        "label": "Enter for Consulting",
+        "href": "/consulting/"
+      },
+      "scroll_hint": "Scroll"
+    },
+    "intro": {
+      "eyebrow": "Meet Kaylin",
+      "headline": "Representation built around the decision, not the transaction.",
+      "body": [
+        "Kaylin Smith is a Broker with RE/MAX Epic Realty Inc., Brokerage, working with buyers, sellers and investors across Markham, Toronto and the Greater Toronto Area.",
+        "Most of the consequential decisions in a move are made before anyone books a showing. Budget. Location. Timeline. Whether to buy first or sell first. Those decisions constrain everything after them, and they are where the real work belongs."
+      ],
+      "cta": {
+        "label": "More About Kaylin",
+        "href": "/about/"
+      }
+    },
+    "contact_cta": {
+      "headline": "Let's talk about your next move.",
+      "body": "Three weeks or three years from a decision, it is worth talking early.",
+      "cta": {
+        "label": "Book a Real Estate Consultation",
+        "href": "/contact/"
+      }
+    },
+    "real_estate": {
+      "eyebrow": "Real Estate",
+      "headline": "What are you trying to do?",
+      "body": "Four ways in. Each one starts with the decision rather than the listing.",
+      "paths": [
+        {
+          "key": "buy",
+          "title": "I'm Buying",
+          "body": "Financing readiness, comparable analysis, offer strategy and negotiation. The search is the visible part.",
+          "href": "/real-estate/buy/"
+        },
+        {
+          "key": "sell",
+          "title": "I'm Selling",
+          "body": "Positioning, preparation and a marketing sequence built for the first two weeks, which is when the outcome is decided.",
+          "href": "/real-estate/sell/"
+        },
+        {
+          "key": "invest",
+          "title": "I'm Investing",
+          "body": "Acquisition criteria, honest expense modelling, and testing the assumptions a hold actually rests on.",
+          "href": "/real-estate/invest/"
+        },
+        {
+          "key": "strategy",
+          "title": "Real Estate Strategy",
+          "body": "Not sure yet. A conversation about whether the move makes sense at all, and what has to be true for it to work.",
+          "href": "/real-estate/strategy/"
+        }
+      ]
+    },
+    "consulting_teaser": {
+      "eyebrow": "Kay Smith Consulting Group",
+      "headline": "A separate practice, for business.",
+      "body": "Alongside real estate, Kaylin consults with owner-led businesses on strategy, growth, partnerships and the events that go with them. Different work, different clients, its own way in.",
+      "items": [
+        "Business Consulting",
+        "Growth",
+        "Partnerships",
+        "Events",
+        "Speaking",
+        "Mentorship"
+      ],
+      "cta": {
+        "label": "Consulting Group",
+        "href": "/consulting/"
+      }
+    },
+    "reviews": {
+      "eyebrow": "Client Reviews",
+      "headline": "What clients actually say.",
+      "empty_headline": "Reviews are being brought across from Google.",
+      "empty_body": "Kaylin's Google reviews have not been added to this site yet. They will appear here, quoted accurately and attributed to the reviewer, rather than paraphrased or reproduced from a third-party rating site."
+    }
+  },
+  "about": {
+    "_note": "Rewritten 2026-09-08 from the client's About page brief. Written in the first person throughout, which is how the brief supplies it. Every factual claim here was supplied by the client: the 2006 Richmond Hill condominium, more than a decade in real estate and investing, and the financial services, business and consulting background. No production, ranking or award claim appears anywhere, because none has been verified.",
+    "hero_eyebrow": "About",
+    "hero_headline": "Kaylin Smith",
+    "credential_line": "Real Estate Broker | Investor | Strategic Advisor",
+    "hero_subhead": "Real estate decisions deserve more than a transaction. They deserve a strategy.",
+    "who_i_am": {
+      "eyebrow": "Who I am",
+      "headline": "Real estate decisions deserve more than a transaction.",
+      "body": [
+        "I help first-time homebuyers, investors, homeowners and sellers across Markham, Toronto, Durham Region and the GTA make informed real estate decisions with confidence.",
+        "I am a Real Estate Broker with RE/MAX Epic Realty Inc., Brokerage, and an investor with more than a decade of experience in real estate and investing.",
+        "My perspective on real estate comes from both sides of the transaction. I am a real estate professional and an investor myself. My first investment property was a condominium in Richmond Hill, purchased in 2006.",
+        "Over the years I have developed a broader understanding of the financial, business and strategic considerations that can influence a real estate decision. My background in financial services, business and consulting allows me to look beyond the immediate transaction and help clients understand the numbers, the opportunity, the risks and the bigger picture.",
+        "Buying a first home, building an investment portfolio, preparing to sell, working out whether to move at all: the approach is the same."
+      ],
+      "pillars": [
+        "Understand the goal.",
+        "Know the market.",
+        "Build the strategy.",
+        "Execute with confidence."
+      ],
+      "close": "Real estate is one of the biggest financial decisions many people make. You deserve advice that is thoughtful, informed and aligned with where you want to go.",
+      "cta_label": "Work With Kaylin"
+    },
+    "who_i_help": {
+      "eyebrow": "Who I help",
+      "headline": "Real estate with a strategy behind it.",
+      "lead": "I work with clients across Markham, Toronto, Durham Region and the GTA, with a particular focus on first-time homebuyers and real estate investors.",
+      "groups": [
+        {
+          "title": "First-time homebuyers",
+          "body": [
+            "Your first home is more than a purchase. It can be the foundation of your financial future.",
+            "I help first-time buyers understand the process, evaluate properties, understand the market and make decisions with confidence.",
+            "The goal is not simply to find a home. It is to make the right move for your circumstances and your future."
+          ]
+        },
+        {
+          "title": "Investors",
+          "body": [
+            "Real estate investing requires more than finding a property that looks good.",
+            "I help investors evaluate opportunities, understand the numbers, consider market conditions and think strategically about how a property fits into their broader goals.",
+            "My own experience as a real estate investor allows me to approach these conversations from an investor's perspective as well as a real estate professional's."
+          ]
+        },
+        {
+          "title": "Sellers",
+          "body": [
+            "Selling is about more than putting a property on the market.",
+            "I help sellers develop a strategy around pricing, positioning, marketing, negotiation and market conditions to give their property the strongest possible presentation and representation.",
+            "Every property and seller is different, so the strategy should be too."
+          ]
+        },
+        {
+          "title": "Pre-construction",
+          "body": [
+            "Pre-construction can involve significant financial commitments, timelines and long-term considerations.",
+            "I help clients evaluate opportunities, understand the financial considerations and determine whether a project makes sense for their goals before they commit."
+          ]
+        }
+      ]
+    },
+    "approach": {
+      "eyebrow": "My approach",
+      "headline": "Strategy before the transaction.",
+      "lead": "Great real estate representation starts with understanding the person, not just the property. Before recommending a property or strategy, I want to understand:",
+      "questions": [
+        "What are you trying to accomplish?",
+        "What does the market mean for your situation?",
+        "What do the numbers actually tell us?",
+        "What are the risks?",
+        "What opportunities should we consider?",
+        "What makes sense for your short and long-term goals?"
+      ],
+      "body": [
+        "I combine market knowledge, research, investment perspective, financial awareness, negotiation and honest advice to help clients make informed decisions.",
+        "I do not believe in a one-size-fits-all approach. I believe in asking the right questions, doing the work behind the scenes and giving clients the information they need to make decisions they feel confident about.",
+        "No pressure. No unnecessary hype. No telling you what you want to hear just to get the deal."
+      ],
+      "close": "Clear advice. Strong representation. A strategy built around you."
+    },
+    "experience": {
+      "eyebrow": "Experience",
+      "headline": "A broader perspective on real estate.",
+      "body": [
+        "My real estate career is supported by experience in investing, financial services, business development and strategic consulting. That background has shaped the way I approach real estate.",
+        "I understand that a real estate decision can affect much more than a transaction. It can impact your finances, investment strategy, business, family and long-term plans.",
+        "That experience gives me a broader perspective when working with clients, particularly entrepreneurs, investors and clients whose real estate decisions are connected to larger financial or business goals.",
+        "My job is to help you understand the opportunity, navigate the process and make a move that makes sense for you."
+      ]
+    },
+    "final_cta": {
+      "headline": "Ready to make your next real estate move?",
+      "body": "A first home, an investment purchase, a sale, or simply working out what your options are. I am here to help you make sense of the market and determine the right strategy for your goals.",
+      "primary": "Book a Real Estate Consultation",
+      "secondary": "Let's Talk"
+    }
+  },
+  "consulting": {
+    "brand": "consulting",
+    "hero_eyebrow": "Kay Smith Consulting Group",
+    "hero_headline": "Strategy for the business, and the room.",
+    "hero_body": "A separate practice from the real estate brokerage. Consulting for owner-led businesses on positioning, growth, partnerships and the events that carry them.",
+    "intro": [
+      "Owner-led businesses rarely fail on effort. They stall on positioning, on operations that were never designed, and on decisions the owner is too close to make.",
+      "Engagements are scoped to a question and produce something written. Where an event is involved, the person who set the objective stays through delivery, so the brief and the execution do not drift apart."
+    ],
+    "services": [
+      {
+        "n": "01",
+        "title": "Strategic Business Consulting",
+        "body": "Who the business is for, what it competes against in a buyer's mind, and what it should stop doing. Most pricing problems turn out to be positioning problems."
+      },
+      {
+        "n": "02",
+        "title": "Business Development",
+        "body": "Where the next customers actually come from, and building a way to reach them that does not depend on the owner's calendar."
+      },
+      {
+        "n": "03",
+        "title": "Growth Strategy",
+        "body": "What to scale and what to leave alone. Turning what lives in the owner's head into a process someone else can run."
+      },
+      {
+        "n": "04",
+        "title": "Brand Partnerships & Activations",
+        "body": "Finding partners whose audience overlaps yours, building an offer worth saying yes to, and running the activation properly."
+      },
+      {
+        "n": "05",
+        "title": "Event Strategy",
+        "body": "What the event is for, what it will cost, and whether the format can carry the gap between the two. Concept, budget, vendors, run of show and the debrief most events skip."
+      },
+      {
+        "n": "06",
+        "title": "Speaking",
+        "body": "Panels, workshops and keynotes on real estate, business building and brand. Available for corporate, community and industry events."
+      },
+      {
+        "n": "07",
+        "title": "Mentorship",
+        "body": "One to one work with agents and early-stage owners on positioning, pipeline and the habits that compound. Limited by design."
+      }
+    ],
+    "cta": {
+      "label": "Book a Consulting Call",
+      "href": "#book"
+    },
+    "disclaimer": "Consulting provided by Kay Smith Consulting Group is advisory and operational in nature. It is not legal, accounting, tax or financial advice. Engage a lawyer or accountant for matters within their scope. This practice is separate from Kaylin's real estate trading services, which are provided through RE/MAX Epic Realty Inc., Brokerage."
+  },
+  "contact": {
+    "hero_eyebrow": "Contact",
+    "hero_headline": "Let's talk about your next move.",
+    "hero_body": "Two ways in, depending on what you need. Real estate enquiries and consulting enquiries go to different places and are answered separately.",
+    "response_note": "Enquiries are answered directly by Kaylin."
+  },
+  "real_estate": {
+    "hero_eyebrow": "Real Estate",
+    "hero_headline": "Strategy first. The property follows.",
+    "hero_body": "Buying, selling and investing across Markham, Toronto and the Greater Toronto Area, through RE/MAX Epic Realty Inc., Brokerage.",
+    "intro": [
+      "The difference between a good outcome and an expensive one is rarely the property. It is whether the decision underneath it was examined before anyone committed.",
+      "That is what this practice is built around: research the specific market rather than the regional average, build the comparable set by hand, be direct about what the evidence supports, and negotiate from a position prepared in advance."
+    ],
+    "services": [
+      {
+        "key": "buy",
+        "label": "I'm Buying",
+        "title": "Buying",
+        "lead": "Finding the property is only part of buying it well.",
+        "body": "Sourcing, comparable analysis, offer construction and negotiation. Most of the leverage in a purchase is created before terms are ever on the table.",
+        "steps": [
+          {
+            "n": "01",
+            "title": "Discovery",
+            "body": "What the move is for, what has to be true for it to be worth doing, and where the flexibility actually sits."
+          },
+          {
+            "n": "02",
+            "title": "Financing readiness",
+            "body": "Full lender approval rather than pre-qualification. Pre-approval assesses you. Approval assesses the property too, and that is the test that fails unexpectedly."
+          },
+          {
+            "n": "03",
+            "title": "Market analysis",
+            "body": "Absorption, inventory and pricing behaviour in your specific segment and community, not the regional headline."
+          },
+          {
+            "n": "04",
+            "title": "Sourcing and showings",
+            "body": "Active listings, plus properties surfaced through the brokerage network before or outside general marketing where they exist."
+          },
+          {
+            "n": "05",
+            "title": "Comparable analysis",
+            "body": "Before any offer, a hand-built comparable set for that specific property. This is what a number should be defended with."
+          },
+          {
+            "n": "06",
+            "title": "Offer and negotiation",
+            "body": "Price, deposit, closing date, conditions and irrevocable period considered together, with a walk-away point set in advance."
+          },
+          {
+            "n": "07",
+            "title": "Conditions and closing",
+            "body": "Financing, inspection and status certificate managed against the calendar. These periods are short and unforgiving."
+          }
+        ]
+      },
+      {
+        "key": "sell",
+        "label": "I'm Selling",
+        "title": "Selling",
+        "lead": "Most homes get listed. Fewer get positioned.",
+        "body": "A listing publishes a property. A strategy decides who sees it, what they assume before they arrive, and what position you negotiate from when an offer comes.",
+        "steps": [
+          {
+            "n": "01",
+            "title": "Strategy",
+            "body": "The real timeline, whether it is fixed, and what the sale has to achieve. Buy first or sell first is decided here."
+          },
+          {
+            "n": "02",
+            "title": "Position",
+            "body": "Which buyer this property is actually for, and where it sits against the inventory that buyer is comparing it to."
+          },
+          {
+            "n": "03",
+            "title": "Prepare",
+            "body": "The work that returns more than it costs, and only that work. Larger renovations frequently do not return their cost."
+          },
+          {
+            "n": "04",
+            "title": "Present",
+            "body": "Photography, video and floor plans to a consistent standard, styled for the buyer identified in positioning."
+          },
+          {
+            "n": "05",
+            "title": "Launch",
+            "body": "Timed deliberately. New listings get concentrated attention from every buyer already searching that band. That audience does not reassemble."
+          },
+          {
+            "n": "06",
+            "title": "Market",
+            "body": "MLS, syndication, paid digital, social, agent network and open houses, sequenced rather than fired off at once."
+          },
+          {
+            "n": "07",
+            "title": "Negotiate and close",
+            "body": "Offers reviewed on all terms. Price, deposit, closing date and the strength of the buyer's financing all affect completion."
+          }
+        ]
+      },
+      {
+        "key": "invest",
+        "label": "I'm Investing",
+        "title": "Investing",
+        "lead": "A property held as an asset is a different decision from a home.",
+        "body": "Different criteria, different analysis, different risks. Gross yield is the figure most often quoted and the least often useful.",
+        "steps": [
+          {
+            "n": "01",
+            "title": "Criteria",
+            "body": "What the portfolio is for, the hold horizon, and whether cash flow or appreciation leads. These conflict more often than people expect."
+          },
+          {
+            "n": "02",
+            "title": "Expense modelling",
+            "body": "Property tax, landlord insurance, condominium fees and their trajectory, and a genuine capital reserve. Roofs and furnaces have finite lives."
+          },
+          {
+            "n": "03",
+            "title": "Financing structure",
+            "body": "Two identical properties on different terms are different investments. Principal paydown is not an expense in the way interest is."
+          },
+          {
+            "n": "04",
+            "title": "Tenancy",
+            "body": "The Residential Tenancies Act governs increases, notice and termination. Any model assuming rent moves freely with the market is wrong for much of the stock."
+          },
+          {
+            "n": "05",
+            "title": "Acquisition",
+            "body": "Assessing a tenanted property at purchase, and what you inherit along with it."
+          },
+          {
+            "n": "06",
+            "title": "Portfolio review",
+            "body": "Whether each holding still fits the objective it was bought for, and what to do if it does not."
+          }
+        ]
+      },
+      {
+        "key": "strategy",
+        "label": "Real Estate Strategy",
+        "title": "Real Estate Strategy",
+        "lead": "The conversation before the decision.",
+        "body": "Sometimes the right answer is to wait, or to do something other than what you came in for. A strategy call is where that gets worked out, before anyone is committed.",
+        "steps": [
+          {
+            "n": "01",
+            "title": "Buy first or sell first",
+            "body": "This single question changes the risk profile of a move entirely, and it has no universally correct answer."
+          },
+          {
+            "n": "02",
+            "title": "Timing",
+            "body": "What your timeline is genuinely driven by, and whether that driver is fixed or assumed."
+          },
+          {
+            "n": "03",
+            "title": "Capacity",
+            "body": "What the move actually requires in cash, and what happens if the two sides do not line up."
+          },
+          {
+            "n": "04",
+            "title": "Options",
+            "body": "Renovate, hold, sell, or move. Laid out with what each one costs and what it gets you."
+          },
+          {
+            "n": "05",
+            "title": "A written read",
+            "body": "What the evidence supports, in writing, so the decision does not rest on a conversation you half remember."
+          }
+        ]
+      }
+    ]
+  },
+  "resources": {
+    "hero_eyebrow": "Resources",
+    "hero_headline": "The numbers, and who to call.",
+    "hero_body": "Calculators that work, guides worth reading, and introductions to professionals Kaylin has actually worked with.",
+    "calculators_intro": "Estimates, not advice. Every rate lives in one configuration file, so when the numbers change the tools change with them.",
+    "guides_intro": "Written for the decision you are actually making, not as a brochure.",
+    "experts_intro": "A referral is a reputation being lent out. Tell Kaylin what you need and she makes the introduction herself. No referral fee is charged to you."
+  },
+  "organizations": {
+    "eyebrow": "Giving Back / Community",
+    "headline": "Giving back matters."
+  }
+}

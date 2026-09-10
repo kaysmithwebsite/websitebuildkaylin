@@ -1,0 +1,44 @@
+{
+  "_note": "SECTION 24 MARKET UPDATES. Route architecture is /market/<city>/<month-year>. Metric values are null because monthly board statistics require a licensed TRREB/CREA data source and must never be estimated. Each report renders a fully-built page with an explicit awaiting-data state on the metrics and charts, so the template, schema and SEO are verifiable now and only the numbers need filling in. Set data_status to \"published\" once real figures and Kaylin's commentary are added.",
+  "reports": [
+    {
+      "slug": "markham/august-2026", "city": "Markham", "period_label": "August 2026",
+      "period_start": "2026-08-01", "period_end": "2026-08-31",
+      "data_status": "awaiting_data", "source": null, "source_url": null,
+      "metrics": { "average_price": null, "median_price": null, "benchmark_price": null, "transactions": null, "new_listings": null, "active_listings": null, "days_on_market": null, "sale_to_list_ratio": null, "months_of_inventory": null },
+      "by_property_type": [
+        { "type": "Detached",          "average_price": null, "transactions": null, "days_on_market": null },
+        { "type": "Semi-Detached",     "average_price": null, "transactions": null, "days_on_market": null },
+        { "type": "Townhouse",         "average_price": null, "transactions": null, "days_on_market": null },
+        { "type": "Condo Apartment",   "average_price": null, "transactions": null, "days_on_market": null }
+      ],
+      "commentary": "", "commentary_author": "Kaylin Smith", "featured": true
+    },
+    {
+      "slug": "markham/july-2026", "city": "Markham", "period_label": "July 2026",
+      "period_start": "2026-07-01", "period_end": "2026-07-31",
+      "data_status": "awaiting_data", "source": null, "source_url": null,
+      "metrics": { "average_price": null, "median_price": null, "benchmark_price": null, "transactions": null, "new_listings": null, "active_listings": null, "days_on_market": null, "sale_to_list_ratio": null, "months_of_inventory": null },
+      "by_property_type": [
+        { "type": "Detached",        "average_price": null, "transactions": null, "days_on_market": null },
+        { "type": "Semi-Detached",   "average_price": null, "transactions": null, "days_on_market": null },
+        { "type": "Townhouse",       "average_price": null, "transactions": null, "days_on_market": null },
+        { "type": "Condo Apartment", "average_price": null, "transactions": null, "days_on_market": null }
+      ],
+      "commentary": "", "commentary_author": "Kaylin Smith", "featured": false
+    },
+    {
+      "slug": "toronto/august-2026", "city": "Toronto", "period_label": "August 2026",
+      "period_start": "2026-08-01", "period_end": "2026-08-31",
+      "data_status": "awaiting_data", "source": null, "source_url": null,
+      "metrics": { "average_price": null, "median_price": null, "benchmark_price": null, "transactions": null, "new_listings": null, "active_listings": null, "days_on_market": null, "sale_to_list_ratio": null, "months_of_inventory": null },
+      "by_property_type": [
+        { "type": "Detached",        "average_price": null, "transactions": null, "days_on_market": null },
+        { "type": "Semi-Detached",   "average_price": null, "transactions": null, "days_on_market": null },
+        { "type": "Townhouse",       "average_price": null, "transactions": null, "days_on_market": null },
+        { "type": "Condo Apartment", "average_price": null, "transactions": null, "days_on_market": null }
+      ],
+      "commentary": "", "commentary_author": "Kaylin Smith", "featured": false
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "_note": "SECTION 51: centralised rate configuration. Legislation is NEVER hard-coded into a component. Update this file when rates change and every calculator follows. Each rate set carries last_verified; while it is null the calculators render a prominent unverified banner and the build warns. Nothing here has been checked against the current statute by this build.",
+
+  "land_transfer_tax": {
+    "ontario": {
+      "name": "Ontario Land Transfer Tax",
+      "authority": "Ontario Ministry of Finance",
+      "source_url": "https://www.ontario.ca/document/land-transfer-tax",
+      "last_verified": null,
+      "effective_from": null,
+      "_note": "Brackets are marginal: each rate applies only to the portion of the price inside that band. The top band applies to a conveyance of land containing one or two single family residences.",
+      "brackets": [
+        { "up_to": 55000,   "rate": 0.005 },
+        { "up_to": 250000,  "rate": 0.010 },
+        { "up_to": 400000,  "rate": 0.015 },
+        { "up_to": 2000000, "rate": 0.020 },
+        { "up_to": null,    "rate": 0.025, "note": "One or two single family residences" }
+      ],
+      "first_time_buyer_rebate": {
+        "max": 4000,
+        "source_url": "https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers",
+        "last_verified": null,
+        "eligibility_summary": "Must be at least 18, must not have owned a home or interest in a home anywhere in the world, and a spouse must not have owned one while being your spouse. The home must be occupied as a principal residence within nine months. Application is generally made through your lawyer at closing."
+      }
+    },
+    "toronto": {
+      "name": "Toronto Municipal Land Transfer Tax",
+      "authority": "City of Toronto",
+      "source_url": "https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/",
+      "last_verified": null,
+      "effective_from": null,
+      "_note": "Charged IN ADDITION to the provincial tax on property within the City of Toronto. The upper bands were expanded for high value residential conveyances; verify the current schedule before relying on it.",
+      "brackets": [
+        { "up_to": 55000,    "rate": 0.005 },
+        { "up_to": 250000,   "rate": 0.010 },
+        { "up_to": 400000,   "rate": 0.015 },
+        { "up_to": 2000000,  "rate": 0.020 },
+        { "up_to": 3000000,  "rate": 0.025 },
+        { "up_to": 4000000,  "rate": 0.035 },
+        { "up_to": 5000000,  "rate": 0.045 },
+        { "up_to": 10000000, "rate": 0.055 },
+        { "up_to": 20000000, "rate": 0.065 },
+        { "up_to": null,     "rate": 0.075 }
+      ],
+      "first_time_buyer_rebate": {
+        "max": 4475,
+        "source_url": "https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/",
+        "last_verified": null,
+        "eligibility_summary": "Broadly mirrors the provincial first-time buyer refund and is claimed separately. Confirm current eligibility and maximum with the City of Toronto."
+      }
+    }
+  },
+
+  "closing_cost_defaults": {
+    "_note": "Starting figures for the buying cost calculator only. They are editable by the user in the interface and are not represented as quotes.",
+    "legal_fees": 2000,
+    "title_insurance": 400,
+    "home_inspection": 600,
+    "appraisal": 400,
+    "moving": 1500,
+    "last_verified": null
+  },
+
+  "mortgage": {
+    "minimum_down_payment": {
+      "_note": "Federally regulated minimums. Tiered: five percent on the portion to $500,000, ten percent on the portion between $500,000 and $1,500,000, twenty percent at or above $1,500,000.",
+      "tier_1_limit": 500000,
+      "tier_1_rate": 0.05,
+      "tier_2_limit": 1500000,
+      "tier_2_rate": 0.10,
+      "tier_3_rate": 0.20,
+      "source_url": "https://www.canada.ca/en/financial-consumer-agency/services/mortgages/down-payments.html",
+      "last_verified": null
+    },
+    "default_insurance_premium": {
+      "_note": "CMHC premium bands on the insurable portion, by loan to value.",
+      "bands": [
+        { "ltv_up_to": 80, "rate": 0.0 },
+        { "ltv_up_to": 85, "rate": 0.028 },
+        { "ltv_up_to": 90, "rate": 0.031 },
+        { "ltv_up_to": 95, "rate": 0.040 }
+      ],
+      "source_url": "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/homeownership-programs",
+      "last_verified": null
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_note": "SECTION 9 CREDIBILITY STATISTICS. Per the build spec these must never be invented. Every entry below has \"verified\": false and renders as a visible placeholder chip in the UI until a real value is supplied and verified is set to true. Entries with verified:false are EXCLUDED from the production build (build.py --production) so no unverified figure can ever ship.",
+  "stats": [
+    { "id": "career_sales",     "value": null, "prefix": "$", "suffix": "M+", "label": "Career Sales",            "verified": false },
+    { "id": "clients",          "value": null, "prefix": "",  "suffix": "+",  "label": "Clients Represented",     "verified": false },
+    { "id": "years_experience", "value": null, "prefix": "",  "suffix": "",   "label": "Years Experience",        "verified": false },
+    { "id": "communities",      "value": null, "prefix": "",  "suffix": "",   "label": "Communities Served",      "verified": false },
+    { "id": "referral_rate",    "value": null, "prefix": "",  "suffix": "%",  "label": "Referral & Repeat Clients","verified": false }
+  ]
+}
