@@ -1254,10 +1254,16 @@ code{ background:rgba(6,17,31,.055); padding:.12em .38em; border-radius:2px; }
       column-gap:clamp(1rem,2.4vw,2.5rem); row-gap:clamp(1.5rem,3vw,3rem); }
 .g12 > *{ grid-column:1 / -1; }               /* mobile: everything full width */
 @media (min-width:820px){
-  .c1{grid-column:span 1}  .c2{grid-column:span 2}  .c3{grid-column:span 3}
-  .c4{grid-column:span 4}  .c5{grid-column:span 5}  .c6{grid-column:span 6}
-  .c7{grid-column:span 7}  .c8{grid-column:span 8}  .c9{grid-column:span 9}
-  .c10{grid-column:span 10} .c11{grid-column:span 11} .c12{grid-column:1 / -1}
+  /* grid-column-END only (not the grid-column shorthand): the shorthand's
+     one-value form resets grid-column-end to auto, which silently swallows
+     the span the moment a .sN start override is combined with a .cN width
+     (e.g. "c4 s9" collapsed to a 1-column box instead of 4). Setting only
+     the end longhand keeps grid-column-start free for .sN, or for the
+     browser's own auto-placement when no .sN is present. */
+  .c1{grid-column-end:span 1}  .c2{grid-column-end:span 2}  .c3{grid-column-end:span 3}
+  .c4{grid-column-end:span 4}  .c5{grid-column-end:span 5}  .c6{grid-column-end:span 6}
+  .c7{grid-column-end:span 7}  .c8{grid-column-end:span 8}  .c9{grid-column-end:span 9}
+  .c10{grid-column-end:span 10} .c11{grid-column-end:span 11} .c12{grid-column:1 / -1}
   .s2{grid-column-start:2} .s3{grid-column-start:3} .s4{grid-column-start:4}
   .s5{grid-column-start:5} .s6{grid-column-start:6} .s7{grid-column-start:7}
   .s8{grid-column-start:8} .s9{grid-column-start:9} .s10{grid-column-start:10}
