@@ -88,13 +88,25 @@ visible form (fetch, url-encoded, same-origin POST to "/")
 Netlify invokes a function named exactly `submission-created` automatically
 whenever any Netlify Form on the site is submitted — a stable, filename-based
 convention unrelated to the function's own modern `export default` shape.
-**Not yet verified against a real deploy** (see `IMPLEMENTATION_STATUS.md`,
-BLOCKED — no deploy has succeeded past the billing limit this session). If
-it does not fire after the next successful deploy, the fallback is a
-Netlify Forms **Outgoing Webhook** (Project configuration → Forms →
-Notifications → Outgoing webhook) pointed at this function's own HTTP
-path — the function's logic is identical either way, since it already just
-reads a JSON body.
+
+**One real constraint this convention imposes, found the hard way:**
+event-triggered functions (this naming convention is one) must not declare
+a custom `config.path` — Netlify rejects the deploy outright
+("Configuration error: Event-triggered functions must not specify a custom
+path") if they do. `submission-created.mts` originally had a redundant
+`config.path` pointing at its own default path; removing the `config`
+export entirely fixed it. Don't add one back. Relatedly, the function
+cannot be invoked directly via its own URL for testing — Netlify's edge
+returns a `403` for that on an event-triggered function, by design; the
+only way to exercise it is a real Netlify Forms submission.
+
+Deployed and confirmed live: a real submission through the site's
+progressive form was accepted (`POST /` → `200`) and appears in Netlify
+Forms. If a submission ever doesn't reach this function for some other
+reason, the fallback is a Netlify Forms **Outgoing Webhook** (Project
+configuration → Forms → Notifications → Outgoing webhook) pointed at this
+function's own path — the function's logic is identical either way, since
+it already just reads a JSON body.
 
 ## Idempotency and spam
 

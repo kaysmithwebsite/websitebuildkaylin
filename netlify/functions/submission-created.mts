@@ -11,7 +11,6 @@
  * A failure anywhere past step 1 is recorded, never silently dropped — see
  * external_submissions.state and rejected_submissions.
  */
-import type { Config } from "@netlify/functions";
 import { eq, and, sql as rawSql } from "drizzle-orm";
 import { db, schema } from "../../db/index.ts";
 import { NetlifySubmissionEnvelope, RawFormData } from "../../lib/validation.ts";
@@ -371,6 +370,8 @@ function json(body: unknown, status = 200): Response {
   return new Response(JSON.stringify(body), { status, headers: { "content-type": "application/json" } });
 }
 
-export const config: Config = {
-  path: "/.netlify/functions/submission-created",
-};
+// No `export const config` here on purpose: this is a Netlify Forms
+// event-triggered function (the "submission-created" filename convention),
+// and Netlify rejects a custom `path` on event-triggered functions —
+// "Event-triggered functions must not specify a custom path." Netlify
+// manages the invocation path/trigger for these automatically.

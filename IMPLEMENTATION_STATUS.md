@@ -61,8 +61,11 @@ why each one is safe to leave for now.
   ai_lead_analysis, audit_logs. Typechecks clean (`npm run typecheck`).
 - **Initial migration**, generated from the schema and placed at
   [`netlify/database/migrations/20260913000001_init_crm_schema/migration.sql`](netlify/database/migrations/20260913000001_init_crm_schema/migration.sql)
-  in Netlify's required directory format. **Not yet applied to any real
-  database** — see BLOCKED.
+  in Netlify's required directory format. **Applied to the live production
+  database** — confirmed via the deploy's own summary
+  (`database_migrations: [{"name": "20260913000001_init_crm_schema",
+  "applied": true}]`, `database_branch_id: "production"`) on deploy
+  `6aa70610d8321ba8291145c7`.
 - **Seed data** — [`db/seed.ts`](db/seed.ts): both brands, both pipelines,
   all 22 pipeline stages (12 real estate + 10 consulting, exact labels from
   the spec), all 10 form_routes (5 dedicated real-estate forms, 4 dedicated
@@ -143,6 +146,20 @@ why each one is safe to leave for now.
   `GOOGLE_INTEGRATION.md`, `SEO_PROTECTION.md`; `CRM-ARCHITECTURE.md`
   rewritten in place to describe the Netlify Database design instead of
   Supabase.
+- **Live deploy, database provisioned, function deployed** — the site is
+  now live at `kaylinsmith.com` (production, not SSO-gated), with a real
+  Netlify Database provisioned and the CRM migration applied
+  (`database_branch_id: "production"`), and `submission-created` deployed
+  as a real function (`runtime: nodejs22.x`, secret scan clean). Getting
+  here required finding and fixing one real bug — see "Bug found and fixed
+  this audit" below.
+- **Netlify Forms end-to-end, confirmed live** — submitted a real test
+  enquiry through the live site's progressive form (`real-estate-buyer`,
+  "Claude AuditTest") and confirmed via the Netlify API that it landed
+  (`POST https://kaylinsmith.com/ → 200`, visible in
+  `manage-form-submissions`). A second, independent real submission from a
+  site visitor (Adina Yankov, `business-consultation`, 8:05 PM) was also
+  found in Netlify Forms — see the caveat under "Bug found and fixed."
 
 ## PARTIAL
 
@@ -182,19 +199,10 @@ why each one is safe to leave for now.
 
 ## BLOCKED
 
-- **No Netlify Database is provisioned for this site yet.** Nothing here
-  can apply the migration, seed data, or run the integration tests for
-  real until one exists. Per `DATABASE.md`, this happens automatically the
-  first time `netlify dev` runs locally or the site deploys — it is not a
-  manual step, but it hasn't happened yet in this environment (no `netlify
-  dev` session, and the last deploy attempt this session failed before
-  reaching a build — see below).
-- **Netlify account credit/billing limit.** The most recent deploy attempt
-  (for the earlier CSS fix, same session) failed with `"Skipped due to
-  account credit usage exceeded"` — a Netlify team billing limit, not a
-  code problem. Until that clears, no deploy (and therefore no database
-  provisioning, no live ingestion test, no Netlify Forms in production)
-  can happen at all. **This blocks everything downstream of "ship it."**
+Both blockers that used to be here — no Netlify Database provisioned, and a
+Netlify account credit limit — are resolved: the database is provisioned
+and migrated, and deploys are succeeding. What remains:
+
 - **`ANTHROPIC_API_KEY` is not set** in this environment (expected — it
   belongs in Netlify's environment variables, never in code or `.env` in
   git). AI Lead Brief generation will fail gracefully (recorded as
@@ -217,30 +225,77 @@ why each one is safe to leave for now.
   deliberate choice made with the user, not guessed. Flagged here rather
   than decided unilaterally.
 
+## Bug found and fixed this audit (2026-09-13, later session)
+
+The deploy that provisioned the database still failed the first several
+times — always the same generic error, `"Build script returned non-zero
+exit code: 2"`, with no further detail available through any MCP tool.
+Got the real error by opening the deploy's log directly in the browser
+(`https://app.netlify.com/sites/<site-id>/deploys/<deploy-id>`, which turned
+out not to require login — only the dashboard's other pages do):
+
+> **Configuration error — Error message:** Event-triggered functions must
+> not specify a custom path. Please remove the "path" configuration from
+> the following event-triggered functions...
+
+`submission-created.mts` had `export const config: Config = { path:
+"/.netlify/functions/submission-created" }` — redundant (it was the
+function's own default path) and, it turns out, **not allowed** on a
+Netlify Forms event-triggered function at all. Netlify manages that
+function's invocation path itself. Fix: removed the `config` export and
+the now-unused `Config` import entirely (`netlify/functions/submission-created.mts`).
+Confirmed locally with Netlify's own bundler (`@netlify/zip-it-and-ship-it`)
+before redeploying — `routes: []` and no `config` block, where before there
+was a `path` route. Redeployed; this time it went all the way to `ready`.
+
+**One caveat found in the process:** a real visitor (Adina Yankov) submitted
+the `business-consultation` form at 8:05 PM, *before* this fix was live —
+Netlify Forms captured it fine (forms storage is independent of the
+function), but `submission-created` didn't exist yet to promote it into a
+contact/lead. Netlify does not replay old form submissions through a
+function deployed after the fact. If that enquiry should be in the CRM, it
+needs manual entry (or a small one-off backfill script reading Netlify
+Forms' submission list and calling the same ingestion logic) — it will not
+appear on its own.
+
+**Not independently verified:** whether `submission-created` actually wrote
+a contact/lead to the database for the post-fix test submission. Netlify
+rejects direct HTTP calls to an event-triggered function's URL (confirmed:
+`curl` to it returns a real `403` from Netlify's edge, by design, not a bug),
+and the Functions log page requires a real dashboard login this session
+doesn't have. The Netlify Forms submission itself is confirmed real and
+accepted (`200`); whether ingestion completed needs a look at Netlify's
+Functions log or a database query.
+
 ## NEXT ACTION
 
-In priority order (matches the master prompt's own ordering):
+In priority order:
 
-1. **Get a Netlify Database provisioned and the migration applied.**
-   Unblocks everything else. Likely just needs someone to run `netlify
-   dev` once, or for the next successful deploy to happen (see the billing
-   blocker above).
-2. Run `tests/integration/ingestion.test.ts` for real against that
-   database and fix anything the sandbox couldn't catch.
-3. Set `ANTHROPIC_API_KEY` in Netlify's environment variables; verify a
+1. **Confirm the fix worked at the database level** — check
+   `https://app.netlify.com/projects/kaysmith/logs/functions/submission-created`
+   for the "Claude AuditTest" invocation (should show a 200 and no
+   exception), or query `contacts`/`leads` for `claude-audit-test@example.com`.
+   Delete that test contact/lead once confirmed — it isn't a real person.
+2. Decide what to do about Adina Yankov's uncaptured `business-consultation`
+   submission (see caveat above) — backfill manually, write the one-off
+   script, or accept the gap since it's a single enquiry.
+3. Run `tests/integration/ingestion.test.ts` for real against the live
+   database (needs a way to reach it — `netlify dev` locally, or run the
+   test from inside a Netlify Function/build).
+4. Set `ANTHROPIC_API_KEY` in Netlify's environment variables; verify a
    real AI Lead Brief round-trip.
-4. Build the automation runner (a scheduled Netlify Function, 30-second
+5. Build the automation runner (a scheduled Netlify Function, 30-second
    execution limit — see `get-netlify-coding-context` output for the exact
    scheduled-function shape) that advances `automation_runs` past `wait`
    steps and executes `email`/`task`/`notify`/`stage_change`/`tag`/`stop`
    steps, claiming each via `automation_run_steps` for idempotency.
-5. Decide the CRM dashboard's authentication approach with the user (see
+6. Decide the CRM dashboard's authentication approach with the user (see
    BLOCKED above) before writing any dashboard code.
-6. Build the CRM dashboard read path (Contacts, Leads, Needs Attention
+7. Build the CRM dashboard read path (Contacts, Leads, Needs Attention
    first — they need no external credentials, unlike Email/Calendar).
-7. Google OAuth scaffolding (Gmail + Calendar), once there is a client ID
+8. Google OAuth scaffolding (Gmail + Calendar), once there is a client ID
    and secret to configure.
-8. Branded HTML email system (Phase 7), threading `brands.bookingUrl`
+9. Branded HTML email system (Phase 7), threading `brands.bookingUrl`
    into a "Book an appointment with me" CTA on every template as
    requested.
 
