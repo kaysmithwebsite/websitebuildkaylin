@@ -52,7 +52,7 @@
     "_whatsapp_note": "Same number as the mobile, supplied by the client 2026-09-08."
   },
   "booking": {
-    "real_estate_url": "",
+    "real_estate_url": "https://calendly.com/kaylinsmithrealestate",
     "consulting_url": "",
     "_placeholder": true,
     "_instructions": "Two separate scheduling links. Paste a Calendly or Cal.com URL for each and the booking buttons become direct links. While blank they route to the matching enquiry form, which still reaches Kaylin."
@@ -176,27 +176,50 @@
     "_instructions": "Verify both addresses receive mail before launch, then set the Supabase secrets NOTIFY_TO_REAL_ESTATE and NOTIFY_TO_CONSULTING to match."
   },
   "netlify_forms": {
-    "_note": "Netlify Forms is the guaranteed capture path: it needs no database and no email provider. Two form names so Netlify's own notification settings can route each to its own inbox, which is simpler and harder to get wrong than conditional logic. Supabase, when configured, ALSO receives the submission and drives the CRM. A submission counts as delivered if either path succeeds.",
+    "_note": "Netlify Forms is the first-party public lead-capture layer (see NETLIFY_FORMS.md). Ten form names, matching the approved routes seeded in db/seed.ts. Each dedicated real-estate/business page form always posts under its own fixed name; general-contact lets the visitor's own selection decide. No database credentials are needed for this to work — see netlify/functions/submission-created.mts for what runs after Netlify receives a submission.",
     "enabled": true,
     "forms": {
-      "real_estate": {
-        "name": "real-estate-enquiry",
-        "notify": "info@kaylinsmith.com",
-        "paths": [
-          "buy",
-          "sell",
-          "invest"
-        ]
+      "real_estate_buyer": {
+        "name": "real-estate-buyer",
+        "notify": "info@kaylinsmith.com"
       },
-      "consulting": {
-        "name": "consulting-enquiry",
-        "notify": "kaylinsmithconsultinggroup@gmail.com",
-        "paths": [
-          "consulting",
-          "other"
-        ]
+      "real_estate_seller": {
+        "name": "real-estate-seller",
+        "notify": "info@kaylinsmith.com"
+      },
+      "real_estate_investor": {
+        "name": "real-estate-investor",
+        "notify": "info@kaylinsmith.com"
+      },
+      "real_estate_home_valuation": {
+        "name": "real-estate-home-valuation",
+        "notify": "info@kaylinsmith.com"
+      },
+      "real_estate_consultation": {
+        "name": "real-estate-consultation",
+        "notify": "info@kaylinsmith.com"
+      },
+      "business_consultation": {
+        "name": "business-consultation",
+        "notify": "kaysmithconsultinggroup@gmail.com"
+      },
+      "business_strategy": {
+        "name": "business-strategy",
+        "notify": "kaysmithconsultinggroup@gmail.com"
+      },
+      "business_operations": {
+        "name": "business-operations",
+        "notify": "kaysmithconsultinggroup@gmail.com"
+      },
+      "business_crm_automation": {
+        "name": "business-crm-automation",
+        "notify": "kaysmithconsultinggroup@gmail.com"
+      },
+      "general_contact": {
+        "name": "general-contact",
+        "notify": "info@kaylinsmith.com"
       }
     },
-    "_setup": "In Netlify: Project configuration > Forms > enable form detection, then redeploy. After the first submission of each form, set its notification address under Forms > <form name> > Settings and usage > Form notifications."
+    "_setup": "Netlify Forms notification emails are configured per-form in the Netlify UI (Project configuration > Forms > <form name> > Settings and usage > Form notifications) if you also want Netlify's own native email, separate from the CRM's own queued-email record. The CRM ingestion function (submission-created.mts) is what actually creates contacts/leads and does not depend on that UI setting."
   }
 }

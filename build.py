@@ -790,15 +790,11 @@ def page(path, url, title, description, body,
       "contact": {"email": CONTACT.get("email", ""), "phone": CONTACT.get("phone", "")},
       "baseUrl": BASE,
       # Netlify Forms needs no credentials, so this is safe in public config and
-      # is the capture path that works whether or not Supabase is connected.
-      "netlifyForms": ({
-        "enabled": True,
-        "byPath": dict(
-          (p, spec["name"])
-          for spec in SITE["netlify_forms"]["forms"].values()
-          for p in spec["paths"]),
-        "fallback": SITE["netlify_forms"]["forms"]["consulting"]["name"],
-      } if SITE.get("netlify_forms", {}).get("enabled") else {"enabled": False}),
+      # is the first-party capture path (see NETLIFY_FORMS.md). The routing
+      # logic itself (which of the ten approved form names a submission
+      # becomes) lives in forms.js:mapToLeadPayload, not in this config — all
+      # this flag does is switch that logic on.
+      "netlifyForms": {"enabled": bool(SITE.get("netlify_forms", {}).get("enabled"))},
     }
 
     ga = ""
@@ -846,7 +842,7 @@ def page(path, url, title, description, body,
       '<a class="skip-link" href="#main">Skip to content</a>\n'
       '%(devbar)s%(nav)s%(drawer)s'
       '<main id="main">\n%(body)s\n</main>\n'
-      '%(footer)s%(float)s%(scripts)s\n</body>\n</html>\n'
+      '%(footer)s%(float)s%(nfstubs)s%(scripts)s\n</body>\n</html>\n'
     ) % {
       "title": e(full_title), "desc": e(description), "canon": e(canonical),
       "robots": ('<meta name="robots" content="noindex,nofollow">\n' if PREVIEW
@@ -860,6 +856,7 @@ def page(path, url, title, description, body,
       "devbar": "" if PRODUCTION else DEVBAR,
       "nav": nav_html(url, brand), "drawer": drawer_html(url),
       "body": body, "footer": footer_html(), "float": floatc_html(),
+      "nfstubs": netlify_form_stubs(),
       "scripts": "".join(scripts),
     }
     write(path, doc)
@@ -1101,18 +1098,30 @@ def _inq_step(n, legend, inner, branch=None, hint=""):
 # schema, which is also what the dashboard columns are built from. They are
 # hidden from assistive technology and from tab order because they are not for
 # people to fill in.
+# Canonical field set the CRM ingestion function reads (see lib/validation.ts
+# RawFormData and NETLIFY_FORMS.md). Every one of the ten approved Netlify
+# forms declares this same schema; a given submission only populates the
+# subset relevant to it; forms.js:mapToLeadPayload is what actually fills
+# these in from whichever real, visible form the visitor used.
 NETLIFY_FIELDS = [
-    "path", "first_name", "last_name", "email", "phone", "message",
-    "re_intent", "re_timeline", "re_location", "re_budget", "re_property_type",
-    "re_seller_address", "re_selling_timeline", "re_has_realtor", "re_pre_approved",
-    "biz_name", "biz_website", "biz_stage", "biz_challenge", "biz_revenue",
-    "biz_urgency", "other_detail",
-    "consent_contact", "consent_marketing", "consent_marketing_text",
-    "page_path", "referrer", "utm_source", "utm_medium", "utm_campaign",
+    "business_line", "lead_type", "first_name", "last_name", "email", "phone", "message",
+    "timeline", "budget", "mortgage_pre_approved", "has_realtor", "property_address",
+    "company_name", "company_website", "support_needed_by", "challenge", "established_company",
+    "form_version", "landing_page", "page_url", "referrer",
+    "utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term",
+    "submission_timestamp", "site_name", "consent",
 ]
 
 
 def netlify_form_stubs():
+    """Hidden, hand-authored forms that exist purely so Netlify's build-time
+    HTML crawler registers all ten approved form names and their field
+    schema (see NETLIFY_FORMS.md). The real, visible forms are submitted by
+    fetch() from forms.js under one of these same names — none of them are
+    ever rendered as a plain HTML <form> a browser would natively post,
+    which is exactly why Netlify would otherwise never see them. Emitted
+    once, in page(), so every deployed page carries them regardless of
+    which visible lead form (if any) that page happens to use."""
     cfg = SITE.get("netlify_forms", {})
     if not cfg.get("enabled"):
         return ""
@@ -1239,9 +1248,12 @@ def inquiry_form(source="contact", idp="inq"):
       '<form class="inq" data-lead data-inquiry data-table="crm_inquiries" data-source="%s" '
       'data-event="inquiry" '
       'data-success="Thank you. Kaylin has your enquiry and will reply personally.">'
-      '%s%s%s%s%s%s%s%s</form>%s'
+      '%s%s%s%s%s%s%s%s</form>'
+      # Netlify form-detection stubs are emitted once per page in page()
+      # itself (not here), so every page carries them regardless of which
+      # lead form it uses.
     ) % (e(source), prog, step1, step2, step3re, step3biz, step3other, step4,
-         nav + not_connected_note(), netlify_form_stubs())
+         nav + not_connected_note())
 
 
 def real_estate_form(source="real_estate", intent="", idp="re"):

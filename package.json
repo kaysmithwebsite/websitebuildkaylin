@@ -1,0 +1,28 @@
+{
+  "name": "kaylinsmith-crm",
+  "private": true,
+  "version": "0.1.0",
+  "description": "CRM application for kaylinsmith.com — Netlify Functions + Netlify Database (Drizzle ORM). Separate from build.py, which still builds the public marketing site.",
+  "type": "module",
+  "scripts": {
+    "db:generate": "drizzle-kit generate",
+    "db:migrate:sync": "node --experimental-strip-types scripts/sync-migrations.ts",
+    "db:seed": "node --experimental-strip-types db/seed.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types tests/run-all.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "@netlify/database": "^1.0.0",
+    "@netlify/functions": "^3.0.0",
+    "drizzle-orm": "^0.36.4",
+    "pg": "^8.13.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/pg": "^8.11.10",
+    "drizzle-kit": "^0.28.1",
+    "typescript": "^5.7.2"
+  }
+}

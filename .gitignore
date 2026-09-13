@@ -20,3 +20,20 @@ assets/guides/*.pdf
 
 kaylinsmith-preview.zip
 .DS_Store
+
+# --------------------------------------------------------------------------
+# CRM (Node / Netlify Functions / Netlify Database)
+# --------------------------------------------------------------------------
+node_modules/
+
+# Never committed: local secrets for `netlify dev` (ANTHROPIC_API_KEY,
+# Google OAuth client secret, etc. — see the environment variable list in
+# SECURITY.md). Real values live in Netlify's own environment variable
+# store, not in a file.
+.env
+.env.local
+
+# Scratch output of `npm run db:generate` (drizzle-kit). The committed,
+# canonical migration lives in netlify/database/migrations/ — see
+# scripts/sync-migrations.ts and DATABASE.md.
+drizzle/generated/

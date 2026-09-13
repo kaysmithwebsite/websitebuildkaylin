@@ -137,31 +137,101 @@
   /* ------------------------------------------------------- netlify forms */
   var NF = CFG.netlifyForms || {};
 
-  /** Which Netlify form a submission belongs to. Real estate paths are listed
-      explicitly; anything else falls to the general inbox, matching the routing
-      in data/site.json. */
-  function netlifyFormName(record) {
-    if (!NF.enabled) return null;
-    var byPath = NF.byPath || {};
-    return byPath[record.path] || NF.fallback || null;
+  /** Maps whichever internal record shape a visible form produces (the
+      progressive inquiry form, the short real-estate form, or the
+      consulting form) onto the ten approved Netlify form names and the
+      canonical field set the CRM ingestion function reads (see
+      lib/validation.ts:RawFormData and NETLIFY_FORMS.md). This is the only
+      place that decides "which Netlify form does this submission become" —
+      explicit form data decides, nothing here guesses at a person's intent.
+      Returns null for a form this mapping does not (yet) cover, in which
+      case only the existing Supabase/local-queue path runs, unchanged. */
+  function mapToLeadPayload(form, record) {
+    var table = form.dataset.table;
+    var ctx = record.context || {};
+    var utm = ctx.utm || {};
+    var nameParts = (record.name || '').trim().split(/\s+/);
+
+    var out = {
+      first_name: record.first_name || nameParts[0] || '',
+      last_name: record.last_name || nameParts.slice(1).join(' ') || '',
+      email: record.email || '',
+      phone: record.phone || '',
+      message: record.message || record.other_detail || '',
+      consent: (record.consent_marketing || record.consent_contact) ? 'true' : '',
+      landing_page: ctx.page_path || '',
+      page_url: ctx.page_path || '',
+      referrer: ctx.referrer || '',
+      utm_source: utm.utm_source || '',
+      utm_medium: utm.utm_medium || '',
+      utm_campaign: utm.utm_campaign || '',
+      utm_content: utm.utm_content || '',
+      utm_term: utm.utm_term || '',
+      submission_timestamp: ctx.submitted_at || new Date().toISOString(),
+      site_name: (CFG.contact && CFG.contact.siteName) || ''
+    };
+
+    var route = null;
+
+    if (table === 'crm_inquiries') {
+      // The progressive form's step-1 "path" choice IS the routing decision.
+      var byPath = {
+        buy:        { formName: 'real-estate-buyer',     leadType: 'buyer' },
+        sell:       { formName: 'real-estate-seller',     leadType: 'seller' },
+        invest:     { formName: 'real-estate-investor',   leadType: 'investor' },
+        consulting: { formName: 'business-consultation',  leadType: 'consultation' },
+        // "Something else": genuinely undetermined. Routed to general-contact
+        // with no lead_type on purpose, so it lands in manual review rather
+        // than being guessed into a bucket.
+        other:      { formName: 'general-contact',        leadType: '' }
+      };
+      route = byPath[record.path] || byPath.other;
+      out.timeline = record.re_timeline || '';
+      out.budget = record.re_budget || '';
+      out.mortgage_pre_approved = record.re_pre_approved === 'yes' ? 'yes' : 'no';
+      out.has_realtor = record.re_has_realtor || '';
+      out.property_address = record.re_seller_address || '';
+      out.company_name = record.biz_name || '';
+      out.company_website = record.biz_website || '';
+      out.support_needed_by = record.biz_urgency || '';
+      out.challenge = record.biz_challenge || '';
+      out.established_company =
+        (record.biz_stage === 'established' || record.biz_stage === 'scaling') ? 'yes' : 'no';
+    } else if (table === 'leads') {
+      // The short real-estate form: "I'm [Buying/Selling/Investing/Not sure yet]".
+      var byInterest = {
+        Buying:    { formName: 'real-estate-buyer',   leadType: 'buyer' },
+        Selling:   { formName: 'real-estate-seller',  leadType: 'seller' },
+        Investing: { formName: 'real-estate-investor', leadType: 'investor' }
+      };
+      route = byInterest[record.interest] ||
+        { formName: 'real-estate-consultation', leadType: 'consultation' };
+      out.timeline = record.timeline || '';
+    } else if (table === 'business_enquiries') {
+      // Always the general consulting inbox: this form is a single page, not
+      // a set of dedicated strategy/operations/crm-automation pages, so
+      // "business-consultation" is the deterministic route for it.
+      route = { formName: 'business-consultation', leadType: 'consultation' };
+      out.company_name = record.organisation || '';
+      out.challenge = record.enquiry_type || '';
+      out.timeline = record.timeline || '';
+    } else {
+      return null;
+    }
+
+    out.lead_type = route.leadType;
+    return { formName: route.formName, fields: out };
   }
 
   /** Netlify Forms takes a url-encoded POST to any path on the site, keyed by
-      form-name. No credentials, so this works whether or not Supabase exists.
-      Nested objects are flattened because the encoding is flat. */
-  function submitToNetlify(formName, record) {
+      form-name. No credentials, so this works whether or not Supabase exists. */
+  function submitToNetlify(formName, fields) {
     var body = new URLSearchParams();
     body.append('form-name', formName);
-    Object.keys(record).forEach(function (k) {
-      var v = record[k];
+    Object.keys(fields).forEach(function (k) {
+      var v = fields[k];
       if (v === null || v === undefined) return;
-      if (k === 'context') {
-        if (v.page_path) body.append('page_path', v.page_path);
-        if (v.referrer)  body.append('referrer', v.referrer);
-        Object.keys(v.utm || {}).forEach(function (u) { body.append(u, v.utm[u]); });
-        return;
-      }
-      body.append(k, typeof v === 'boolean' ? (v ? 'yes' : 'no') : String(v));
+      body.append(k, String(v));
     });
     return fetch('/', {
       method: 'POST',
@@ -173,6 +243,17 @@
     }).catch(function (err) {
       return { ok: false, via: 'netlify', error: err.message };
     });
+  }
+
+  /** Attempts the Netlify Forms submission for whichever form this is, if
+      NF.enabled and mapToLeadPayload recognizes its data-table. Always
+      returns an array (possibly empty) suitable for spreading into
+      Promise.all alongside the Supabase attempt. */
+  function netlifyAttempts(form, record) {
+    if (!NF.enabled) return [];
+    var mapped = mapToLeadPayload(form, record);
+    if (!mapped) return [];
+    return [submitToNetlify(mapped.formName, mapped.fields)];
   }
 
   function submitRecord(table, record) {
@@ -290,13 +371,10 @@
         var table = form.dataset.table || 'leads';
         var ev = form.dataset.event;
 
-        /* Netlify Forms is the capture path that always works; Supabase, when
-           configured, additionally feeds the CRM. A submission counts as
-           delivered if either succeeds, so lead capture never depends on the
-           database being reachable. */
-        var nfName = netlifyFormName(record);
-        var attempts = [];
-        if (nfName) attempts.push(submitToNetlify(nfName, record));
+        /* Netlify Forms is the first-party capture path and always works;
+           Supabase, if ever configured, is a secondary attempt only. A
+           submission counts as delivered if either succeeds. */
+        var attempts = netlifyAttempts(form, record);
         attempts.push(submitRecord(table, record));
 
         Promise.all(attempts).then(function (results) {

@@ -12,6 +12,17 @@
   PYTHON_VERSION = "3.9"
 
 # --------------------------------------------------------------------------
+# CRM — Netlify Functions + Netlify Database
+# --------------------------------------------------------------------------
+# The public site (above) and the CRM (netlify/, db/, lib/) are two halves
+# of the same deploy, not two projects: the zip-and-build upload includes
+# both, Netlify builds dist/ from build.py AND bundles netlify/functions/,
+# and applies netlify/database/migrations/ before the deploy is published.
+# See NETLIFY_ARCHITECTURE.md.
+[functions]
+  directory = "netlify/functions"
+
+# --------------------------------------------------------------------------
 # Headers
 # --------------------------------------------------------------------------
 [[headers]]
