@@ -10,6 +10,11 @@
 
 [build.environment]
   PYTHON_VERSION = "3.9"
+  # @netlify/database requires Node >=20.6.1. package.json's presence at the
+  # repo root means Netlify's build image installs Node dependencies before
+  # running [build.command] below, so this must be pinned explicitly rather
+  # than left to Netlify's own default.
+  NODE_VERSION = "22"
 
 # --------------------------------------------------------------------------
 # CRM — Netlify Functions + Netlify Database
