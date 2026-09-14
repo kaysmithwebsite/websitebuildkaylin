@@ -55,6 +55,10 @@ export const RawFormData = z.object({
   challenge: z.string().optional(),
   established_company: z.string().optional(),     // "yes" | "no" | ""
 
+  // chatbot
+  location: z.string().optional(),                 // free-text area/neighbourhood, chatbot-intake only
+  conversation_summary: z.string().optional(),      // chatbot-intake only — the chat transcript summary shown to and editable by the visitor before sending
+
   // attribution / metadata
   form_version: z.string().optional(),
   landing_page: z.string().optional(),

@@ -109,13 +109,16 @@ for path in pages:
             "data-next", "data-back", "data-clear", "data-clear-all", "data-gprev", "data-gnext",
             "data-id", "aria-controls", "role", "onclick", "data-filter-form",
             # progressive inquiry form, driven by assets/js/inquiry.js
-            "data-inq-next", "data-inq-back", "data-inq-send"))
+            "data-inq-next", "data-inq-back", "data-inq-send",
+            # chat widget, driven by assets/js/chatbot.js
+            "data-chat-open"))
         typ = a.get("type", "submit")
         if typ in ("submit", "reset"):
             has_hook = True
         if "class" in a and any(c in a["class"] for c in
                                 ("nav__burger", "fav", "hero__dot", "gallery__thumb",
-                                 "floatc__btn", "iconbtn", "tab", "chip")):
+                                 "floatc__btn", "iconbtn", "tab", "chip",
+                                 "chatw__close")):
             has_hook = True
         if not has_hook:
             fail("button with no behaviour", "%s :: %r" % (rel, inner[:40]))

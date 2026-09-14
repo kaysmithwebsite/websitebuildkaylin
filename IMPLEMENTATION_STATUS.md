@@ -1,6 +1,7 @@
 # Implementation status — Kaylin Smith CRM
 
-Last updated 2026-09-13, this session. **Read this before starting work.** It
+Last updated 2026-09-14, this session (AI FAQ chatbot added — see below).
+**Read this before starting work.** It
 is the source of truth for what actually exists, corrected against the
 repository each time it changes — not what a previous handoff prompt assumed.
 
@@ -266,6 +267,33 @@ and the Functions log page requires a real dashboard login this session
 doesn't have. The Netlify Forms submission itself is confirmed real and
 accepted (`200`); whether ingestion completed needs a look at Netlify's
 Functions log or a database query.
+
+## AI FAQ chatbot added (2026-09-14, later session)
+
+A floating website chat widget was built and locally verified end-to-end
+(desktop + mobile viewports, lead-form submission attempt, all 12 test
+files passing, `build.py --production` / `audit.py` / `antiai_audit.py`
+all clean). Full architecture, knowledge-base editing instructions,
+required environment variables, and safety rules are in **`CHATBOT.md`** —
+not duplicated here. In short:
+
+- `netlify/functions/chat.mts` (`/api/chat`) — Claude-backed, grounded only
+  in `content/chatbot-knowledge.json`, rate-limited via Netlify Blobs,
+  deterministic escalation/lead-intent detection runs before any Claude
+  call, fails open to a human-contact message if the API key is missing or
+  the call errors.
+- `assets/js/chatbot.js` + the `.chatw` panel in `build.py` — the widget UI,
+  reusing the site's existing design tokens and `KS.*` helpers.
+- `chatbot-intake` — the eleventh Netlify Form (see `NETLIFY_FORMS.md`),
+  seeded into `form_routes` via the same `branchRoutes()`/`matchKeyFor()`
+  disambiguation as `general-contact`, so it ingests into the CRM through
+  the existing `submission-created.mts` pipeline like any other lead.
+- **Not yet done:** `ANTHROPIC_API_KEY` is not yet set in Netlify's
+  environment variables, so the live chatbot currently falls back to its
+  graceful "connect with the team" message rather than answering from
+  Claude. Setting it and verifying a real round-trip (including a live
+  `chatbot-intake` submission through the real Netlify Forms API, not just
+  the local dev server) is the next action for this feature specifically.
 
 ## NEXT ACTION
 

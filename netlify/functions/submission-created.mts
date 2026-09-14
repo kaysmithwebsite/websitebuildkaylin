@@ -189,15 +189,23 @@ export default async (req: Request): Promise<Response> => {
     await syncContactAggregate(contactId);
 
     // ---- Step 21-22: activity + follow-up task.
+    // chatbot-intake has no free-text "message" field of its own most of the
+    // time — the chat transcript summary (already reviewed and editable by
+    // the visitor before sending, see CHATBOT.md) stands in for it.
+    const taskDetail = nullIfEmpty(data.message) ?? nullIfEmpty(data.conversation_summary);
     await db.insert(schema.activityEvents).values({
       contactId, leadId, kind: "inquiry",
       summary: `Submitted ${formName} (${route.leadType})`,
-      meta: { formName, leadType: route.leadType, score, scoreEvents: events },
+      meta: {
+        formName, leadType: route.leadType, score, scoreEvents: events,
+        location: nullIfEmpty(data.location),
+        conversationSummary: nullIfEmpty(data.conversation_summary),
+      },
     });
     await db.insert(schema.tasks).values({
       contactId, leadId,
       title: `Call ${[data.first_name, data.last_name].filter(Boolean).join(" ") || "new lead"}`,
-      detail: nullIfEmpty(data.message),
+      detail: taskDetail,
       dueAt: new Date(Date.now() + 60 * 60 * 1000), // 1 business hour — a fixed offset here, not calendar-aware yet
     });
 

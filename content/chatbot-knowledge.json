@@ -1,0 +1,155 @@
+{
+  "_note": "Approved knowledge for the website chatbot (netlify/functions/chat.mts). Every fact here is sourced from data/site.json, data/pages.json and data/faqs.json — nothing is invented for the chatbot specifically. Edit this file to change what the chatbot knows; it is never inferred from the live site at runtime. A field intentionally left blank or marked 'ask_team' means the chatbot must say it doesn't have that figure rather than guess — see CHATBOT.md, 'How to edit the knowledge base'.",
+  "organization": {
+    "brands": [
+      {
+        "slug": "real_estate",
+        "name": "Kaylin Smith Real Estate",
+        "person": "Kaylin Smith",
+        "registration": "Kaylin Smith is registered as a Broker with the Real Estate Council of Ontario (RECO), trading in real estate through RE/MAX Epic Realty Inc., Brokerage.",
+        "brokerage_legal_name": "RE/MAX Epic Realty Inc., Brokerage",
+        "brokerage_address": "50 Acadia Avenue, Suite 315, Markham, ON L3R 0B3",
+        "service_area": "Markham, Toronto and the Greater Toronto Area (TRREB board area)",
+        "email": "info@kaylinsmith.com",
+        "phone_display": "647-986-7355",
+        "booking_url": "https://calendly.com/kaylinsmithrealestate"
+      },
+      {
+        "slug": "business_consulting",
+        "name": "Kay Smith Consulting Group",
+        "person": "Kaylin Smith (Kay)",
+        "relationship_to_real_estate": "A separate practice from the real estate brokerage. Consulting engagements are advisory and operational — not legal, accounting, tax or financial advice.",
+        "email": "kaysmithconsultinggroup@gmail.com",
+        "booking_url": null,
+        "booking_note": "No direct booking link yet — offer to take a message and have the team follow up to schedule a call."
+      }
+    ],
+    "hours": "Not published. Do not state specific business hours — offer to take a message, or point to the booking link for real estate."
+  },
+
+  "real_estate_services": [
+    {
+      "key": "buy",
+      "title": "Buying",
+      "summary": "Sourcing, comparable analysis, offer construction and negotiation. Includes discovery, full lender approval (not just pre-qualification), market analysis for the specific segment, sourcing and showings, a hand-built comparable set before any offer, negotiation, and managing conditions through to closing."
+    },
+    {
+      "key": "sell",
+      "title": "Selling",
+      "summary": "Positioning a property, not just listing it — deciding who sees it, what they assume before they arrive, and what position the seller negotiates an offer from."
+    },
+    {
+      "key": "invest",
+      "title": "Investing",
+      "summary": "Treating a property held as an asset as a different decision from a home — different criteria, analysis and risk than owner-occupied buying."
+    },
+    {
+      "key": "strategy",
+      "title": "Real Estate Strategy Call",
+      "summary": "A conversation before the decision — for someone who isn't sure buying, selling or investing is even the right move yet. Sometimes the right answer coming out of this call is to wait."
+    }
+  ],
+
+  "consulting_services": [
+    { "title": "Strategic Business Consulting", "summary": "Who the business is for, what it competes against in a buyer's mind, and what it should stop doing." },
+    { "title": "Business Development", "summary": "Where the next customers actually come from, and a way to reach them that doesn't depend on the owner's calendar." },
+    { "title": "Growth Strategy", "summary": "What to scale and what to leave alone — turning what lives in the owner's head into a process someone else can run." },
+    { "title": "Brand Partnerships & Activations", "summary": "Finding partners whose audience overlaps yours and running the activation properly." },
+    { "title": "Event Strategy", "summary": "What an event is for, what it will cost, and whether the format can carry it — concept, budget, vendors, run of show and debrief." },
+    { "title": "Speaking", "summary": "Panels, workshops and keynotes on real estate, business building and brand — corporate, community and industry events." },
+    { "title": "Mentorship", "summary": "One-to-one work with agents and early-stage owners on positioning, pipeline and habits. Limited by design." }
+  ],
+
+  "pricing": {
+    "status": "not_published",
+    "guidance": "No commission rates, consulting fees, or package prices are published. Never state or estimate a number. Say pricing depends on the specific engagement and offer to connect the visitor with the team, or — for real estate — note that compensation terms are set out in a written representation agreement disclosed before the visitor is bound, per Ontario's Trust in Real Estate Services Act (TRESA)."
+  },
+
+  "government_programs": {
+    "status": "unverified_do_not_state_figures",
+    "guidance": "Government home-buying programs (first-time buyer incentives, land transfer tax rebates, savings accounts, renovation/energy programs, new-construction rebates, accessibility programs) exist and are described in general terms on /real-estate/programs/, but specific dollar thresholds, contribution limits and eligibility rules are NOT verified in this knowledge base and change over time. Never state a specific figure, threshold, or eligibility rule. Point to the programs page and recommend confirming with the team, a mortgage broker, or the official government source. Never say a program or rebate is guaranteed."
+  },
+
+  "booking": {
+    "real_estate": "Book directly at https://calendly.com/kaylinsmithrealestate, or ask here and the team will follow up.",
+    "consulting": "No direct booking link yet for consulting — offer to take contact details and have the team reach out to schedule a call.",
+    "guidance": "Never invent or guess at specific appointment availability, time slots, or how soon someone can be seen. Only the booking link or the team itself knows real availability."
+  },
+
+  "faqs": [
+    {
+      "topic": "buying",
+      "q": "How much do I need for a down payment in Ontario?",
+      "a": "Federally regulated minimums are five percent on the portion of a purchase price up to $500,000, ten percent on the portion between $500,000 and $1,500,000, and twenty percent on properties of $1,500,000 or more. Anything under twenty percent requires mortgage default insurance, added to the mortgage. These rules change, so confirm current thresholds with a lender or mortgage broker."
+    },
+    {
+      "topic": "buying",
+      "q": "What does a buyer pay in closing costs?",
+      "a": "In Ontario the main items are provincial land transfer tax, legal fees and disbursements, title insurance, and adjustments for prepaid property taxes or utilities. Purchases within the City of Toronto also attract a municipal land transfer tax. First-time buyers may qualify for a rebate on both. A lawyer provides a statement of adjustments before closing."
+    },
+    {
+      "topic": "buying",
+      "q": "Does a buyer pay Kaylin's commission?",
+      "a": "Compensation arrangements are set out in a written representation agreement and vary by transaction. Under Ontario's Trust in Real Estate Services Act, the terms of representation and remuneration must be disclosed in writing before a buyer is bound — ask for that in writing at the outset."
+    },
+    {
+      "topic": "buying",
+      "q": "Should I get pre-approved before looking?",
+      "a": "Yes, and it's worth understanding the limits of it. Pre-approval assesses the buyer, not the property — a lender can still decline to advance funds against a specific property, most commonly on appraised value. Doing the financing work early is what makes a competitive offer possible later."
+    },
+    {
+      "topic": "selling",
+      "q": "How long does it take to sell?",
+      "a": "This depends on the specific property, condition, pricing and market segment at the time — there is no single published timeline. Ask the team for a read on the current market for a specific property."
+    },
+    {
+      "topic": "selling",
+      "q": "What is a home evaluation and what does it cost?",
+      "a": "A home evaluation is an assessment of what a specific property is likely worth in the current market. Ask the team to arrange one rather than relying on an automated online estimate."
+    },
+    {
+      "topic": "selling",
+      "q": "Do I have to accept the highest offer?",
+      "a": "No. A seller can weigh price alongside conditions, deposit, closing date and the strength of the buyer's financing — the highest number on paper is not always the strongest offer."
+    },
+    {
+      "topic": "working_together",
+      "q": "What does a real estate consultant do that a broker does not?",
+      "a": "Kaylin's practice is built around examining the decision before the property — researching the specific market by hand rather than relying on the regional average, and negotiating from a position prepared in advance."
+    },
+    {
+      "topic": "working_together",
+      "q": "Do you work outside Markham?",
+      "a": "Yes — the practice covers Markham, Toronto and the Greater Toronto Area (TRREB board area)."
+    },
+    {
+      "topic": "working_together",
+      "q": "Is my information kept private?",
+      "a": "Yes. See the site's privacy policy at /privacy/ for details on how information is handled."
+    }
+  ],
+
+  "policies": {
+    "real_estate_disclosure": "Kaylin Smith is registered as a Broker with the Real Estate Council of Ontario (RECO), trading in real estate through RE/MAX Epic Realty Inc., Brokerage. Representation and compensation terms are disclosed in writing before a client is bound, per Ontario's Trust in Real Estate Services Act (TRESA).",
+    "consulting_disclosure": "Consulting provided by Kay Smith Consulting Group is advisory and operational in nature. It is not legal, accounting, tax or financial advice. A lawyer or accountant should be engaged for matters within their scope. This practice is separate from Kaylin's real estate trading services.",
+    "privacy_policy_url": "/privacy/",
+    "terms_url": "/terms/",
+    "accessibility_url": "/accessibility/"
+  },
+
+  "escalation_triggers": {
+    "description": "Topics the chatbot must never answer on its own — always offer the contact/lead flow instead, per CHATBOT.md.",
+    "always_escalate": [
+      "individualized legal, tax, accounting or financial advice",
+      "a specific property valuation or 'what is my house worth' number",
+      "exact appointment availability or scheduling a specific time slot",
+      "specific commission rates, fees, or any dollar pricing",
+      "specific government program eligibility, dollar thresholds, or a guarantee that funding/a rebate applies",
+      "complaints about service",
+      "billing or commission disputes",
+      "legal disputes or threatened legal action",
+      "anything resembling a safeguarding or safety concern",
+      "any question not clearly answered by this knowledge base"
+    ]
+  }
+}

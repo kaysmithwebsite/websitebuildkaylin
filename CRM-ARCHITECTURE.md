@@ -20,7 +20,7 @@ original Supabase-era design was reused here versus left in
 | `IMPLEMENTATION_STATUS.md` | Source of truth: complete / partial / not started / blocked, next action. |
 | `NETLIFY_ARCHITECTURE.md` | The overall pipeline, how the public site and CRM share one deploy. |
 | `DATABASE.md` | Netlify Database, the Drizzle schema, the migration workflow. |
-| `NETLIFY_FORMS.md` | The ten approved forms, routing, idempotency, spam handling. |
+| `NETLIFY_FORMS.md` | The eleven approved forms, routing, idempotency, spam handling. |
 | `SECURITY.md` | Environment variables, authorization, cross-brand send protection. |
 | `EMAIL_SYSTEM.md` | Branded email — requirements captured, not yet built. |
 | `AUTOMATIONS.md` | The automation engine's design, what's seeded, what the runner needs to be. |
@@ -29,7 +29,7 @@ original Supabase-era design was reused here versus left in
 
 ## One-paragraph summary
 
-A visitor submits one of ten Netlify Forms on the static site
+A visitor submits one of eleven Netlify Forms on the static site
 (`build.py` → `dist/`, unchanged). Netlify invokes
 `netlify/functions/submission-created.mts`, which validates, deduplicates,
 and persists a contact and a lead into Netlify Database (Postgres, via

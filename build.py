@@ -550,6 +550,14 @@ def whatsapp_href():
 
 def floatc_html():
     rows = []
+    rows.append(
+      '<button type="button" data-chat-open>'
+        '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+        'stroke-width="1.7" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 '
+        '8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 '
+        '8.48 0 0 1 8 8v.5z"/></svg>'
+        'Chat with us</button>'
+    )
     if HAS_PHONE:
         rows.append('<a href="tel:%s" data-loc="float">Call</a>' % e(CONTACT["phone"]))
         if CONTACT.get("sms"):
@@ -578,6 +586,39 @@ def floatc_html():
           'stroke-width="1.7" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>'
           'Let\'s Talk</button>'
       '</div>' % "".join(rows))
+
+
+def chatw_html():
+    """The chat panel shell. Opened by the "Chat with us" row inside
+    floatc_html()'s menu (assets/js/chatbot.js wires the two together) —
+    see CHATBOT.md for the full architecture. All message content, the
+    welcome message and quick actions are rendered by chatbot.js, not here,
+    so this markup never needs to change to update chatbot copy."""
+    return (
+      '<div class="chatw" hidden>'
+        '<div class="chatw__panel" role="dialog" aria-modal="true" aria-labelledby="chatw-title">'
+          '<div class="chatw__head">'
+            '<p class="chatw__title" id="chatw-title">Kaylin Smith<small>Website assistant</small></p>'
+            '<button class="chatw__close" type="button" aria-label="Close chat">'
+              '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+              'stroke-width="1.8" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>'
+            '</button>'
+          '</div>'
+          '<div class="chatw__body" id="chatw-body" role="log" aria-live="polite" aria-label="Conversation"></div>'
+          '<div class="chatw__quick" id="chatw-quick"></div>'
+          '<div class="chatw__lead" id="chatw-lead" hidden></div>'
+          '<form class="chatw__form" id="chatw-form">'
+            '<label class="visually-hidden" for="chatw-input">Message</label>'
+            '<textarea id="chatw-input" rows="1" maxlength="1000" placeholder="Ask a question…" required></textarea>'
+            '<button class="chatw__send" type="submit" aria-label="Send message">'
+              '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+              'stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
+            '</button>'
+          '</form>'
+          '<p class="chatw__notice" id="chatw-notice">Please don\'t include sensitive personal or financial details in chat.</p>'
+        '</div>'
+      '</div>'
+    )
 
 
 # =============================================================================
@@ -805,7 +846,8 @@ def page(path, url, title, description, body,
               'gtag("js",new Date());gtag("config","%s");</script>' % (e(gid), e(gid)))
 
     scripts = ['<script src="%s" defer></script>' % e(asset("/assets/js/app.js")),
-               '<script src="%s" defer></script>' % e(asset("/assets/js/forms.js"))]
+               '<script src="%s" defer></script>' % e(asset("/assets/js/forms.js")),
+               '<script src="%s" defer></script>' % e(asset("/assets/js/chatbot.js"))]
     for s in (extra_js or []):
         scripts.append('<script src="%s" defer></script>' % e(asset("/assets/js/" + s)))
 
@@ -842,7 +884,7 @@ def page(path, url, title, description, body,
       '<a class="skip-link" href="#main">Skip to content</a>\n'
       '%(devbar)s%(nav)s%(drawer)s'
       '<main id="main">\n%(body)s\n</main>\n'
-      '%(footer)s%(float)s%(nfstubs)s%(scripts)s\n</body>\n</html>\n'
+      '%(footer)s%(float)s%(chatw)s%(nfstubs)s%(scripts)s\n</body>\n</html>\n'
     ) % {
       "title": e(full_title), "desc": e(description), "canon": e(canonical),
       "robots": ('<meta name="robots" content="noindex,nofollow">\n' if PREVIEW
@@ -856,6 +898,7 @@ def page(path, url, title, description, body,
       "devbar": "" if PRODUCTION else DEVBAR,
       "nav": nav_html(url, brand), "drawer": drawer_html(url),
       "body": body, "footer": footer_html(), "float": floatc_html(),
+      "chatw": chatw_html(),
       "nfstubs": netlify_form_stubs(),
       "scripts": "".join(scripts),
     }
@@ -1107,6 +1150,7 @@ NETLIFY_FIELDS = [
     "business_line", "lead_type", "first_name", "last_name", "email", "phone", "message",
     "timeline", "budget", "mortgage_pre_approved", "has_realtor", "property_address",
     "company_name", "company_website", "support_needed_by", "challenge", "established_company",
+    "location", "conversation_summary",
     "form_version", "landing_page", "page_url", "referrer",
     "utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term",
     "submission_timestamp", "site_name", "consent",
@@ -1115,7 +1159,7 @@ NETLIFY_FIELDS = [
 
 def netlify_form_stubs():
     """Hidden, hand-authored forms that exist purely so Netlify's build-time
-    HTML crawler registers all ten approved form names and their field
+    HTML crawler registers all eleven approved form names and their field
     schema (see NETLIFY_FORMS.md). The real, visible forms are submitted by
     fetch() from forms.js under one of these same names — none of them are
     ever rendered as a plain HTML <form> a browser would natively post,

@@ -5,7 +5,7 @@ database and no API key, so lead capture never depends on anything else in
 this stack being configured correctly — see "capture first" in
 `IMPLEMENTATION_STATUS.md`.
 
-## The ten approved forms
+## The eleven approved forms
 
 Seeded in `db/seed.ts` → `form_routes`, configured in `data/site.json` →
 `netlify_forms`, declared for Netlify's crawler in `build.py` →
@@ -23,32 +23,49 @@ Seeded in `db/seed.ts` → `form_routes`, configured in `data/site.json` →
 | `business-operations` | business_consulting | operations | kaysmithconsultinggroup@gmail.com |
 | `business-crm-automation` | business_consulting | crm_automation | kaysmithconsultinggroup@gmail.com |
 | `general-contact` | — decided by the visitor's own `lead_type` selection — |
+| `chatbot-intake` | — decided by the visitor's own `lead_type` selection — |
 
-`general-contact` never guesses: an unrecognized or missing `lead_type` is
-recorded in `rejected_submissions` (reason `unknown_lead_type`) rather than
-routed anywhere. Same for a `form_name` that isn't one of the ten above
-(reason `unknown_form`) — see `lib/routing.ts`.
+`general-contact` and `chatbot-intake` are both **branching** forms: neither
+has a single fixed business line or lead type. Each is seeded with one
+`form_routes` row per real business-line/lead-type combination (via
+`branchRoutes()` in `db/seed.ts`), disambiguated through `matchKeyFor()` so
+the two brands' identically-named `consultation` lead type never collide in
+the same unique index — see `CRM-ARCHITECTURE.md`. Neither ever guesses: an
+unrecognized or missing `lead_type` is recorded in `rejected_submissions`
+(reason `unknown_lead_type`) rather than routed anywhere. Same for a
+`form_name` that isn't one of the eleven above (reason `unknown_form`) —
+see `lib/routing.ts`.
+
+`chatbot-intake` is the website chat widget's own lead form
+(`assets/js/chatbot.js`), submitted after a visitor accepts the offer to
+connect with the team. It carries two fields the other ten forms don't:
+`location` (free-text area/neighbourhood) and `conversation_summary` (the
+chat transcript summary shown to and editable by the visitor before
+sending). See `CHATBOT.md` for the chatbot itself.
 
 ## Why the visible forms don't look like this
 
 The public site has three real, hand-built lead forms (the progressive
 "inquiry" form used across most pages, a short real-estate form, and a
 consulting form — see `build.py`: `inquiry_form()`, `real_estate_form()`,
-`consulting_form()`), none of which use these ten form names or this exact
-field schema directly. Rewriting all three to match field-for-field was a
-larger, riskier change to the working public site than this session's
+`consulting_form()`), none of which use these eleven form names or this
+exact field schema directly. Rewriting all three to match field-for-field
+was a larger, riskier change to the working public site than this session's
 budget justified, so instead:
 
 - **`assets/js/forms.js`:`mapToLeadPayload(form, record)`** is the one
   place that translates whichever of the three internal record shapes a
   visible form produced into the canonical field set and one of the ten
-  form names, at submit time. It's a pure mapping — see the function body
-  for the exact rules per `data-table` value (`crm_inquiries`, `leads`,
-  `business_enquiries`).
-- **`netlify_form_stubs()`** (`build.py`) emits ten hidden,
+  non-chatbot form names, at submit time. It's a pure mapping — see the
+  function body for the exact rules per `data-table` value
+  (`crm_inquiries`, `leads`, `business_enquiries`). The eleventh form,
+  `chatbot-intake`, is submitted directly by `assets/js/chatbot.js`'s own
+  `submitLead()` — it never goes through `mapToLeadPayload` because the
+  chat widget's lead form isn't one of these three internal record shapes.
+- **`netlify_form_stubs()`** (`build.py`) emits eleven hidden,
   `data-netlify="true"` forms — one per approved name, sharing the
   canonical field list (`NETLIFY_FIELDS`) — once per page, purely so
-  Netlify's build-time HTML crawler registers all ten names and their
+  Netlify's build-time HTML crawler registers all eleven names and their
   schema. They are never rendered for a person to fill in
   (`hidden aria-hidden="true" tabindex="-1"`); the *visible* form is always
   submitted by `fetch()`, which is exactly why Netlify would never see it
@@ -67,10 +84,14 @@ keep both in sync if either changes:
 business_line, lead_type, first_name, last_name, email, phone, message,
 timeline, budget, mortgage_pre_approved, has_realtor, property_address,
 company_name, company_website, support_needed_by, challenge, established_company,
+location, conversation_summary,
 form_version, landing_page, page_url, referrer,
 utm_source, utm_medium, utm_campaign, utm_content, utm_term,
 submission_timestamp, site_name, consent
 ```
+
+`location` and `conversation_summary` are populated only by `chatbot-intake`
+— every other form leaves them blank.
 
 `business_line` is accepted but not authoritative — the resolved
 `form_routes` row decides business line, never the raw field (so a

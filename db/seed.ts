@@ -100,6 +100,43 @@ async function main() {
     ["business-crm-automation", "crm_automation"],
   ];
 
+  // Both dedicated lists include "consultation" as a lead_type (real estate's
+  // own general consultation, and business's). That's fine for a fixed-route
+  // form (matchLeadType is "" there, disambiguated by form_name alone), but
+  // a branching form like general-contact or chatbot-intake — where the
+  // *visitor's own selection* is the match key — would seed two rows with
+  // the identical matchLeadType "consultation", violating the (form_name,
+  // match_lead_type) unique index and silently losing one of them to
+  // onConflictDoNothing. Disambiguate the match key by business line
+  // whenever the underlying lead_type could mean either; every other
+  // lead_type is already unique across the two lists and passes through
+  // unchanged. This key is purely a routing lookup value — the leadType
+  // actually stored on the resulting lead is unaffected.
+  function matchKeyFor(
+    businessLine: "real_estate" | "business_consulting",
+    leadType: (typeof schema.leadTypeEnum.enumValues)[number],
+  ): string {
+    if (leadType === "consultation") {
+      return businessLine === "real_estate" ? "real_estate_consultation" : "business_consultation";
+    }
+    return leadType;
+  }
+
+  /** A branching form (general-contact, chatbot-intake) resolves entirely
+   *  from the visitor's own explicit selection — never guessed. */
+  function branchRoutes(formName: string): RouteSeed[] {
+    return [
+      ...dedicatedRealEstate.map(([, leadType]) => ({
+        formName, matchLeadType: matchKeyFor("real_estate", leadType), businessLine: "real_estate" as const,
+        leadType, pipelineSlug: "real_estate", notifyEmail: RE_EMAIL,
+      })),
+      ...dedicatedBusiness.map(([, leadType]) => ({
+        formName, matchLeadType: matchKeyFor("business_consulting", leadType), businessLine: "business_consulting" as const,
+        leadType, pipelineSlug: "business_consulting", notifyEmail: BIZ_EMAIL,
+      })),
+    ];
+  }
+
   const routes: RouteSeed[] = [
     ...dedicatedRealEstate.map(([formName, leadType]) => ({
       formName, matchLeadType: "", businessLine: "real_estate" as const,
@@ -109,16 +146,12 @@ async function main() {
       formName, matchLeadType: "", businessLine: "business_consulting" as const,
       leadType, pipelineSlug: "business_consulting", notifyEmail: BIZ_EMAIL,
     })),
-    // general-contact: the visitor's own explicit selection resolves the
-    // route. Every branch below is a deterministic match, not a guess.
-    ...dedicatedRealEstate.map(([, leadType]) => ({
-      formName: "general-contact", matchLeadType: leadType, businessLine: "real_estate" as const,
-      leadType, pipelineSlug: "real_estate", notifyEmail: RE_EMAIL,
-    })),
-    ...dedicatedBusiness.map(([, leadType]) => ({
-      formName: "general-contact", matchLeadType: leadType, businessLine: "business_consulting" as const,
-      leadType, pipelineSlug: "business_consulting", notifyEmail: BIZ_EMAIL,
-    })),
+    ...branchRoutes("general-contact"),
+    // chatbot-intake: the floating website chatbot's own lead form. Same
+    // branching shape as general-contact — the widget sets lead_type
+    // explicitly from what the visitor actually said/selected, never guessed
+    // server-side. See CHATBOT.md.
+    ...branchRoutes("chatbot-intake"),
   ];
 
   await db.insert(schema.formRoutes).values(routes)

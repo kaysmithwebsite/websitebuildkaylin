@@ -47,7 +47,8 @@
     'home_evaluation_started','home_evaluation_completed','consultation_request',
     'phone_click','email_click','guide_download','newsletter_signup',
     'neighbourhood_view','listing_alert_signup','contact_request','valuation_request',
-    'referral_request','calculator_used','business_enquiry'];
+    'referral_request','calculator_used','business_enquiry',
+    'chat_opened','faq_question','lead_flow_started','lead_submitted','human_escalation'];
 
   KS.track = function (event, params) {
     params = params || {};

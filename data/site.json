@@ -218,6 +218,11 @@
       "general_contact": {
         "name": "general-contact",
         "notify": "info@kaylinsmith.com"
+      },
+      "chatbot_intake": {
+        "name": "chatbot-intake",
+        "notify": "info@kaylinsmith.com",
+        "_note": "Lead capture from the website chatbot (see CHATBOT.md). Routes to real_estate or business_consulting per the visitor's own selection, same branching mechanism as general-contact — see db/seed.ts:branchRoutes."
       }
     },
     "_setup": "Netlify Forms notification emails are configured per-form in the Netlify UI (Project configuration > Forms > <form name> > Settings and usage > Form notifications) if you also want Netlify's own native email, separate from the CRM's own queued-email record. The CRM ingestion function (submission-created.mts) is what actually creates contacts/leads and does not depend on that UI setting."

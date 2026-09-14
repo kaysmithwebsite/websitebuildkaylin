@@ -1046,6 +1046,79 @@ input[type="range"]{ width:100%; accent-color:var(--navy); height:2px; margin:1r
   font-size:var(--t-label); text-transform:uppercase; letter-spacing:.16em; color:var(--ink-faint); }
 
 /* --------------------------------------------------------------------------
+   16b. CHAT WIDGET
+   Opens from the existing "Let's Talk" menu (.floatc) rather than a second
+   floating bubble — one launcher, one corner, matching the site's own
+   minimal, square-cornered system rather than a bolted-on generic widget.
+   -------------------------------------------------------------------------- */
+.chatw{ position:fixed; right:var(--gutter); bottom:calc(clamp(1rem,3vh,2rem) + 62px);
+  z-index:var(--z-modal); pointer-events:none; }
+@media (max-width:700px){ .chatw{ right:1rem; bottom:calc(1rem + 62px); } }
+.chatw__panel{ pointer-events:auto; background:var(--white); border:1px solid var(--line);
+  border-radius:var(--radius-lg); box-shadow:0 24px 56px -20px rgba(6,17,31,.45);
+  width:min(380px,calc(100vw - 2rem)); height:min(560px,calc(100vh - 7rem));
+  display:flex; flex-direction:column; overflow:hidden;
+  opacity:0; visibility:hidden; transform:translateY(10px) scale(.98); transform-origin:bottom right;
+  transition:opacity var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease), visibility var(--dur-fast); }
+.chatw.is-open .chatw__panel{ opacity:1; visibility:visible; transform:none; }
+@media (max-width:480px){
+  .chatw__panel{ width:calc(100vw - 1.5rem); height:min(72vh,560px); }
+}
+
+.chatw__head{ display:flex; align-items:center; justify-content:space-between; gap:.75rem;
+  padding:.85rem 1.1rem; background:var(--navy); color:var(--on-navy); flex:none; }
+.chatw__title{ font-family:var(--serif); font-size:1.05rem; font-weight:400; }
+.chatw__title small{ display:block; font-family:var(--sans); font-size:var(--t-xs);
+  color:var(--on-navy-mute); font-weight:400; margin-top:1px; }
+.chatw__close{ color:var(--on-navy-mute); padding:.25rem; line-height:1; transition:color var(--dur-fast); }
+.chatw__close:hover{ color:var(--on-navy); }
+
+.chatw__body{ flex:1 1 auto; overflow-y:auto; padding:1rem 1.1rem; display:flex; flex-direction:column; gap:.65rem;
+  background:var(--offwhite); }
+.chatw__msg{ max-width:86%; font-size:var(--t-sm); line-height:1.5; padding:.6rem .8rem; border-radius:var(--radius-lg); }
+.chatw__msg--assistant{ align-self:flex-start; background:var(--white); border:1px solid var(--line); color:var(--ink); }
+.chatw__msg--user{ align-self:flex-end; background:var(--navy); color:var(--on-navy); }
+.chatw__msg--typing{ align-self:flex-start; background:var(--white); border:1px solid var(--line);
+  color:var(--ink-faint); font-style:italic; }
+.chatw__msg--error{ align-self:stretch; background:#F6EAEA; border:1px solid #E3C2C2; color:#6E2E2E; }
+
+.chatw__quick{ display:flex; flex-wrap:wrap; gap:.4rem; padding:0 1.1rem .8rem; flex:none; background:var(--offwhite); }
+.chatw__quick button{ font-size:var(--t-xs); padding:.4rem .65rem; border:1px solid var(--line-strong);
+  border-radius:var(--radius-lg); background:var(--white); color:var(--ink); transition:background var(--dur-fast); }
+.chatw__quick button:hover{ background:var(--offwhite); }
+
+.chatw__lead{ flex:none; border-top:1px solid var(--line); padding:.85rem 1.1rem; background:var(--white);
+  display:flex; flex-direction:column; gap:.55rem; max-height:60%; overflow-y:auto; }
+.chatw__lead h3{ font-family:var(--serif); font-size:1rem; font-weight:400; }
+.chatw__lead .fgrid{ display:grid; grid-template-columns:1fr 1fr; gap:.5rem; }
+.chatw__lead label{ font-size:var(--t-xs); color:var(--ink-faint); display:block; margin-bottom:.2rem; }
+.chatw__lead input,.chatw__lead select,.chatw__lead textarea{
+  width:100%; font:inherit; font-size:var(--t-sm); padding:.45rem .55rem; border:1px solid var(--line-strong);
+  border-radius:var(--radius); background:var(--white); color:var(--ink); }
+.chatw__lead textarea{ resize:vertical; min-height:3.2em; }
+.chatw__lead .consent{ display:flex; align-items:flex-start; gap:.5rem; font-size:var(--t-xs); color:var(--ink-muted); }
+.chatw__lead .consent input{ width:auto; margin-top:.2em; }
+.chatw__lead-status{ font-size:var(--t-xs); color:var(--ink-faint); min-height:1.2em; }
+.chatw__lead .actions{ display:flex; gap:.5rem; justify-content:flex-end; }
+.chatw__lead .actions button{ font-size:var(--t-xs); padding:.5rem .85rem; border-radius:var(--radius); }
+.chatw__lead .actions .cancel{ color:var(--ink-faint); }
+.chatw__lead .actions .submit{ background:var(--navy); color:var(--on-navy); }
+.chatw__lead .actions .submit:hover{ background:var(--navy-deep); }
+.chatw__lead .actions .submit:disabled{ opacity:.6; cursor:default; }
+
+.chatw__form{ flex:none; display:flex; gap:.5rem; padding:.75rem 1.1rem; border-top:1px solid var(--line);
+  background:var(--white); }
+.chatw__form textarea{ flex:1; resize:none; font:inherit; font-size:var(--t-sm); max-height:5.5em;
+  padding:.5rem .65rem; border:1px solid var(--line-strong); border-radius:var(--radius); color:var(--ink); }
+.chatw__form textarea:focus{ outline:2px solid var(--focus); outline-offset:1px; }
+.chatw__send{ flex:none; width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;
+  background:var(--navy); color:var(--white); border-radius:var(--radius); transition:background var(--dur-fast); }
+.chatw__send:hover{ background:var(--navy-deep); }
+.chatw__send:disabled{ opacity:.5; cursor:default; }
+
+.chatw__notice{ flex:none; padding:0 1.1rem .7rem; font-size:var(--t-xs); color:var(--ink-faint); background:var(--white); }
+
+/* --------------------------------------------------------------------------
    17. FOOTER
    -------------------------------------------------------------------------- */
 .foot{ background:var(--navy-deep); color:var(--on-navy); padding-top:clamp(2.5rem,5vw,5rem); }
@@ -1078,8 +1151,16 @@ input[type="range"]{ width:100%; accent-color:var(--navy); height:2px; margin:1r
   display:grid; gap:var(--s-4); font-size:var(--t-xs); color:var(--on-navy-faint); line-height:1.65; }
 .foot__legal p{ max-width:80ch; }
 @media (min-width:900px){ .foot__legal{ grid-template-columns:1fr 1fr; gap:var(--s-6); } }
+/* Netlify injects its own "Powered by Netlify" badge as a fixed, very-high
+   z-index iframe pinned to the viewport's bottom-right corner (~202x64px) —
+   it ships outside this repo's HTML/CSS, so it can't be targeted or moved
+   directly. The copyright/Privacy/Terms row sits right there by default, so
+   it gets covered whenever a visitor scrolls to the true bottom of the page.
+   Reserving badge-height clearance below that row raises the real content
+   clear of the fixed badge instead. */
 .foot__bottom{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;
-  gap:var(--s-4); padding-block:var(--s-5); border-top:1px solid var(--line-navy);
+  gap:var(--s-4); padding-top:var(--s-5); padding-bottom:calc(var(--s-5) + 64px);
+  border-top:1px solid var(--line-navy);
   font-size:var(--t-xs); color:var(--on-navy-faint); }
 .foot__bottom nav{ display:flex; flex-wrap:wrap; gap:var(--s-5); }
 .foot__bottom a:hover{ color:var(--white); }
