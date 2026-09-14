@@ -15,6 +15,13 @@
   --offwhite:     #F7F7F4;
   --grey-soft:    #E9EBED;
 
+  /* Sampled directly from assets/img/brokerage/remax-logo.png (the balloon
+     red), used only for the one control that should read as "the brokerage's
+     button": the floating Let's Talk trigger. Not a general accent — the
+     site's own signal colour above stays the actual UI accent. */
+  --remax-red:      #FF0A00;
+  --remax-red-deep: #CC0700;
+
   /* Derived text tones */
   --ink:          #07182D;
   --ink-muted:    #4A5A6E;
@@ -1010,7 +1017,12 @@ input[type="range"]{ width:100%; accent-color:var(--navy); height:2px; margin:1r
 /* --------------------------------------------------------------------------
    16. FLOATING CONTACT
    -------------------------------------------------------------------------- */
-.floatc{ position:fixed; right:var(--gutter); bottom:clamp(1rem,3vh,2rem); z-index:var(--z-float);
+/* bottom offset: clamp(1rem,3vh,2rem) is where the fab would sit flush with
+   the corner; +76px raises it clear of Netlify's own fixed "Powered by
+   Netlify" badge (~64px tall, pinned bottom-right, outside this repo's
+   control — see the matching note on .foot__bottom) and reads as a
+   deliberately higher, easier-to-reach position generally. */
+.floatc{ position:fixed; right:var(--gutter); bottom:calc(76px + clamp(1rem,3vh,2rem)); z-index:var(--z-float);
   display:flex; flex-direction:column; align-items:flex-end; gap:var(--s-3);
   /* The closed panel keeps its layout box, which inflates this wrapper to
      roughly 268x330 over the bottom-right of the viewport. Left interactive it
@@ -1019,19 +1031,19 @@ input[type="range"]{ width:100%; accent-color:var(--navy); height:2px; margin:1r
   pointer-events:none; }
 .floatc > *{ pointer-events:auto; }
 @media (max-width:700px){
-  .floatc{ right:1rem; bottom:1rem; }
+  .floatc{ right:1rem; bottom:calc(76px + 1rem); }
   /* The floating contact button is fixed to the bottom-right, and on a phone
      the hero's buttons run the full width, so the fab sat on top of the
      "Enter for Consulting" corner and swallowed taps meant for it. Reserve the
      fab's own height plus its offset at the foot of the hero. Keep this in
      step with the .floatc offset and .floatc__btn min-height above. */
-  .hero__inner{ padding-bottom:calc(1rem + 50px + 0.9rem); }
+  .hero__inner{ padding-bottom:calc(76px + 1rem + 50px + 0.9rem); }
 }
 .floatc__btn{ display:inline-flex; align-items:center; gap:.6em; padding:.95em 1.4em;
-  background:var(--navy); color:var(--white); border-radius:var(--radius); font-size:var(--t-sm);
+  background:var(--remax-red); color:var(--white); border-radius:var(--radius); font-size:var(--t-sm);
   font-weight:500; letter-spacing:.04em; box-shadow:0 12px 30px -14px rgba(6,17,31,.55);
   transition:background var(--dur-fast), transform var(--dur-fast) var(--ease); min-height:48px; }
-.floatc__btn:hover{ background:var(--navy-deep); }
+.floatc__btn:hover{ background:var(--remax-red-deep); }
 .floatc__panel{ background:var(--white); border:1px solid var(--line); border-radius:var(--radius-lg);
   box-shadow:0 24px 56px -28px rgba(6,17,31,.4); width:min(268px,calc(100vw - 2rem)); overflow:hidden;
   opacity:0; visibility:hidden; transform:translateY(8px) scale(.98); transform-origin:bottom right;
@@ -1051,9 +1063,9 @@ input[type="range"]{ width:100%; accent-color:var(--navy); height:2px; margin:1r
    floating bubble — one launcher, one corner, matching the site's own
    minimal, square-cornered system rather than a bolted-on generic widget.
    -------------------------------------------------------------------------- */
-.chatw{ position:fixed; right:var(--gutter); bottom:calc(clamp(1rem,3vh,2rem) + 62px);
+.chatw{ position:fixed; right:var(--gutter); bottom:calc(76px + clamp(1rem,3vh,2rem) + 62px);
   z-index:var(--z-modal); pointer-events:none; }
-@media (max-width:700px){ .chatw{ right:1rem; bottom:calc(1rem + 62px); } }
+@media (max-width:700px){ .chatw{ right:1rem; bottom:calc(76px + 1rem + 62px); } }
 .chatw__panel{ pointer-events:auto; background:var(--white); border:1px solid var(--line);
   border-radius:var(--radius-lg); box-shadow:0 24px 56px -20px rgba(6,17,31,.45);
   width:min(380px,calc(100vw - 2rem)); height:min(560px,calc(100vh - 7rem));
